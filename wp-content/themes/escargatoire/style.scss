@@ -838,7 +838,9 @@ a:active {
 }
 
 .site-header .main-navigation .menu-item-has-children > a {
-  margin-right: 56px;
+  margin-right: 0px;
+  padding-right: 40px;
+  width: 170px;
 }
 
 .site-header .dropdown-toggle {
@@ -850,14 +852,14 @@ a:active {
   height: 48px;
   padding: 0;
   position: absolute;
-  right: 0;
+  left: 0;
   text-transform: uppercase;
-  top: 0;
-  width: 48px;
+  top: -0.84375em;
+  width: 170px;
 }
 
 .site-header .dropdown-toggle:after {
-  border: 0 solid $salty-blue;
+  border: 0 solid $salty-pink;
   border-left-width: 1px;
   content: "\f431";
   font-size: 24px;
@@ -883,6 +885,11 @@ a:active {
 
 .site-header .dropdown-toggle.toggled-on:after {
   content: "\f432";
+}
+
+.site-header .sub-menu li {
+  display: block;
+  z-index: 5;
 }
 
 .site-header .main-navigation + .social-navigation {
