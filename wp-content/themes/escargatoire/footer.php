@@ -12,44 +12,41 @@
 
 		</div><!-- .site-content -->
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
-			<?php if ( has_nav_menu( 'primary' ) ) : ?>
-				<nav class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Primary Menu', 'twentysixteen' ); ?>">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'primary',
-							'menu_class'     => 'primary-menu',
-						 ) );
-					?>
-				</nav><!-- .main-navigation -->
-			<?php endif; ?>
+		<footer class="site-footer" role="contentinfo">
+			<div class="footer-content">
+				<div class="link-list footer-section" id="footer-nav">
+					<ul>
+						<li class="nav-link"><a href="<?php echo esc_url( home_url( '/wp-admin' ) ); ?>" rel="about">About</a></li>
+						<li class="nav-link"><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" rel="contact">Contact</a></li>
+						<li class="nav-link"><a href="<?php echo esc_url( home_url( '/wp-admin' ) ); ?>" rel="login">Login</a></li>
+					</ul>
+				</div>
+				<div class="outline-box subscribe-form footer-section" id="footer-subscribe">
+					<div class="form-container">
+					<p class="form-title">Subscribe</p>
+						<ul>
+							<li>
+								<label for="" class="input-label" id="name-label">Name:</label>
+								<input type="text" name="RESULT_TextField-0" class="text_field" id="RESULT_TextField-0" size="25" maxlength="255" value="">
+							</li>
+							<li>
+								<label for="" class="input-label" id="email-label">Email:</label>
+								<input type="text" email="RESULT_TextField-0" class="text_field" id="RESULT_TextField-0" size="25" maxlength="255" value="">
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				<div class="social-nav link-list footer-section">
+					<ul id="menu-page-nav-1" class="social-links-menu link-list">
+						<li class="menu-item social-icon twitter-icon social-navigation"><a href="https://twitter.com/saltyrunning"></a></li>
+						<li class="menu-item social-icon facebook-icon social-navigation"><a href="https://instagram.com/saltyrunning"></a></li>
+						<li class="menu-item social-icon instagram-icon social-navigation"><a href="http://facebook.com/saltyrunning"></a></li>
+					</ul>
+				</div>
+			</div>
 
-			<?php if ( has_nav_menu( 'social' ) ) : ?>
-				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twentysixteen' ); ?>">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'social',
-							'menu_class'     => 'social-links-menu',
-							'depth'          => 1,
-							'link_before'    => '<span class="screen-reader-text">',
-							'link_after'     => '</span>',
-						) );
-					?>
-				</nav><!-- .social-navigation -->
-			<?php endif; ?>
-
-			<div class="site-info">
-				<?php
-					/**
-					 * Fires before the twentysixteen footer text for footer customization.
-					 *
-					 * @since Twenty Sixteen 1.0
-					 */
-					do_action( 'twentysixteen_credits' );
-				?>
-				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
+<!-- .site-info -->
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->
 </div><!-- .site -->

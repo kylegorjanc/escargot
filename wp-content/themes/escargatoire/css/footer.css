@@ -1,0 +1,67 @@
+/** *    11.2a - End Home Page **/
+/** *    11.2b - Other Posts and pages **/
+/** *    11.3 - Post Formats **/
+/** *    11.4 - Comments **/
+/** *    11.5 - Sidebar **/
+/** *    11.6 - Footer **/
+
+/** *    11.6 - Footer **/
+$font-size: 16px;
+
+.site > div > footer {
+  margin: $font-size 0px 0px 0px;
+  width: 100%;
+  background-color: #000000;
+  color: #FFF;
+  padding: 10px 0;
+
+  .footer-section {
+    padding: 10px auto;
+  }
+
+  a {
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  ul, ol {
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+
+    li {
+      display: inline;
+    }
+  }
+
+  .nav-link {
+     a {
+      padding: 0px 20px;
+      }
+    }
+
+  .form-container {
+    width: 342px;
+    border: 2px solid #FFFFFF;
+    border-radius: 2px;
+    padding: 20px;
+    margin: 0 auto;
+    ul li {
+      display: block;
+    }
+    label {
+      text-transform: uppercase;
+      font-size: $font-size * .75;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    input {
+      margin: 10px 0px 10px auto;
+    }
+  }
+}
+
+/** *    11.6 - end Footer **/
+
+
+

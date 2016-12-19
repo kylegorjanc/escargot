@@ -12,3 +12,6 @@ Configuration Notes:
 - Media: Set all sizes to 0 x 0
 - Permalinks: Link structure should be set to Post name (http://localhost:8000/sample-post/)
 
+# Home Page:
+
+Text can be changed to reflect current 'who we are' mission statement.

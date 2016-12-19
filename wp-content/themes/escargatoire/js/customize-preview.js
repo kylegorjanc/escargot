@@ -3,12 +3,12 @@
  */
 
 ( function( $ ) {
-	var style = $( '#twentysixteen-color-scheme-css' ),
+	var style = $( '#escargatoire-color-scheme-css' ),
 		api = wp.customize;
 
 	if ( ! style.length ) {
-		style = $( 'head' ).append( '<style type="text/css" id="twentysixteen-color-scheme-css" />' )
-		                    .find( '#twentysixteen-color-scheme-css' );
+		style = $( 'head' ).append( '<style type="text/css" id="escargatoire-color-scheme-css" />' )
+		                    .find( '#escargatoire-color-scheme-css' );
 	}
 
 	// Site title.
