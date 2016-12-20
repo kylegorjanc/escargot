@@ -687,11 +687,12 @@ input[type="search"],
 input[type="tel"],
 input[type="number"],
 textarea {
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   border-radius: 2px;
   color: #FFFFFF;
   padding: 0.625em 0.4375em;
   min-width: 200px;
+  border-width: 0px;
 }
 
 input[type="date"]:focus,
@@ -708,9 +709,8 @@ input[type="tel"]:focus,
 input[type="number"]:focus,
 textarea:focus {
   background-color: #fff;
-  border-color: #222222;
-  color: #1a1a1a;
-  outline: 0;
+  border: 2px solid $salty-teal inset;
+  color: #1A1A1A;
 }
 
 .post-password-form {
@@ -900,7 +900,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 .site-header .main-navigation a:hover,
 .site-header .main-navigation a:focus {
   background-color: $salty-green;
-  color: #000000;
+  color: #000000 !important;
   font-weight: 800;
 }
 
@@ -1483,10 +1483,9 @@ blockquote:after,
   /** *    11.1 - Header **/
 
     .site-header {
-    padding: 0;
     background-color: #000000;
     color: #FFFFFF;
-    min-height: 100px;
+    height: 100px;
   }
 
   .site-header-main {
@@ -1500,13 +1499,13 @@ blockquote:after,
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    padding: 16px 16px 24px;
   }
 
   .site-branding {
     margin: ($font-size-px * .875) 0;
     /* Avoid overflowing wide custom logo in small screens in Firefox and IEs */
-    max-width: 100%;
-    min-width: 280px;
+    max-width: 70%;
     overflow: hidden;
   }
 
@@ -1516,7 +1515,7 @@ blockquote:after,
 
   .custom-logo {
     width: 94%;
-    margin: 20px 10px 10px 16px;
+    margin: 4px 0;
   }
 
   .site-title {
@@ -1627,10 +1626,15 @@ blockquote:after,
   }
 
 
-   @media all and (max-width: 768px) and (min-width: 412px) {
-
+   @media all and (min-width: 414px) {
+  .site-header {
+    height: 140px;
+  }
 }
-   @media all and (max-width: 980px) and (min-width: 768px) {
+   @media all and (min-width: 768px) {
+    .site-header {
+    height: 160px;
+  }
 }
    @media all and (min-width: 980px) {
 
@@ -1638,8 +1642,13 @@ blockquote:after,
     display: inline;
   }
 
-  .custom-logo {
-    max-width: 180px;
+  .site-header {
+    height: 200px;
+  }
+
+  .site-header-main .site-content, .footer-contents {
+    max-width: 980px;
+    margin: 0 auto;
   }
 
   .site-title {
@@ -1843,6 +1852,9 @@ blockquote:after,
      a {
       padding: 16px 20px;
       text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      line-height: 40px;
       }
       :hover {
         background-color: #FFFFFF;
@@ -1864,6 +1876,7 @@ blockquote:after,
     }
     ul li {
       display: block;
+      
     }
     label {
       text-transform: uppercase;
@@ -1874,6 +1887,8 @@ blockquote:after,
     input {
       margin: 10px 0px 10px auto;
       width: 200px;
+      right: 0px;
+      border: none;
     }
   }
 }
