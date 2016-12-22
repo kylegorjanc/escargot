@@ -19,10 +19,10 @@ if ( ! function_exists( 'escargatoire_entry_meta' ) ) :
  */
 function escargatoire_entry_meta() {
 	if ( 'post' === get_post_type() ) {
-		$author_avatar_size = apply_filters( 'escargatoire_author_avatar_size', 49 );
+		$author_avatar_size = apply_filters( 'escargatoire_author_avatar_size', 80 );
 		printf( '<span class="byline"><span class="author vcard">%1$s<span class="screen-reader-text">%2$s </span> <a class="url fn n" href="%3$s">%4$s</a></span></span>',
 			get_avatar( get_the_author_meta( 'user_email' ), $author_avatar_size ),
-			_x( 'Author', 'Used before post author name.', 'escargatoire' ),
+			_x( 'Written by', 'Used before post author name.', 'escargatoire' ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			get_the_author()
 		);
@@ -65,9 +65,10 @@ function escargatoire_entry_date() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>
+		';
 	}
-
+// <time class="updated" datetime="%3$s">%4$s</time>
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
 		get_the_date(),
@@ -76,7 +77,7 @@ function escargatoire_entry_date() {
 	);
 
 	printf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
-		_x( 'Posted on', 'Used before publish date.', 'escargatoire' ),
+		_x( '', 'Used before publish date.', 'escargatoire' ),
 		esc_url( get_permalink() ),
 		$time_string
 	);

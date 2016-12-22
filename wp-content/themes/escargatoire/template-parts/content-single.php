@@ -9,13 +9,19 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+
+	<div class="entry-header">
+		<div class="black-bg entry-header-content">
+		<?php the_title( '<h3 class="entry-title">', '</h3>' ); ?>
+		<?php escargatoire_entry_date();?>
+		</div>
+		
+		<span class="posted-by">by<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+				<?php printf( __( ' %s', 'escargatoire' ), get_the_author() ); ?></a></span>
+		
+	</div><!-- .entry-header -->
 
 	<?php escargatoire_excerpt(); ?>
-
-	<?php escargatoire_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

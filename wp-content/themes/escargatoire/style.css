@@ -351,11 +351,11 @@ h1, h2, h3 {
 }
 
 h1, h2 {
-  font-family: 'Pantra Bold', Helvetica, sans-serif;
   font-weight: bold;
 }
 
 h1 {
+  font-family: 'Pantra Bold', Helvetica, sans-serif;
   font-size: 32pt;
 }
 
@@ -368,16 +368,19 @@ h3, h4, h5, h6 {
 }
 
 h3 {
-  font-weight: bolder;
+  font-family: "Proxima Nova Extrabold", Helvetica, sans-serif;
 }
 
-h4 h5 h6 {
+h5 h6 {
   font-size: 16pt;
-  font-weight: bold;
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
 }
 
 p {
   margin: 0 0 16pt;
+  font-size: 16pt;
+  color: #222222;
+  line-height: 28pt;
 }
 
 dfn,
@@ -429,7 +432,7 @@ blockquote cite {
 
 blockquote strong,
 blockquote b {
-  font-weight: 400;
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
 }
 
 blockquote > :last-child {
@@ -511,7 +514,7 @@ dl {
 }
 
 dt {
-  font-weight: 700;
+  font-family: "Proxima Nova Extrabold", Helvetica, sans-serif;
 }
 
 dd {
@@ -521,7 +524,7 @@ dd {
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
-  max-width: 100%;
+  max-width: 980px;
   /* Adhere to container width. */
   vertical-align: middle;
 }
@@ -555,7 +558,7 @@ td {
 
 th {
   border-width: 0 1px 1px 0;
-  font-weight: 700;
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
 }
 
 td {
@@ -596,7 +599,7 @@ input {
   height: 56px;
   background-color: #000;
   color: #FFF;
-  font-weight: bolder;
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
   font-size: 14pt;
   border-radius: 12px;
 }
@@ -618,7 +621,7 @@ input[type="submit"][disabled]:focus {
   border-radius: 2px;
   color: #fff;
   font-family: Proxima Nova, "Helvetica Neue", sans-serif;
-  font-weight: 700;
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
   line-height: 1;
   padding: 0.84375em 0.875em 0.78125em;
   text-transform: uppercase;
@@ -664,7 +667,7 @@ input[type="number"],
 textarea {
   background-color: #FFFFFF;
   border-radius: 2px;
-  color: #FFFFFF;
+  color: #000000;
   padding: 0.625em 0.4375em;
   min-width: 200px;
   border-width: 0px;
@@ -690,6 +693,23 @@ textarea:focus {
 
 .post-password-form {
   margin-bottom: 1.75em;
+}
+
+.comment-form-comment textarea {
+  background-color: #FFFFFF;
+  border: 2px solid black inset;
+  border-radius: 2px;
+  color: #000000;
+  padding: 16px;
+  min-width: 200px;
+  border-width: 0px;
+}
+
+.comment-form-comment textarea:focus {
+  background-color: #fff;
+  border: 2px solid #2FF6F6 inset;
+  color: #1A1A1A;
+  outline: #2FF6F6 auto 5px;
 }
 
 .post-password-form label {
@@ -750,7 +770,7 @@ input[type="search"].search-field {
 /** 6.0 - Navigation **/
 /** 6.1 - Links **/
 a {
-  color: #2FF6F6;
+  color: #2F24DB;
   text-decoration: none;
 }
 
@@ -864,7 +884,7 @@ a:active {
 .site-header .main-navigation a:hover,
 .site-header .main-navigation a:focus {
   background-color: #D8EB00;
-  color: #000000;
+  color: #000000 !important;
   font-weight: 800;
 }
 
@@ -1148,7 +1168,7 @@ footer .social-navigation a {
   display: inline;
   font-size: 23px;
   font-size: 1.4375rem;
-  font-weight: 700;
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
   line-height: 1.2173913043;
   text-rendering: optimizeLegibility;
 }
@@ -1237,7 +1257,7 @@ footer .social-navigation a {
 
 .pagination .current {
   display: inline-block;
-  font-weight: 700;
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
 }
 
 .pagination .prev,
@@ -1337,32 +1357,54 @@ footer .social-navigation a {
 
 /** 7.0 - Accessibility **/
 /** 8.0 - Alignments **/
-.alignleft {
-  float: left;
-  margin: 0.375em 1.75em 1.75em 0;
-}
 
-.alignright {
-  float: right;
-  margin: 0.375em 0 1.75em 1.75em;
-}
+  .alignleft, .alignright, .aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 -16px 16px;
+    width: 100vw;
+    position: relative;
+  }
 
-.aligncenter {
-  clear: both;
-  display: block;
-  margin: 0 auto 1.75em;
-}
 
-blockquote.alignleft {
-  margin: 0.3157894737em 1.4736842105em 1.473684211em 0;
-}
+@media all and (min-width: 480px) {
+  .alignleft, .alignright, .aligncenter {
+    clear: both;
+    position: relative;
+    margin-bottom: 16px;
+  }
 
-blockquote.alignright {
-  margin: 0.3157894737em 0 1.473684211em 1.4736842105em;
-}
+  .alignleft, .alignright {
+    display: inline;
+    max-width: 50%;
+  }
 
-blockquote.aligncenter {
-  margin-bottom: 1.473684211em;
+  .alignleft {
+    float: left;
+    margin-right: 16px;
+  }
+
+  .alignright {
+    float: right;
+    margin-left: 16px;
+  }
+
+  .aligncenter {
+    width: 100vw;
+    display: block;
+  }
+
+  blockquote.alignleft {
+    margin: 0.3157894737em 1.4736842105em 1.473684211em 0;
+  }
+
+  blockquote.alignright {
+    margin: 0.3157894737em 0 1.473684211em 1.4736842105em;
+  }
+
+  blockquote.aligncenter {
+    margin-bottom: 1.473684211em;
+  }
 }
 
 /** 9.0 - Clearings **/
@@ -1417,6 +1459,8 @@ blockquote:after,
 
 .site-content {
   word-wrap: break-word;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 /* Do not show the outline on the skip link target. */
@@ -1424,12 +1468,16 @@ blockquote:after,
   outline: 0;
 }
 
-.site-main {
-  margin-bottom: 40px;
+.page-main {
+  margin: 20px 0;
 }
 
-.site-main > :last-child {
-  margin-bottom: 0;
+.page-main :first-child {
+  margin-top: 0px;
+}
+
+.page-main :last-child {
+  margin-bottom: 0px;
 }
 
 /** *    11.1 - Header **/
@@ -1451,6 +1499,8 @@ blockquote:after,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 16px 16px 24px;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .site-branding {
@@ -1575,13 +1625,13 @@ blockquote:after,
   opacity: 0.85;
 }
 
-@media all and (max-width: 768px) and (min-width: 414px) {
+@media all and (min-width: 414px) {
   .site-header {
     height: 140px;
   }
 }
 
-@media all and (max-width: 980px) and (min-width: 768px) {
+@media all and (min-width: 768px) {
   .site-header {
     height: 160px;
   }
@@ -1592,13 +1642,8 @@ blockquote:after,
     display: inline;
   }
 
-   .site-header {
+  .site-header {
     height: 200px;
-  }
-
-  .site-header-main, .site-content, .footer-contents {
-    max-width: 980px;
-    margin: 0 auto;
   }
 
   .site-title {
@@ -1697,6 +1742,12 @@ blockquote:after,
   margin-top: 20px;
 }
 
+.home-section .page-entry-header {
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+}
+
 .home-section #site-desc .entry-content {
   font-family: "Proxima Nova Extrabold", Helvetica, sans-serif;
   width: 90%;
@@ -1752,14 +1803,84 @@ blockquote:after,
   margin-bottom: 20px;
 }
 
-article header {
+/** **    11.2a - End Home Page **/
+/** **    11.2a - Regular Post **/
+.entry-header {
+  margin-bottom: 10px;
+}
+
+.entry-header-content {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 8px 16px;
+  overflow: hidden;
+}
+
+.entry-header-content .posted-on, .entry-header-content .entry-title {
+  position: relative;
+  font-size: 12pt;
+  line-height: 1.4;
+  font-style: none;
+  color: #EEEEEE;
+  display: inline-flex;
+}
+
+.entry-header-content .posted-by, .entry-header-content .posted-on, .entry-header-content .entry-date {
+  position: relative;
+  white-space: nowrap;
+}
+
+.entry-header-content .posted-by {
+  float: left;
+  margin-left: 16px;
+}
+
+.entry-header-content .posted-by a:hover {
+  text-decoration: underline;
+}
+
+.entry-header-content .posted-on {
+  float: right;
+}
+
+.entry-header-content .posted-on a {
+  color: #EEEEEE;
+}
+
+.entry-header-content .posted-on a:hover {
+  text-decoration: underline;
+}
+
+.entry-header-content .entry-title {
+  float: left;
+  white-space: normal;
+  margin-right: 10px;
+}
+
+.entry-content {
+  margin: auto 16px;
+}
+
+.entry-content p {
+  margin: auto 0px 24px;
+}
+
+article.post {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/** **    11.2b - End Regular Post  **/
+/** **    11.2c - Regular Page **/
+.page-title {
   visibility: hidden;
   font-size: 0px;
   height: 0px;
 }
 
-/** **    11.2a - End Home Page **/
-/** **    11.2b - Other Posts and pages **/
+/** **    11.2b - Regular Page **/
+/** **    11.2c - Other Posts and pages **/
 /** *    11.3 - Post Formats **/
 /** *    11.4 - Comments **/
 /** *    11.5 - Sidebar **/
@@ -1770,6 +1891,11 @@ article header {
   color: #FFF;
   padding-bottom: 10px;
   font-size: 12pt;
+}
+
+.site > div > footer .footer-contents {
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .site > div > footer .footer-section {

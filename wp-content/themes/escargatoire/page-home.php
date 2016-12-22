@@ -15,11 +15,12 @@
 get_header(); ?>
 
 <div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
-	<a href="./subscribe"></a>
+	<main id="main" class="site-main page-main" role="main">
 		<div class="home-section sixteen-nine" id="home-section-1">
+		 <a href="./subscribe"></a>
 			<div class="section-content home-banner" id="home-banner-1">
 				<h2>Subscribe</h2>
+			<a href="./subscribe"></a>
 			</div>
 		</div> <!-- Section -->
 

@@ -419,3 +419,6 @@ function escargatoire_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'escargatoire_widget_tag_cloud_args' );
+
+
+
