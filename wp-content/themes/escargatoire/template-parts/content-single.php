@@ -15,10 +15,15 @@
 		<?php the_title( '<h3 class="entry-title">', '</h3>' ); ?>
 		<?php escargatoire_entry_date();?>
 		</div>
-		
-		<span class="posted-by">by<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-				<?php printf( __( ' %s', 'escargatoire' ), get_the_author() ); ?></a></span>
-		
+		<div class="byline">
+		<span>
+			<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php $author_bio_avatar_size = apply_filters( 'escargatoire_author_bio_avatar_size', 42 );
+	    			echo get_avatar( get_the_author_meta( 'user_email' ), $author_bio_avatar_size );
+			?></a>
+			<span class="posted-by">Posted by<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+				<?php printf( __( ' %s', 'escargatoire' ), get_the_author() ); ?></a></span> on <?php escargatoire_entry_date();?>
+		</span>
+		</div>
 	</div><!-- .entry-header -->
 
 	<?php escargatoire_excerpt(); ?>
@@ -43,7 +48,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php escargatoire_entry_meta(); ?>
 		<?php
 			edit_post_link(
 				sprintf(

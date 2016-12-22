@@ -1357,15 +1357,13 @@ footer .social-navigation a {
 
 /** 7.0 - Accessibility **/
 /** 8.0 - Alignments **/
-
-  .alignleft, .alignright, .aligncenter {
-    clear: both;
-    display: block;
-    margin: 0 -16px 16px;
-    width: 100vw;
-    position: relative;
-  }
-
+.alignleft, .alignright, .aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 -16px 16px;
+  width: 100vw;
+  position: relative;
+}
 
 @media all and (min-width: 480px) {
   .alignleft, .alignright, .aligncenter {
@@ -1863,6 +1861,23 @@ blockquote:after,
 
 .entry-content p {
   margin: auto 0px 24px;
+}
+
+.byline {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.byline img {
+  border-radius: 100%;
+}
+
+.byline a {
+  color: #222222;
+}
+
+.byline a :hover {
+  text-decoration: underline;
 }
 
 article.post {

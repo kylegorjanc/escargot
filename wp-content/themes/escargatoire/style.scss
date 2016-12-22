@@ -1910,9 +1910,17 @@ blockquote:after,
   }
 }
 
-.entry-footer {
-  .author img {
-    border-radius: 100%;
+.byline {
+  margin-top: 10px;
+  width: 100%;
+  img {
+    border-radius: 100;
+  }
+  a {
+    color: #222222;
+    :hover {
+      text-decoration: underline;
+    }
   }
 }
 
