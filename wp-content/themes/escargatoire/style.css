@@ -623,7 +623,8 @@ input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:focus,
 .action-btn,
 .action-btn[disabled]:hover,
-.action-btn[disabled]:focus {
+.action-btn[disabled]:focus,
+.comment-reply-link {
   background: transparent;
   border-radius: 12rem;
   color: #000000;
@@ -656,14 +657,17 @@ input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:focus,
 .action-btn,
 .action-btn[disabled]:hover,
-.action-btn[disabled]:focus {
+.action-btn[disabled]:focus,
+.comment-reply-link {
   border: 5px solid #FC0262;
   color: #FC0262;
 }
 
 .action-btn:hover,
 input[type="submit"]:hover,
-input[type="submit"]:focus {
+input[type="submit"]:focus,
+.comment-reply-link:hover,
+.comment-reply-link:focus {
   border-color: #FF9E01;
   color: #FF9E01;
 }
@@ -705,7 +709,6 @@ textarea {
   color: #000000;
   padding: 0.625em 0.4375em;
   min-width: 200px;
-  border-width: 0px;
 }
 
 input[type="date"]:focus,
@@ -2043,7 +2046,7 @@ article.post {
 .comment-list .pingback,
 .comment-list .trackback {
   border-top: 1px solid #d1d1d1;
-  padding: 1.75em 0;
+  padding: 20pt 0;
 }
 
 .comment-list .children {
@@ -2062,10 +2065,11 @@ article.post {
 
 .comment-author .avatar {
   float: left;
-  height: 28px;
-  margin-right: 0.875em;
+  height: 48px;
+  width: 48px;
+  border-radius: 6px;
+  margin-right: 14pt;
   position: relative;
-  width: 28px;
 }
 
 .bypostauthor > article .fn:after {
@@ -2085,7 +2089,7 @@ article.post {
 }
 
 .comment-metadata {
-  margin-bottom: 2.1538461538em;
+  margin-bottom: 20pt;
 }
 
 .comment-metadata a,
@@ -2124,23 +2128,11 @@ article.post {
 }
 
 .comment-reply-link {
-  border: 1px solid #d1d1d1;
-  border-radius: 2px;
-  color: #007acc;
+  border-width: 2px;
   display: inline-block;
-  font-family: Montserrat, "Helvetica Neue", sans-serif;
   font-size: 13px;
-  font-size: 0.8125rem;
   line-height: 1;
-  margin-top: 2.1538461538em;
-  padding: 0.5384615385em 0.5384615385em 0.4615384615em;
-}
-
-.comment-reply-link:hover,
-.comment-reply-link:focus {
-  border-color: currentColor;
-  color: #007acc;
-  outline: 0;
+  float: right;
 }
 
 .comment-form {
