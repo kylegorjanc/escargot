@@ -57,7 +57,12 @@ This theme and all its content copyright © 2016 SaltyRunning.com
 /* COLOR VARIABLES */
 
 $salty-purple: #C900A0; $salty-pink: #FC0262; $salty-orange: #FF9E01; $salty-green: #D8EB00; $salty-blue: #2F24DB; $salty-teal: #2FF6F6;
-
+$action-color: $salty-pink;
+$link-color: $salty-blue;
+$accent-color: $salty-green;
+$accent-color-2: $salty-orange;
+$accent-color-dark: $salty-purple;
+$visited-link-color: $salty-purple;
 /* IMAGE SIZE CONSTRAINTS */
 
 @mixin aspect-ratio($width, $height) {
@@ -87,6 +92,10 @@ $salty-purple: #C900A0; $salty-pink: #FC0262; $salty-orange: #FF9E01; $salty-gre
 
 body {
   margin: 0;
+}
+
+time {
+  white-space: nowrap;
 }
 
 article,
@@ -419,9 +428,9 @@ textarea {
   }
 
   blockquote {
-    border: 0 solid $salty-green;
+    border: 0 solid $accent-color;
     border-left-width: 4px;
-    color: $salty-blue;
+    color: $accent-color-dark;
     font-size: $font-size;
     font-style: italic;
     line-height: 1.4;
@@ -1002,7 +1011,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
   background-color: transparent;
   border: 0;
   border-radius: 0;
-  color: $salty-green;
+  color: $accent-color;
   content: "";
   height: 40px;
   padding: 0;
@@ -2087,8 +2096,9 @@ article.post {
 .comment-list article,
 .comment-list .pingback,
 .comment-list .trackback {
-  border-top: 1px solid #d1d1d1;
-  padding: ($font-size * 1.25) 0;
+  border-left: 2px solid $salty-green;
+  padding: 38px 0 38px 16px;
+  margin-bottom: 20px
 }
 
 .comment-list .children {
@@ -2171,10 +2181,11 @@ article.post {
 
 .comment-reply-link {
   border-width: 2px;
-  display: inline-block;
+  display: block;
   font-size: 13px;
   line-height: 1;
   float: right;
+  margin-bottom: 16px;
 }
 
 .comment-form {
@@ -2256,6 +2267,14 @@ article.post {
   font-size: 32px;
   position: relative;
   top: -5px;
+}
+
+.depth-1 {
+  border-top: 4px solid $accent-color;
+}
+
+.depth-1, .depth-2, .depth-3, .depth-4, .depth-5 {
+  padding-left: 16px;
 }
 
   /** *    11.4 - End Comments **/

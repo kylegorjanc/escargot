@@ -77,6 +77,10 @@ body {
   margin: 0;
 }
 
+time {
+  white-space: nowrap;
+}
+
 article,
 aside,
 details,
@@ -398,7 +402,7 @@ i {
 blockquote {
   border: 0 solid #D8EB00;
   border-left-width: 4px;
-  color: #2F24DB;
+  color: #C900A0;
   font-size: 16pt;
   font-style: italic;
   line-height: 1.4;
@@ -2045,8 +2049,9 @@ article.post {
 .comment-list article,
 .comment-list .pingback,
 .comment-list .trackback {
-  border-top: 1px solid #d1d1d1;
-  padding: 20pt 0;
+  border-left: 2px solid #D8EB00;
+  padding: 38px 0 38px 16px;
+  margin-bottom: 20px;
 }
 
 .comment-list .children {
@@ -2129,10 +2134,11 @@ article.post {
 
 .comment-reply-link {
   border-width: 2px;
-  display: inline-block;
+  display: block;
   font-size: 13px;
   line-height: 1;
   float: right;
+  margin-bottom: 16px;
 }
 
 .comment-form {
@@ -2214,6 +2220,14 @@ article.post {
   font-size: 32px;
   position: relative;
   top: -5px;
+}
+
+.depth-1 {
+  border-top: 4px solid #D8EB00;
+}
+
+.depth-1, .depth-2, .depth-3, .depth-4, .depth-5 {
+  padding-left: 16px;
 }
 
 /** *    11.4 - End Comments **/
