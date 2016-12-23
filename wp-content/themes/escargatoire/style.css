@@ -621,14 +621,14 @@ input[type="reset"][disabled]:focus,
 input[type="submit"],
 input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:focus {
-  background: #000000;
-  border: 0;
-  border-radius: 2px;
-  color: #fff;
-  font-family: Proxima Nova, "Helvetica Neue", sans-serif;
+  background: transparent;
+  border: 5px solid #000000;
+  border-radius: 12rem;
+  color: #000000;
   font-family: "Proxima Nova Bold", Helvetica, sans-serif;
+  font-family: Proxima Nova, "Helvetica Neue", sans-serif;
   line-height: 1;
-  padding: 0.84375em 0.875em 0.78125em;
+  padding: 8pt 20pt;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
@@ -640,8 +640,13 @@ input[type="submit"][disabled]:focus {
 .action-btn,
 .action-btn[disabled]:hover,
 .action-btn[disabled]:focus {
-  background: #FC0262;
-  color: #000;
+  border-color: #FC0262;
+  color: #FC0262;
+}
+
+.action-btn:hover {
+  border-color: #FF9E01;
+  color: #FF9E01;
 }
 
 button:hover,
@@ -652,8 +657,8 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background: #FC0262;
-  color: #000000;
+  border-color: #2FF6F6;
+  color: #2FF6F6;
 }
 
 button:focus,

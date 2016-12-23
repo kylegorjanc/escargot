@@ -29,8 +29,8 @@
 		<p class="author-bio">
 			<?php the_author_meta( 'description' ); ?></p>
 			<ul class="bio-links">
-				<li id="view-all-posts-by"><button class="action-btn author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><
-				<?php printf( __( 'View all posts by %s', 'escargatoire' ), get_the_author() ); ?></button>
+				<li id="view-all-posts-by"><button class="action-btn author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+				<?php printf( __( 'All posts by %s', 'escargatoire' ), get_the_author() ); ?></button>
 				</li>
 				<li id="view-bio" class="btn"><button class="action-btn author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
 				<?php printf( __( 'More from %s', 'escargatoire' ), get_the_author() ); ?></button>
