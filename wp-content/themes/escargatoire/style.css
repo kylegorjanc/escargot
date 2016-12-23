@@ -481,7 +481,7 @@ body {
 }
 
 hr {
-  background-color: #FC0262;
+  background-color: #FF9E01;
   border: 0;
   height: 1px;
   width: 80%;
@@ -1855,14 +1855,6 @@ blockquote:after,
   margin-right: 10px;
 }
 
-.entry-content {
-  margin: auto 16px;
-}
-
-.entry-content p {
-  margin: auto 0px 24px;
-}
-
 .byline {
   margin-top: 10px;
   width: 100%;
@@ -1876,10 +1868,41 @@ blockquote:after,
   color: #222222;
 }
 
-.byline a :hover {
+.byline a:hover {
+  color: #2F24DB;
   text-decoration: underline;
 }
 
+.byline .author-link {
+  text-transform: capitalize;
+}
+
+.byline p {
+  font-size: 14pt;
+}
+
+.byline ul {
+  list-style: none;
+}
+
+.byline ul li {
+  display: inline-block;
+}
+
+.entry-content {
+  margin: auto 16px;
+}
+
+.entry-content p {
+  margin: auto 0px 24px;
+}
+
+.entry-content .author-info {
+  display: inline-block;
+  float: left;
+}
+
+/****************/
 article.post {
   max-width: 980px;
   margin: 0 auto;
