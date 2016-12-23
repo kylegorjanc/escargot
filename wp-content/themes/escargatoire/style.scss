@@ -1978,16 +1978,27 @@ article.post {
   /** **    11.2d - Short Bio **/
 
 .author-info {
+  max-width: 600px;
+  border-radius: 12px;
+  padding: $font-size;
+  margin: 0 auto;
   p {
-    margin: auto 0px 24px;
+    margin: auto 0px ($font-size * .5);
     font-size: 14pt;
+  }
+  h3 > a {
+    text-decoration: none;
+    color: #000000;
+    :hover {
+      color: $salty-pink;
+    }
   }
   .author-title {
     text-transform: uppercase;
     clear: none;
     line-height: 1;
   }
-  .author-description > img {
+  .author-description img {
 
     position: relative;
     display: inline-block;
@@ -1995,13 +2006,23 @@ article.post {
     border-radius: 12px;
     margin-right: 10px;
   }
+  .author-buttons {
+    display: block;
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+  }
   ul {
     list-style: none;
+    margin: 0 auto;
     li {
       display: inline;
     }
   }
-
+  button {
+    min-width: 260px;
+    margin: ($font-size * 0.5) auto;
+  }
 
 }
 

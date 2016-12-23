@@ -657,8 +657,8 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  border-color: #2FF6F6;
-  color: #2FF6F6;
+  border-color: #FC0262;
+  color: #FC0262;
 }
 
 button:focus,
@@ -1931,9 +1931,25 @@ article.post {
 
 /** **    11.2b - end Regular Page **/
 /** **    11.2d - Short Bio **/
+.author-info {
+  max-width: 600px;
+  border-radius: 12px;
+  padding: 16pt;
+  margin: 0 auto;
+}
+
 .author-info p {
-  margin: auto 0px 24px;
+  margin: auto 0px 8pt;
   font-size: 14pt;
+}
+
+.author-info h3 > a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.author-info h3 > a :hover {
+  color: #FC0262;
 }
 
 .author-info .author-title {
@@ -1942,7 +1958,7 @@ article.post {
   line-height: 1;
 }
 
-.author-info .author-description > img {
+.author-info .author-description img {
   position: relative;
   display: inline-block;
   float: left;
@@ -1950,12 +1966,25 @@ article.post {
   margin-right: 10px;
 }
 
+.author-info .author-buttons {
+  display: block;
+  margin: 0 auto;
+  clear: both;
+  text-align: center;
+}
+
 .author-info ul {
   list-style: none;
+  margin: 0 auto;
 }
 
 .author-info ul li {
   display: inline;
+}
+
+.author-info button {
+  min-width: 260px;
+  margin: 8pt auto;
 }
 
 /** **    11.d - end Short Bio **/
