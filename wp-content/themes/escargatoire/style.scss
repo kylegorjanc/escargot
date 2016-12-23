@@ -31,6 +31,11 @@ This theme and all its content copyright © 2016 SaltyRunning.com
  * 11.0 - Content
  *    11.1 - Header
  *    11.2 - Posts and pages
+  *    11.2a - Home Page
+  *    11.2b - Regular Post
+  *    11.2c - Regular Page
+  *    11.2d - Short Bio
+  *    11.2e - Long Bio
  *    11.3 - Post Formats
  *    11.4 - Comments
  *    11.5 - Sidebar
@@ -654,6 +659,14 @@ input[type="submit"][disabled]:focus {
   -webkit-font-feature-settings: "kern";
   -moz-font-feature-settings: "kern";
   -moz-font-feature-settings: "kern=1";
+}
+
+
+.action-btn,
+.action-btn[disabled]:hover,
+.action-btn[disabled]:focus {
+  background: $salty-pink;
+  color: #000;
 }
 
 button:hover,
@@ -1933,17 +1946,11 @@ blockquote:after,
   p {
     margin: auto 0px 24px;
   }
-  .author-info {
-    display: inline-block;
-    float: left;
-  }
 
 }
 
 
-
-
-/****************/
+/****************/ 
 
 article.post {
   max-width: 980px;
@@ -1963,9 +1970,44 @@ article.post {
   }
 
 
-  /** **    11.2b - Regular Page **/
+  /** **    11.2b - end Regular Page **/
+  /** **    11.2d - Short Bio **/
 
-  /** **    11.2c - Other Posts and pages **/
+.author-info {
+  p {
+    margin: auto 0px 24px;
+    font-size: 14pt;
+  }
+  .author-title {
+    text-transform: uppercase;
+    clear: none;
+    line-height: 1;
+  }
+  .author-description > img {
+
+    position: relative;
+    display: inline-block;
+    float: left;
+    border-radius: 12px;
+    margin-right: 10px;
+  }
+  ul {
+    list-style: none;
+    li {
+      display: inline;
+    }
+  }
+
+
+}
+
+  /** **    11.d - end Short Bio **/
+
+  /** **    11.2e - Long Bio **/
+
+  /** **    11.e - end Long Bio **/
+
+  /** **    11.2x - Other Posts and pages **/
   /** *    11.3 - Post Formats **/
   /** *    11.4 - Comments **/
   /** *    11.5 - Sidebar **/
