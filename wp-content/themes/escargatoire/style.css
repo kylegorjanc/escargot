@@ -1293,7 +1293,7 @@ footer .social-navigation a {
   padding: 0;
   position: absolute;
   top: 0;
-  width: 120px;
+  width: 52px;
   z-index: 2;
 }
 
@@ -1882,7 +1882,7 @@ blockquote:after,
 }
 
 .byline {
-  margin-top: 10px;
+  margin: 10px 16px 0px;
   width: 100%;
 }
 
@@ -1921,6 +1921,15 @@ blockquote:after,
 
 .entry-content p {
   margin: auto 0px 24px;
+}
+
+.entry-footer {
+  margin: 0 16px;
+}
+
+.entry-footer .cat-links, .entry-footer .tag-links {
+  margin-right: 16px;
+  text-transform: capitalize;
 }
 
 /****************/

@@ -95,16 +95,16 @@ if ( ! function_exists( 'escargatoire_entry_taxonomies' ) ) :
 function escargatoire_entry_taxonomies() {
 	$categories_list = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'escargatoire' ) );
 	if ( $categories_list && escargatoire_categorized_blog() ) {
-		printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-			_x( 'Categories', 'Used before category names.', 'escargatoire' ),
+		printf( '<div class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</div>',
+			_x( 'Categories: ', 'Used before category names.', 'escargatoire' ),
 			$categories_list
 		);
 	}
 
 	$tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', 'escargatoire' ) );
 	if ( $tags_list ) {
-		printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-			_x( 'Tags', 'Used before tag names.', 'escargatoire' ),
+		printf( '<div class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</div>',
+			_x( 'Tags: ', 'Used before tag names.', 'escargatoire' ),
 			$tags_list
 		);
 	}
