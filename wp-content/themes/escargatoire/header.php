@@ -28,7 +28,7 @@
 		<header id="masthead" class="site-header" role="banner">
 			<div class="site-header-main">
 				<div class="site-branding">
-					<img href="<?php echo esc_url( home_url( '/' ) ); ?>" src="<?php echo esc_url( home_url( '//wp-content/themes/escargatoire/assets/logo.png' ) ); ?>" alt="" class="custom-logo">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel=""><img src="<?php echo esc_url( home_url( '//wp-content/themes/escargatoire/assets/logo.png' ) ); ?>" alt="" class="custom-logo"></a>
 
 					<?php if ( is_front_page() && is_home() ) : ?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

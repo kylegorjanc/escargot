@@ -402,7 +402,7 @@ i {
 blockquote {
   border: 0 solid #D8EB00;
   border-left-width: 4px;
-  color: #C900A0;
+  color: #333333;
   font-size: 16pt;
   font-style: italic;
   line-height: 1.4;
@@ -449,7 +449,7 @@ blockquote > :last-child {
 }
 
 pre {
-  border: 1px solid #FC0262;
+  border: 1px solid #2FF6F6;
   margin: 0 0 28pt;
   max-width: 100%;
   overflow: auto;
@@ -630,11 +630,11 @@ input[type="submit"][disabled]:focus,
 .action-btn[disabled]:focus,
 .comment-reply-link {
   background: transparent;
-  border-radius: 12rem;
+  border-radius: 2px;
   color: #000000;
   font-family: Proxima Nova, "Helvetica Neue", sans-serif;
   line-height: 1;
-  padding: 8pt 20pt;
+  padding: 12pt 20pt;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
@@ -652,7 +652,7 @@ input[type="button"][disabled]:focus,
 input[type="reset"],
 input[type="reset"][disabled]:hover,
 input[type="reset"][disabled]:focus {
-  border: 5px solid #000000;
+  border: 2px solid #000000;
   color: #000000;
 }
 
@@ -663,7 +663,7 @@ input[type="submit"][disabled]:focus,
 .action-btn[disabled]:hover,
 .action-btn[disabled]:focus,
 .comment-reply-link {
-  border: 5px solid #FC0262;
+  border: 2px solid #FC0262;
   color: #FC0262;
 }
 
@@ -682,8 +682,8 @@ input[type="button"]:hover,
 input[type="button"]:focus,
 input[type="reset"]:hover,
 input[type="reset"]:focus {
-  border-color: #FC0262;
-  color: #FC0262;
+  border-color: #2FF6F6;
+  color: #2FF6F6;
 }
 
 button:focus,
@@ -811,21 +811,21 @@ input[type="search"].search-field {
 /** 6.0 - Navigation **/
 /** 6.1 - Links **/
 a {
-  color: #2F24DB;
+  color: #C900A0;
   text-decoration: none;
 }
 
 a:hover,
 a:active {
-  color: #D8EB00;
+  color: #2FF6F6;
 }
 
 a:focus {
-  color: #FF9E01;
+  color: #2FF6F6;
 }
 
 a:visited {
-  color: #C900A0;
+  color: #FF9E01;
 }
 
 a:focus {
@@ -1587,7 +1587,7 @@ blockquote:after,
 }
 
 .wp-custom-logo .site-title {
-  margin-top: 9.73913pt;
+  margin-top: 9.6pt;
 }
 
 .site-description {
@@ -1602,9 +1602,9 @@ blockquote:after,
 
 .menu-toggle {
   background-color: transparent;
-  border: 1px solid #FF9E01;
+  border: 1px solid #FC0262;
   border-radius: 2px;
-  color: #FF9E01;
+  color: #FC0262;
   font-size: 16pt;
   width: 50px;
   margin: 8px 16px 0 10px;
@@ -1616,7 +1616,7 @@ blockquote:after,
 }
 
 .menu-toggle a {
-  color: #FF9E01;
+  color: #FC0262;
 }
 
 .no-js .menu-toggle {
@@ -1625,21 +1625,21 @@ blockquote:after,
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-  border-color: #2F24DB;
-  color: #2F24DB;
+  border-color: #FF9E01;
+  color: #FF9E01;
 }
 
 .menu-toggle:visited {
-  border-color: #C900A0;
-  color: #C900A0;
+  border-color: #FC0262;
+  color: #FC0262;
 }
 
 .menu-toggle.toggled-on,
 .menu-toggle.toggled-on:hover,
 .menu-toggle.toggled-on:focus {
-  background-color: #1a1a1a;
-  border-color: #1a1a1a;
-  color: #fff;
+  background-color: transparent;
+  border-color: #2FF6F6;
+  color: #2FF6F6;
 }
 
 .menu-toggle:focus {
@@ -1713,23 +1713,22 @@ blockquote:after,
   }
 
   .wp-custom-logo .site-title {
-    margin-top: 9.73913pt;
+    margin-top: 8pt;
   }
 
   .site-description {
     color: #D8EB00;
     display: none;
     font-size: 13px;
-    font-size: 0.8125rem;
     font-weight: 400;
-    line-height: 1.0769230769;
-    margin: 0.538461538em 0 0;
+    line-height: 1.2;
+    margin: 8pt 0 0;
   }
 
   .menu-toggle {
     background-color: transparent;
-    border: 1px solid #FF9E01;
-    color: #FF9E01;
+    border: 1px solid #FC0262;
+    color: #FC0262;
     font-size: 12.8pt;
     margin: 1.076923077em 0;
     padding: 0.769230769em;
@@ -1743,8 +1742,8 @@ blockquote:after,
   .menu-toggle:focus,
   .menu-toggle:visited {
     background-color: transparent;
-    border-color: #FC0262;
-    color: #FC0262;
+    border-color: #FF9E01;
+    color: #FF9E01;
   }
 
   .menu-toggle.toggled-on,
@@ -1910,7 +1909,7 @@ blockquote:after,
 }
 
 .byline a:hover {
-  color: #2F24DB;
+  color: #2FF6F6;
   text-decoration: underline;
 }
 
@@ -1973,7 +1972,7 @@ article.post {
 }
 
 .author-info h3 > a :hover {
-  color: #FC0262;
+  color: #2FF6F6;
 }
 
 .author-info .author-title {
@@ -2195,7 +2194,6 @@ article.post {
 
 .required {
   color: #FC0262;
-  font-family: Merriweather, Georgia, serif;
 }
 
 .comment-reply-title small {
@@ -2220,10 +2218,6 @@ article.post {
   font-size: 32px;
   position: relative;
   top: -5px;
-}
-
-.depth-1 {
-  border-top: 4px solid #D8EB00;
 }
 
 .depth-1, .depth-2, .depth-3, .depth-4, .depth-5 {
