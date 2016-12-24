@@ -369,6 +369,7 @@ h1 {
 }
 
 h2 {
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
   font-size: 20pt;
 }
 
@@ -889,9 +890,6 @@ a:active {
 
 .main-navigation {
   font-family: Proxima Nova, "Helvetica Neue", sans-serif;
-}
-
-.main-navigation {
   margin: 24px 0 48px;
 }
 
@@ -959,7 +957,7 @@ a:active {
 }
 
 .site-header .main-navigation .primary-menu {
-  border-bottom: 1px solid #FC0262;
+  border-bottom: 1px solid #D8EB00;
 }
 
 .site-header .main-navigation .menu-item-has-children > a {
@@ -1225,30 +1223,13 @@ footer .social-navigation a {
 
 .pagination {
   border-top: 4px solid #1a1a1a;
-  font-size: 19px;
-  font-size: 1.1875rem;
-  margin: 0 7.6923% 2.947368421em;
+  font-size: 16pt;
+  font-size: 1rem;
+  max-width: 80%;
+  margin: 0 auto 40px;
   min-height: 56px;
   position: relative;
-}
-
-.pagination:before,
-.pagination:after {
-  background-color: #1a1a1a;
-  content: "";
-  height: 52px;
-  position: absolute;
-  top: 0;
-  width: 52px;
-  z-index: 0;
-}
-
-.pagination:before {
-  right: 0;
-}
-
-.pagination:after {
-  right: 54px;
+  text-align: center;
 }
 
 .pagination a:hover,
@@ -1268,7 +1249,7 @@ footer .social-navigation a {
   line-height: 51px;
   opacity: 0.3;
   position: absolute;
-  width: 52px;
+  width: 53px;
   z-index: 1;
 }
 
@@ -1279,7 +1260,7 @@ footer .social-navigation a {
 
 .pagination .nav-links:after {
   content: "\f430";
-  right: 55px;
+  left: -1px;
 }
 
 /* reset screen-reader-text */
@@ -1312,7 +1293,7 @@ footer .social-navigation a {
   padding: 0;
   position: absolute;
   top: 0;
-  width: 52px;
+  width: 120px;
   z-index: 2;
 }
 
@@ -1339,7 +1320,7 @@ footer .social-navigation a {
 }
 
 .pagination .prev {
-  right: 54px;
+  left: 0;
 }
 
 .pagination .prev:before {
@@ -1545,7 +1526,7 @@ blockquote:after,
 .site-branding {
   margin: 14px 0;
   /* Avoid overflowing wide custom logo in small screens in Firefox and IEs */
-  max-width: 70%;
+  max-width: 78%;
   overflow: hidden;
 }
 
@@ -1554,8 +1535,8 @@ blockquote:after,
 }
 
 .custom-logo {
-  width: 94%;
-  margin: 4px 0;
+  width: 100%;
+  margin: 4px 0 0;
 }
 
 .site-title {
@@ -1607,7 +1588,7 @@ blockquote:after,
   color: #FC0262;
   font-size: 16pt;
   width: 50px;
-  margin: 8px 16px 0 10px;
+  margin: 8px 0px 0 10px;
   padding: 14px;
 }
 
@@ -1849,7 +1830,7 @@ blockquote:after,
 
 .entry-header-content {
   background-color: #000000;
-  color: #FFFFFF;
+  color: #FEFEFE;
   padding: 8px 16px;
   overflow: hidden;
 }
@@ -1859,8 +1840,13 @@ blockquote:after,
   font-size: 12pt;
   line-height: 1.4;
   font-style: none;
-  color: #EEEEEE;
+  color: #FEFEFE;
+  font-weight: normal;
   display: inline-flex;
+}
+
+.entry-header-content .posted-on :hover, .entry-header-content .entry-title :hover {
+  color: #D8EB00;
 }
 
 .entry-header-content .posted-by, .entry-header-content .posted-on, .entry-header-content .entry-date {
@@ -2048,7 +2034,7 @@ article.post {
 .comment-list article,
 .comment-list .pingback,
 .comment-list .trackback {
-  border-left: 2px solid #D8EB00;
+  border-left: 4px solid #2FF6F6;
   padding: 38px 0 38px 16px;
   margin-bottom: 20px;
 }

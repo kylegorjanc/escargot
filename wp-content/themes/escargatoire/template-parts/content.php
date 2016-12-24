@@ -11,15 +11,28 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-			<span class="sticky-post"><?php _e( 'Featured', 'escargatoire' ); ?></span>
+			<span class="sticky-post"><?php _e( 'Featured:', 'escargatoire' ); ?></span>
 		<?php endif; ?>
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<div class="black-bg entry-header-content">
+		<a href="<?php echo esc_url( get_permalink( get_the_ID() ) ) ?>">
+		<?php the_title( '<h3 class="entry-title">', '</h3>' ); ?></a>
+		<?php escargatoire_entry_date();?>
+		</div>
+		<div class="byline">
+		<span>
+			<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php $author_bio_avatar_size = apply_filters( 'escargatoire_author_bio_avatar_size', 36 );
+	    			echo get_avatar( get_the_author_meta( 'user_email' ), $author_bio_avatar_size );
+			?></a>
+			<span class="posted-by">Posted by<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+				<?php printf( __( ' %s', 'escargatoire' ), get_the_author() ); ?></a></span> on <?php escargatoire_entry_date();?>
+		</span>
+		</div>
 	</header><!-- .entry-header -->
 
 	<?php escargatoire_excerpt(); ?>
 
-	<?php escargatoire_post_thumbnail(); ?>
+<!-- 	<?php //escargatoire_post_thumbnail(); ?> -->
 
 	<div class="entry-content">
 		<?php
@@ -41,7 +54,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php escargatoire_entry_meta(); ?>
+		<?php escargatoire_entry_taxonomies(); ?>
 		<?php
 			edit_post_link(
 				sprintf(

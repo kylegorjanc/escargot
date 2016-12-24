@@ -43,8 +43,8 @@ get_header(); ?>
 
 			// Previous/next page navigation.
 			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'escargatoire' ),
-				'next_text'          => __( 'Next page', 'escargatoire' ),
+				'prev_text'          => __( 'Prev', 'escargatoire' ),
+				'next_text'          => __( 'Next', 'escargatoire' ),
 				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'escargatoire' ) . ' </span>',
 			) );
 

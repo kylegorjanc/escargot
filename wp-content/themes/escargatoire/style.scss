@@ -401,6 +401,7 @@ textarea {
   }
 
   h2, {
+    font-family: "Proxima Nova Bold", Helvetica, sans-serif;
     font-size: $font-size * 1.25;
   }
 
@@ -1271,30 +1272,13 @@ footer .social-navigation a {
 
 .pagination {
   border-top: 4px solid #1a1a1a;
-  font-size: 19px;
-  font-size: 1.1875rem;
-  margin: 0 7.6923% 2.947368421em;
+  font-size: $font-size;
+  font-size: 1rem;
+  max-width: 80%;
+  margin: 0 auto 40px;
   min-height: 56px;
   position: relative;
-}
-
-.pagination:before,
-.pagination:after {
-  background-color: #1a1a1a;
-  content: "";
-  height: 52px;
-  position: absolute;
-  top:0;
-  width: 52px;
-  z-index: 0;
-}
-
-.pagination:before {
-  right: 0;
-}
-
-.pagination:after {
-  right: 54px;
+  text-align: center;
 }
 
 .pagination a:hover,
@@ -1314,7 +1298,7 @@ footer .social-navigation a {
   line-height: 51px;
   opacity: 0.3;
   position: absolute;
-  width: 52px;
+  width: 53px;
   z-index: 1;
 }
 
@@ -1325,7 +1309,7 @@ footer .social-navigation a {
 
 .pagination .nav-links:after {
   content: "\f430";
-  right: 55px;
+  left: -1px;
 }
 
 /* reset screen-reader-text */
@@ -1385,7 +1369,7 @@ footer .social-navigation a {
 }
 
 .pagination .prev {
-  right: 54px;
+  left: 0;
 }
 
 .pagination .prev:before {
@@ -1598,7 +1582,7 @@ blockquote:after,
   .site-branding {
     margin: ($font-size-px * .875) 0;
     /* Avoid overflowing wide custom logo in small screens in Firefox and IEs */
-    max-width: 70%;
+    max-width: 78%;
     overflow: hidden;
   }
 
@@ -1607,8 +1591,8 @@ blockquote:after,
   }
 
   .custom-logo {
-    width: 94%;
-    margin: 4px 0;
+    width: 100%;
+    margin: 4px 0 0;
   }
 
   .site-title {
@@ -1662,7 +1646,7 @@ blockquote:after,
   color: $primary-action;
   font-size: 16pt;
   width: 50px;
-  margin: 8px 16px 0 10px;
+  margin: 8px 0px 0 10px;
   padding: 14px;
     :before { 
     content:'\2630'; 
@@ -1908,7 +1892,7 @@ blockquote:after,
 
 .entry-header-content {
     background-color: #000000;
-    color: #FFFFFF;
+    color: $light-text;
     padding: 8px 16px;
     overflow: hidden;
     .posted-on, .entry-title {
@@ -1916,8 +1900,12 @@ blockquote:after,
       font-size: 12pt;
       line-height: 1.4;
       font-style: none;
-      color: #EEEEEE;
+      color: $light-text;
+      font-weight: normal;
       display: inline-flex;
+      :hover {
+      color: $accent;
+      }
     }
     .posted-by, .posted-on, .entry-date {
       position: relative;

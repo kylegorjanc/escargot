@@ -32,7 +32,8 @@ Configuration Notes:
     - Spelling and Grammar on
 -   Co-Authors Plus
 - Profile Xtra
-
+- (Link First Image to Post)[*/?tab=plugin-information&plugin=link-first-image-to-post&TB_iframe=true&width=772&height=579]
+- (WP Category Permalink)[*/?tab=plugin-information&plugin=wp-category-permalink&TB_iframe=true&width=772&height=579]
 
 # Home Page:
 
