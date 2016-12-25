@@ -1287,7 +1287,7 @@ footer .social-navigation a {
 }
 
 .pagination .nav-links {
-  padding-right: 106px;
+  padding: 10px 54px 0;
   position: relative;
 }
 
@@ -1307,22 +1307,20 @@ footer .social-navigation a {
   right: -1px;
 }
 
-.pagination .nav-links:after {
-  content: "\f430";
-  left: -1px;
-}
+
 
 /* reset screen-reader-text */
 .pagination .current .screen-reader-text {
   position: static !important;
+  margin-bottom: 10px;
 }
 
 .pagination .page-numbers {
   display: none;
   letter-spacing: 0.013157895em;
   line-height: 1;
-  margin: 0 0.7368421053em 0 -0.7368421053em;
-  padding: 0.8157894737em 0.7368421053em 0.3947368421em;
+  margin: 0 auto;
+  padding: $font-size 4% 0;
   text-transform: uppercase;
 }
 
@@ -1333,8 +1331,8 @@ footer .social-navigation a {
 
 .pagination .prev,
 .pagination .next {
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: transparent;
+  color: #000;
   display: inline-block;
   height: 52px;
   margin: 0;
@@ -1342,7 +1340,7 @@ footer .social-navigation a {
   padding: 0;
   position: absolute;
   top: 0;
-  width: 52px;
+  width: 56px;
   z-index: 2;
 }
 
@@ -1352,7 +1350,8 @@ footer .social-navigation a {
   height: 53px;
   line-height: 52px;
   position: relative;
-  width: 53px;
+  display: inline-block;
+  width: 0px;
 }
 
 .pagination .prev:hover,
