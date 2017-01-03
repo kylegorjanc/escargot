@@ -17,7 +17,6 @@
 		<div class="black-bg entry-header-content">
 		<a href="<?php echo esc_url( get_permalink( get_the_ID() ) ) ?>">
 		<?php the_title( '<h3 class="entry-title">', '</h3>' ); ?></a>
-		<?php escargatoire_entry_date();?>
 		</div>
 		<div class="byline">
 		<span>
@@ -25,7 +24,7 @@
 	    			echo get_avatar( get_the_author_meta( 'user_email' ), $author_bio_avatar_size );
 			?></a>
 			<span class="posted-by">Posted by<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-				<?php printf( __( ' %s', 'escargatoire' ), get_the_author() ); ?></a></span> on <?php escargatoire_entry_date();?>
+				<?php printf( __( ' %s', 'escargatoire' ), get_the_author() ); ?></a></span><?php escargatoire_entry_date();?>
 		</span>
 		</div>
 	</header><!-- .entry-header -->

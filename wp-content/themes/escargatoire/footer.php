@@ -23,19 +23,30 @@
 						<li class="nav-link"><a href="<?php echo esc_url( home_url( '/workwithus' ) ); ?>" rel="about">Work With Us</a></li>
 					</ul>
 				</div>
+				<div class="lower">
 				<div class="outline-box subscribe-form footer-section" id="footer-subscribe">
 					<div class="form-container">
 					<p class="form-title">Subscribe</p>
 						<ul>
 							<li>
-								<label for="" class="input-label" id="name-label">Name:</label>
-								<input type="text" name="RESULT_TextField-0" class="text_field" id="RESULT_TextField-0" size="25" maxlength="255" value="">
+								<label for="mce-FNAME" class="input-label" id="name-label">Name:</label>
+								<input type="text" name="FNAME" class="text_field" id="mce-FNAME" value="">
 							</li>
 							<li>
-								<label for="" class="input-label" id="email-label">Email:</label>
-								<input type="text" email="RESULT_TextField-0" class="text_field" id="RESULT_TextField-0" size="25" maxlength="255" value="">
+								<label for="mce-EMAIL" class="input-label" id="email-label">Email:</label>
+								<input type="email" name="EMAIL" class="required email text_field" id="mce-EMAIL"value="">
 							</li>
-						</ul>
+							<li>
+									<div class="signup-options"><input type="checkbox" value="1" name="group[10365][1]" id="mce-group[10365]-10365-0"><label for="mce-group[10365]-10365-0">DAILY</label>
+									</div>
+									<div class="signup-options"><input type="checkbox" value="2" name="group[10365][2]" id="mce-group[10365]-10365-1" checked><label for="mce-group[10365]-10365-1">WEEKLY</label>
+									</div>
+									<div class="signup-options"><input type="checkbox" value="4" name="group[10365][4]" id="mce-group[10365]-10365-2"><label for="mce-group[10365]-10365-2">UPDATES ONLY</label>
+									</div>
+							</li>
+
+							</ul>
+						
 					</div>
 					
 				</div>
@@ -45,6 +56,7 @@
 						<li class="menu-item social-icon facebook-icon social-navigation"><a href="https://instagram.com/saltyrunning"></a></li>
 						<li class="menu-item social-icon instagram-icon social-navigation"><a href="http://facebook.com/saltyrunning"></a></li>
 					</ul>
+				</div>
 				</div>
 			</div>
 

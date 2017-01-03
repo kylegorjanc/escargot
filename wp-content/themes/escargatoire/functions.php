@@ -421,4 +421,36 @@ function escargatoire_widget_tag_cloud_args( $args ) {
 add_filter( 'widget_tag_cloud_args', 'escargatoire_widget_tag_cloud_args' );
 
 
+function escargatoire_infinite_scroll_init() {
+	add_theme_support( 'infinite-scroll', array(
+		'container' => 'main',
+		'render'    => 'escargatoire_infinite_scroll_render',
+		'footer'    => 'content',
+	) );
+}
+add_action( 'after_setup_theme', 'escargatoire_infinite_scroll_init' );
 
+/**
+ * Custom render function for Infinite Scroll.
+ */
+function escargatoire_infinite_scroll_render() {
+	while ( have_posts() ) {
+		the_post();
+		if ( is_search() ) {
+			get_template_part( 'template-parts/content', 'search' );
+		} else {
+			get_template_part( 'template-parts/content', get_post_format() );
+		}
+	}
+}
+
+/**
+ * Enqueue CSS stylesheet with theme styles for Infinite Scroll.
+ */
+function escargatoire_infinite_scroll_enqueue_styles() {
+	if ( wp_script_is( 'the-neverending-homepage' ) ) {
+		wp_enqueue_style( 'infinity-escargatoire', plugins_url( 'escargatoire.css', __FILE__ ), array( 'the-neverending-homepage' ), '20151102' );
+		wp_style_add_data( 'infinity-escargatoire', 'rtl', 'replace' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'escargatoire_infinite_scroll_enqueue_styles', 25 );

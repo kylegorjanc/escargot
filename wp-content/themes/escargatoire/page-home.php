@@ -15,7 +15,7 @@
 get_header(); ?>
 
 <div id="primary" class="content-area">
-	<main id="main" class="site-main page-main" role="main">
+	<main id="main" class="site-main" role="main">
 		<div class="home-section sixteen-nine" id="home-section-1">
 		 <a href="./subscribe"></a>
 			<div class="section-content home-banner" id="home-banner-1">
@@ -53,9 +53,9 @@ get_header(); ?>
 		<div class="home-section" id="home-section-4">
 			<div class="section-content" id="home-buttons">
 				<ul>
+					<li><button class="btn-home">Training Logs</button></li>
 					<li><button class="btn-home">Blog Archive</button></li>
 					<li><button class="btn-home">Blog With Us</button></li>
-					<li><button class="btn-home">Sponsored Content</button></li>
 				</ul>
 			</div>
 		</div>

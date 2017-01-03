@@ -17,9 +17,9 @@ Configuration Notes:
 - Akismet
 - Jetpack
   - Engagement on
-    - Sharing on; configure by un-checking the 'disable css and js' box
     - Sitemaps on
     - Enhanced distribution on
+    - Related posts on
   - Security
     - SEO Tools on
     - Protect on

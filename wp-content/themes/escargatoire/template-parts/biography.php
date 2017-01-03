@@ -32,11 +32,11 @@
 	</div><!-- .author-description -->
 	<div class="author-buttons">
 					<ul class="bio-links">
-				<li id="view-all-posts-by"><button class="action-btn author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-				<?php printf( __( 'All posts by %s', 'escargatoire' ), get_the_author() ); ?></button>
-				</li>
-				<li id="view-bio" class="btn"><button class="action-btn author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+				<li id="more-from"><button class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
 				<?php printf( __( 'More from %s', 'escargatoire' ), get_the_author() ); ?></button>
+				</li>
+				<li id="view-bio" class="btn"><button class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+				<?php printf( __( 'More about %s', 'escargatoire' ), get_the_author() ); ?></button>
 				</li>		
 			</ul>
 	</div>

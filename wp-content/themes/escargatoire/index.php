@@ -44,8 +44,8 @@ get_header(); ?>
 
 				// Previous/next page navigation.
 				the_posts_pagination( array(
-					'prev_text'          => __( 'Older', 'escargatoire' ),
-					'next_text'          => __( 'Newer', 'escargatoire' ),
+					'prev_text'          => __( 'Prev', 'escargatoire' ),
+					'next_text'          => __( 'Next', 'escargatoire' ),
 					'screen_reader_text' => __( 'Navigation', 'escargatoire'),
 				) );
 
