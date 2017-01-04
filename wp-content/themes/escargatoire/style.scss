@@ -934,7 +934,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
   position: absolute;
   display: block;
   right: 0px;
-  top: $menu-toggle-height;
+  top: 120px;
   width: 240px;
   height: 100%;
   background: #000000;
@@ -968,11 +968,9 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 
 .site-header .main-navigation a {
   color: $light-text;
-  line-height: 1.3125;
   outline-offset: -1px;
-  padding: ($font-size-px * 1.8) 10px;
+  padding: 20px;
   text-transform: uppercase;
-  font-weight: 700;
 }
 
 .site-header .main-navigation a:hover,
@@ -987,7 +985,6 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 .site-header .main-navigation .current-menu-item > a,
 .site-header .main-navigation .current-menu-ancestor > a {
   font-weight: 700;
-  color: $header-color; 
 }
 
 .site-header .main-navigation .current-menu-item > a:before,
@@ -1063,7 +1060,12 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
   border-color: transparent;
 }
 
+.site-header .sub-menu {
+  display:none;
+}
+
 .site-header .sub-menu.toggled-on {
+  display:block;
   position: absolute;
     z-index: 6;
     background-color: transparent;
@@ -1491,8 +1493,11 @@ footer .social-navigation a {
           min-width: 0;
         }
         .sub-menu {
+          display:none;
           border:0px transparent;
+          margin-top:0px;
           &:toggled-on {
+            display:block;
             background-color:transparent;
           }
           li a {
@@ -1767,6 +1772,7 @@ blockquote:after,
     background-color: transparent;
     border-color: $accent-1;
     color: $accent-1;
+    z-index: 10;
   }
 
   .menu-toggle:focus {
