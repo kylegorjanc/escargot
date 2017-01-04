@@ -816,6 +816,7 @@ input[type="search"].search-field {
   top: 0;
   width: 42px;
   max-height: 100;
+  margin-top: 20px;
 }
 
 /** 6.0 - Navigation **/
@@ -1967,7 +1968,7 @@ article.post {
 }
 
 .page-main {
-  margin: 0 16px 40px;
+  margin: 20px 16px 40px;
 }
 
 /** **    11.2b - end Regular Page **/
@@ -2267,7 +2268,6 @@ article.post {
 }
 
 .site > div > footer .footer-content .lower {
-  display: inline-flex;
   margin: 0 auto;
 }
 

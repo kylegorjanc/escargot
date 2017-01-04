@@ -44,8 +44,9 @@
 									<div class="signup-options"><input type="checkbox" value="4" name="group[10365][4]" id="mce-group[10365]-10365-2"><label for="mce-group[10365]-10365-2">UPDATES ONLY</label>
 									</div>
 							</li>
-
 							</ul>
+							<div class="clear"><input id="mc-embedded-subscribe" class="action-btn button" name="subscribe" type="submit" value="Subscribe" /></div>
+
 						
 					</div>
 					
