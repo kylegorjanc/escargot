@@ -921,7 +921,6 @@ a:active {
   -webkit-flex: 0 1 100%;
   -ms-flex: 0 1 100%;
   flex: 0 1 100%;
-  margin: 0.875em 0;
 }
 
 
@@ -978,8 +977,10 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 
 .site-header .main-navigation a:hover,
 .site-header .main-navigation a:focus {
-  background-color: $header-color;
-  color: #000000 !important;
+  border: 2px solid $accent;
+  border-radius: 2px;
+  background-color: transparent;
+  color: $accent;
   font-weight: 800;
 }
 
@@ -1034,6 +1035,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
   text-transform: uppercase;
   top: -0.84375em;
   width: 40px;
+  z-index:8;
 }
 
 .site-header .dropdown-toggle:after {
@@ -1064,12 +1066,11 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 .site-header .sub-menu.toggled-on {
   position: absolute;
     z-index: 6;
-    background-color: #000;
-    border: 1px solid $primary-action;
+    background-color: transparent;
     border-radius: 2px;
     width: 170px;
     right: 0px;
-
+    margin-top: -20px;
 }
 
 .site-header .dropdown-toggle.toggled-on:after {
@@ -1077,9 +1078,13 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 }
 
 
-.site-header .sub-menu li {
-  display: block;
-  z-index: 5;
+.site-header .sub-menu li a {
+    display:block;
+    padding: 20px;
+    margin: 6px auto;
+    background-color: $accent;
+    color: $dark-text;
+    width: 160px;
 }
 
 .sharing-title {
@@ -1455,6 +1460,57 @@ footer .social-navigation a {
   padding: 0 0.538461538em;
 }
 
+   @media all and (min-width: 760px) {
+     .menu-toggle {
+      display:none;
+      }
+
+    #site-header-menu.toggled-on, .no-js .site-header-menu {
+      display:block;
+      position: static;
+      background:transparent;
+      margin: 0;
+    }
+
+    .site-header-menu {
+    display:block;
+    position: static;
+    margin-top: -80px;
+    margin-left: 70px;
+    }
+    .site-header {
+
+      .main-navigation {
+        margin: 40px 30px;
+        a {
+          padding:20px;
+        }
+        li {
+          margin:0;
+          height:auto;
+          min-width: 0;
+        }
+        .sub-menu {
+          border:0px transparent;
+          &:toggled-on {
+            background-color:transparent;
+          }
+          li a {
+            display:block;
+            padding: 20px;
+            margin: 6px auto;
+            background-color: $accent;
+            color: $dark-text;
+          }
+        }
+      }
+      .main-navigation .primary-menu {
+        border-bottom:0px;
+      }
+    }
+
+    
+}
 
  /** 7.0 - Accessibility **/
  /** 8.0 - Alignments **/
@@ -1666,7 +1722,7 @@ blockquote:after,
   }
 
 
-
+// ************************* menu drawer ***************
 .menu-toggle {
   background-color: transparent;
   border: 1px solid $primary-action;
@@ -1729,27 +1785,6 @@ blockquote:after,
   .header-image a:focus img {
     opacity: 0.85;
   }
-
-
-   @media all and (min-width: 414px) {
-  .site-header {
-  }
-}
-
-   @media all and (min-width: 620px) {
-  .site-header {
-  }
-}
-
-   @media all and (min-width: 768px) {
-
-}
-   @media all and (min-width: 980px) {
-
-     .custom-logo-link {
-    display: inline;
-  }
-
 
 
 
@@ -1842,8 +1877,15 @@ blockquote:after,
   .header-image a:focus img {
     opacity: 0.85;
   }
-}
+
   
+
+   @media all and (min-width: 980px) {
+
+     .custom-logo-link {
+    display: inline;
+  }
+}
   /** *    11.2 - Posts and pages
 
     /** *    11.2a - Home Page **/
