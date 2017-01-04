@@ -1588,7 +1588,7 @@ blockquote:after,
     .site-header {
     background-color: #000000;
     color: #FFFFFF;
-    height: 100px;
+    height: auto;
   }
 
   .site-header-main {
@@ -1733,13 +1733,16 @@ blockquote:after,
 
    @media all and (min-width: 414px) {
   .site-header {
-    height: 140px;
   }
 }
-   @media all and (min-width: 768px) {
-    .site-header {
-    height: 160px;
+
+   @media all and (min-width: 620px) {
+  .site-header {
   }
+}
+
+   @media all and (min-width: 768px) {
+
 }
    @media all and (min-width: 980px) {
 
@@ -1747,9 +1750,6 @@ blockquote:after,
     display: inline;
   }
 
-  .site-header {
-    height: 200px;
-  }
 
 
 
@@ -2020,7 +2020,9 @@ article.post {
   .page-main {
     margin: 20px 16px 40px;
   }
-
+  .page-entry-header {
+    margin: auto 16px;
+  }
 
   /** **    11.2b - end Regular Page **/
   /** **    11.2d - Short Bio **/
@@ -2362,7 +2364,7 @@ article.post {
       }
     }
 
-  .form-container {
+  .subscribe-form .form-container {
     font-family: $body-font;
     width: 342px;
     border: 2px solid $light-text
@@ -2389,12 +2391,37 @@ article.post {
       font-weight: bold;
       margin-right: 10px;
     }
-    input {
+    
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="month"],
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="number"],
+    textarea {
       margin: 10px 0px 10px auto;
       border-radius: 2px;
       width: 200px;
       right: 0px;
       border: none;
+    }
+
+    #mc-embedded-subscribe {
+      float: right;
+      width: auto;
+      margin-right: 16px;
+      color: $dark-text;
+      background: $primary-action;
+    }
+    #mc-embedded-subscribe:hover {
+      color: $dark-text;
+      background: $accent-2;
     }
     .signup-options {
       display:inline;
