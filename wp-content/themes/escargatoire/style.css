@@ -829,6 +829,7 @@ a {
 a:hover,
 a:active {
   color: #2FF6F6;
+  border-color: #2FF6F6;
 }
 
 a:focus {
@@ -846,18 +847,6 @@ a:focus {
 a:hover,
 a:active {
   outline: 0;
-}
-
-.entry-content a,
-.entry-summary a,
-.taxonomy-description a,
-.logged-in-as a,
-.comment-content a,
-.pingback .comment-body > a,
-.textwidget a,
-.entry-footer a:hover,
-.site-info a:hover {
-  box-shadow: 0 1px 0 0 currentColor;
 }
 
 .entry-content a:hover,
@@ -1089,13 +1078,13 @@ a:active {
 }
 
 .social-navigation a {
-  border: 3px solid #FEFEFE;
   color: #FEFEFE;
+  border: 3px solid currentColor;
 }
 
 .post-sharing a {
-  border: 3px solid #FC0262;
   color: #FC0262;
+  border: 3px solid currentColor;
 }
 
 footer .social-navigation a {
@@ -1455,13 +1444,13 @@ footer .social-navigation a {
   }
 
   .site-header .main-navigation .sub-menu {
-    display:none;
+    display: none;
     border: 0px transparent;
     margin-top: 0px;
   }
 
   .site-header .main-navigation .sub-menu:toggled-on {
-    display:block;
+    display: block;
     background-color: transparent;
   }
 
