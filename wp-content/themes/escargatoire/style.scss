@@ -942,7 +942,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 }
 
 .main-navigation {
-  font-family: Proxima Nova, "Helvetica Neue", sans-serif;
+  font-family: Proxima Nova Bold, "Helvetica Neue", sans-serif;
   margin: ($font-size-px * 1.5) 0 ($font-size-px * 3);
 }
 
@@ -1081,12 +1081,12 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 
 
 .site-header .sub-menu li a {
-    display:block;
-    padding: 20px;
-    margin: 6px auto;
+    display: block;
+    padding: 12px 20px;
+    margin: 4px auto;
     background-color: $accent;
     color: $dark-text;
-    width: 160px;
+    min-width: 160px;
 }
 
 .sharing-title {
@@ -1493,19 +1493,14 @@ footer .social-navigation a {
           min-width: 0;
         }
         .sub-menu {
-          display:none;
-          border:0px transparent;
-          margin-top:0px;
+          display: none;
+          border: 0px transparent;
+          margin-top: 10px;
           &:toggled-on {
-            display:block;
-            background-color:transparent;
+            display: block;
+            background-color: transparent;
           }
           li a {
-            display:block;
-            padding: 20px;
-            margin: 6px auto;
-            background-color: $accent;
-            color: $dark-text;
           }
         }
       }
