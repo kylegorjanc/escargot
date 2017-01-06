@@ -830,7 +830,9 @@ textarea:focus {
 }
 
 .search-form {
-   max-width: 100%;
+  position:absolute;
+   width:340px;
+   right:0;
    ul {
     list-style: none;
     margin: 0;
@@ -871,7 +873,7 @@ input[type="search"].search-field {
       padding: 20px;
     }
     .search-form {
-      max-width: 100%;
+      width: 100%;
       position: absolute;
       right: 0px;
     }
@@ -966,6 +968,8 @@ input[type="search"].search-field {
 }
 
 @media all and (min-width: 760px) {
+  .search-form {
+  }
   .site > div > header {
     .search-form {
       display: none;
@@ -976,6 +980,7 @@ input[type="search"].search-field {
     .search-form {
       display: block;
       position: relative;
+      width:100%;
       padding: 0;
       margin: 0;
       input {
@@ -2513,8 +2518,9 @@ article.post {
   .footer-content {
     max-width: 980px;
     margin: 0 auto;
+    text-align: center;
     .lower {
-      margin: 0 auto;
+      margin: 0 auto 30px;
     }
     .lower-right {
       text-align:center;
@@ -2522,7 +2528,7 @@ article.post {
   }
 
   .footer-section {
-    padding: 10px auto;
+    padding: 10px 0;
   }
 
   a {
@@ -2567,16 +2573,22 @@ article.post {
     }
 }
 
-@media all and (min-width: 660px) {
+@media all and (min-width: 740px) {
   footer {
     .subscribe-form {
-      display:inline-flex;
-      margin: 0 0 32px 32px;
+      display:inline-block;
+      text-align: center;
+    }
+    .lower {
+      text-align: left;
+      padding: 0 30px;
     }
     .lower-right {
+      position: relative;
       float: right;
       text-align:right;
-      ul {
+      height: 342.67px;
+      ul, p {
         text-align: right;
       }
       div {
@@ -2586,10 +2598,17 @@ article.post {
         position: relative;
       }
       .copyright {
-        top: 100px;
-        text-align: right;
+        position: absolute;
+        bottom: 0px;
+        right:0px;
       }
     }
+  }
+}
+
+@media all and (min-width: 980px) {
+  footer .lower {
+    padding:0;
   }
 }
 
