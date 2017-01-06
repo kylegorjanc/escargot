@@ -25,7 +25,7 @@
 <div id="page" class="site">
 	<div class="site-inner">
 
-		<header id="masthead" class="site-header" role="banner">
+		<header id="masthead" class="site-header dark-bg" role="banner">
 			<div class="site-header-main">
 				<div class="site-branding">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel=""><img src="<?php echo esc_url( home_url( '//wp-content/themes/escargatoire/assets/logo.png' ) ); ?>" alt="" class="custom-logo"></a>
@@ -70,6 +70,7 @@
 								?>
 							</nav><!-- .social-navigation -->
 						<?php endif; ?>
+						<?php get_search_form(); ?>
 					</div><!-- .site-header-menu -->
 				<?php endif; ?>
 			</div><!-- .site-header-main -->

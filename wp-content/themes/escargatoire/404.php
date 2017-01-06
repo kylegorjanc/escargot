@@ -12,7 +12,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main page-main" role="main">
 
-			<section class="error-404 not-found">
+			<section class="error-404 not-found"><center>
 				<header class="page-header">
 					 <h3 class="title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'escargatoire' ); ?></h3>
 				</header><!-- .page-header -->
@@ -22,6 +22,7 @@ get_header(); ?>
 
 					<?php get_search_form(); ?>
 				</div><!-- .page-content -->
+				</center>
 			</section><!-- .error-404 -->
 
 		</main><!-- .site-main -->

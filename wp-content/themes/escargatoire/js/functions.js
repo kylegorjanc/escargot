@@ -12,7 +12,7 @@
 
 		// Add dropdown toggle that displays child menu items.
 		var dropdownToggle = $( '<button />', {
-			'class': 'dropdown-toggle',
+			'class': 'dropdown-toggle icon-btn',
 			'aria-expanded': false
 		} ).append( $( '<span />', {
 			'class': 'screen-reader-text',

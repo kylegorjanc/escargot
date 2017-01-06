@@ -94,6 +94,13 @@ $medium-text: #c0c0c0;
 
 /**  1.0 Normalize - Copied from Twenty Sixteen theme **/
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
 }
@@ -823,36 +830,161 @@ textarea:focus {
 }
 
 .search-form {
-  position: relative;
+   max-width: 80%;
+   ul {
+    list-style: none;
+    margin: 0;
+   }
 }
 
 input[type="search"].search-field {
-  border-radius: 2px 0 0 2px;
-  width: -webkit-calc(100% - 42px);
-  width: calc(100% - 42px);
+  border-radius: 2px;
 }
 
 .search-submit:before {
   content: "\f400";
   font-size: $font-size * 1.5;
   left: 2px;
-  line-height: 1.8;
+  line-height: 1;
   position: relative;
   width: 40px;
 }
 
 .search-submit {
-  border-radius: 0 2px 2px 0;
-  bottom: 0;
-  overflow: hidden;
+  position: relative;
+  top: -8px;
+  left: 4px;
+  height: 40px;
+  width: 40px;
   padding: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 42px;
-  max-height: 100;
-  margin-top:20px;
+  border-color: $primary-action;
+  color: $primary-action;
 }
+
+
+
+.site > div > footer, .site > div > header {
+    .form-container, .search-form {
+      margin: 0 auto;
+      color: inherit;
+    .form-container {
+      padding: 20px;
+    }
+    .search-form {
+      position: absolute;
+      right: 0px;
+    }
+    .form-title {
+      font-family: $bold-font;
+      color: inherit;
+      text-align: center;
+      margin: 0;
+      text-transform: uppercase;
+
+    }
+    ul li {
+      display: block;
+      
+    }
+    label {
+      text-transform: uppercase;
+      font-size: $font-size * .75;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="month"],
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="number"],
+    textarea {
+      margin: 10px 0px 10px auto;
+      border-radius: 2px;
+      width: 200px;
+      right: 0px;
+      border: none;
+    }
+
+    input[type="submit"],
+    input[type="submit"][disabled]:hover,
+    input[type="submit"][disabled]:focus,
+    .action-btn,
+    .action-btn[disabled]:hover,
+    .action-btn[disabled]:focus,
+    .comment-reply-link {
+      
+          color: $dark-text;
+          background: $primary-action;
+    }
+
+    .action-btn:hover,
+    input[type="submit"]:hover,
+    input[type="submit"]:focus,
+    .comment-reply-link:hover,
+    .comment-reply-link:focus {
+      color: $dark-text;
+      background: $accent-2;
+    }
+
+    #mc-embedded-subscribe {
+      float: right;
+      width: auto;
+      margin-right: 16px;
+      color: $dark-text;
+      background: $primary-action;
+    }
+    #mc-embedded-subscribe:hover {
+      color: $dark-text;
+      background: $accent-2;
+    }
+    .signup-options {
+      display:inline;
+      white-space:nowrap;
+      font-size: 9px;
+    }
+    input[type="checkbox"] {
+      width: auto;
+      margin: 6px;
+      vertical-align: bottom;
+    }
+    label {
+      font-size: inherit;
+    }
+  }
+}
+.site > div > footer .search-form {
+  display: none;
+}
+
+@media all and (min-width: 760px) {
+  .site > div > header {
+    .search-form {
+      display: none;
+    }
+  }
+
+  .site > div > footer {
+    .search-form {
+      display: block;
+      position: relative;
+      padding: 0;
+      margin: 0;
+      input {
+        margin: 0;
+      }
+    }
+  }
+}
+
+
 
  /** 6.0 - Navigation **/
  /** 6.1 - Links **/
@@ -935,7 +1067,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
   display: block;
   right: 0px;
   top: 120px;
-  width: 240px;
+  width: 260px;
   height: 100%;
   background: #000000;
   z-index: 5;
@@ -1019,45 +1151,44 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
   width: 170px;
 }
 
-.site-header .dropdown-toggle {
-  background-color: transparent;
-  border: 0;
-  border-radius: 0;
-  color: $accent;
-  content: "";
-  height: 40px;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  text-transform: uppercase;
-  top: -0.84375em;
-  width: 40px;
-  z-index:8;
-}
+.site-header, .site-footer {
+  .dropdown-toggle, .icon-btn {
+    background-color: transparent;
+    border: 3px dotted #fc0262;
+    border-radius: 100%;
+    color: #FC0262;
+    content: "";
+    height: 40px;
+    padding: 0;
+    text-transform: uppercase;
+    width: 40px;
+  }
 
-.site-header .dropdown-toggle:after {
-  border: 0 solid $primary-action;
-  border-left-width: 1px;
-  content: "\f431";
-  font-size: 24px;
-  left: 1px;
-  position: relative;
-  width: 40px;
-}
+  .dropdown-toggle {
+    position: absolute;
+    right: -2px;
+    top: -12px;
+    z-index:8;
+  }
 
-.site-header .dropdown-toggle:hover,
-.site-header .dropdown-toggle:focus {
-  background-color: $header-color;
-  color: black;
-}
+  .dropdown-toggle:after {
+      content: "\f431";
+      font-size: 24px;
+      font-weight: 900;
 
-.site-header .dropdown-toggle:focus {
-  outline: thin dotted;
-  outline-offset: -1px;
-}
+  }
+  .icon-btn:after {
+      font-size: 24px;
+      font-weight: 900;
+  }
 
-.site-header .dropdown-toggle:focus:after {
-  border-color: transparent;
+  .dropdown-toggle:hover,
+  .dropdown-toggle:focus,
+  .icon-btn:hover,
+  .icon-btn:focus {
+    border: 3px solid $accent;
+    color: $accent;
+  }
 }
 
 .site-header .sub-menu {
@@ -1076,7 +1207,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 }
 
 .site-header .dropdown-toggle.toggled-on:after {
-  content: "\f432";
+  content: "\f431";
 }
 
 
@@ -1477,7 +1608,7 @@ footer .social-navigation a {
     .site-header-menu {
     display:block;
     position: static;
-    margin-top: -80px;
+    margin-top: -70px;
     margin-left: 70px;
     }
     .site-header {
@@ -1725,6 +1856,7 @@ blockquote:after,
     line-height: 1.0769230769;
     margin: 0.538461538em 0 0;
   }
+
 
 
 // ************************* menu drawer ***************
@@ -2154,7 +2286,7 @@ article.post {
 
 .comments-title,
 .comment-reply-title {
-  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-family: Proxima Nova, "Helvetica Neue", sans-serif;
   font-size: 23px;
   font-size: 1.4375rem;
   font-weight: 700;
@@ -2213,7 +2345,7 @@ article.post {
 .comment-metadata,
 .pingback .edit-link {
   color: #686868;
-  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-family: Proxima Nova, "Helvetica Neue", sans-serif;
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 1.6153846154;
@@ -2274,7 +2406,7 @@ article.post {
 .comment-form label {
   color: #686868;
   display: block;
-  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-family: Proxima Nova, "Helvetica Neue", sans-serif;
   font-size: 13px;
   font-size: 0.8125rem;
   letter-spacing: 0.076923077em;
@@ -2300,7 +2432,7 @@ article.post {
 
 .no-comments {
   border-top: 1px solid #d1d1d1;
-  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-family: Proxima Nova, "Helvetica Neue", sans-serif;
   font-weight: 700;
   margin: 0;
   padding-top: 1.75em;
@@ -2312,7 +2444,7 @@ article.post {
 }
 
 .form-allowed-tags code {
-  font-family: Inconsolata, monospace;
+  font-family: Helvetica, monospace;
 }
 
 .form-submit {
@@ -2395,6 +2527,13 @@ article.post {
 
   }
 
+  .subscribe-form .form-container {
+    padding: 20px;
+    width: 342px;
+    border: 2px solid $light-text;
+    border-radius: 2px;
+  }
+
   .nav-link {
     box-sizing: border-box;
      a {
@@ -2411,80 +2550,6 @@ article.post {
         border-radius: 2px;
       }
     }
-
-  .subscribe-form .form-container {
-    font-family: $body-font;
-    width: 342px;
-    border: 2px solid $light-text
-    ;
-    border-radius: 2px;
-    padding: 20px;
-    margin: 0 auto;
-    color: inherit;
-    .form-title {
-      font-family: $bold-font;
-      color: inherit;
-      text-align: center;
-      margin: 0;
-      text-transform: uppercase;
-
-    }
-    ul li {
-      display: block;
-      
-    }
-    label {
-      text-transform: uppercase;
-      font-size: $font-size * .75;
-      font-weight: bold;
-      margin-right: 10px;
-    }
-    
-    input[type="date"],
-    input[type="time"],
-    input[type="datetime-local"],
-    input[type="week"],
-    input[type="month"],
-    input[type="text"],
-    input[type="email"],
-    input[type="url"],
-    input[type="password"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="number"],
-    textarea {
-      margin: 10px 0px 10px auto;
-      border-radius: 2px;
-      width: 200px;
-      right: 0px;
-      border: none;
-    }
-
-    #mc-embedded-subscribe {
-      float: right;
-      width: auto;
-      margin-right: 16px;
-      color: $dark-text;
-      background: $primary-action;
-    }
-    #mc-embedded-subscribe:hover {
-      color: $dark-text;
-      background: $accent-2;
-    }
-    .signup-options {
-      display:inline;
-      white-space:nowrap;
-      font-size: 9px;
-    }
-    input[type="checkbox"] {
-      width: auto;
-      margin: 6px;
-      vertical-align: bottom;
-    }
-    label {
-      font-size: inherit;
-    }
-  }
 }
 
 @media all and (min-width: 660px) {
@@ -2493,9 +2558,17 @@ article.post {
       display:inline-flex;
       margin: 0 0 32px 32px;
     }
-    .social-nav.link-list {
+    .lower-right {
       float: right;
       margin-right: 32px;
+      div {
+        display:block;
+      }
+      .footer-search {
+        position: relative;
+        right: 20px;
+        top: 160px;
+      }
     }
   }
 }

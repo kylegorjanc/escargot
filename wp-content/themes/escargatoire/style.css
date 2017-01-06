@@ -73,6 +73,14 @@ This theme and all its content copyright © 2016 SaltyRunning.com
 }
 
 /**  1.0 Normalize - Copied from Twenty Sixteen theme **/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
 }
@@ -788,35 +796,225 @@ textarea:focus {
 }
 
 .search-form {
-  position: relative;
+  max-width: 80%;
+}
+
+.search-form ul {
+  list-style: none;
+  margin: 0;
 }
 
 input[type="search"].search-field {
-  border-radius: 2px 0 0 2px;
-  width: -webkit-calc(100% - 42px);
-  width: calc(100% - 42px);
+  border-radius: 2px;
 }
 
 .search-submit:before {
   content: "\f400";
   font-size: 24pt;
   left: 2px;
-  line-height: 1.8;
+  line-height: 1;
   position: relative;
   width: 40px;
 }
 
 .search-submit {
-  border-radius: 0 2px 2px 0;
-  bottom: 0;
-  overflow: hidden;
+  position: relative;
+  top: -8px;
+  left: 4px;
+  height: 40px;
+  width: 40px;
   padding: 0;
+  border-color: #FC0262;
+  color: #FC0262;
+}
+
+.site > div > footer .form-container, .site > div > footer .search-form, .site > div > header .form-container, .site > div > header .search-form {
+  margin: 0 auto;
+  color: inherit;
+}
+
+.site > div > footer .form-container .form-container, .site > div > footer .search-form .form-container, .site > div > header .form-container .form-container, .site > div > header .search-form .form-container {
+  padding: 20px;
+}
+
+.site > div > footer .form-container .search-form, .site > div > footer .search-form .search-form, .site > div > header .form-container .search-form, .site > div > header .search-form .search-form {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 42px;
-  max-height: 100;
-  margin-top: 20px;
+  right: 0px;
+}
+
+.site > div > footer .form-container .form-title, .site > div > footer .search-form .form-title, .site > div > header .form-container .form-title, .site > div > header .search-form .form-title {
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
+  color: inherit;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.site > div > footer .form-container ul li, .site > div > footer .search-form ul li, .site > div > header .form-container ul li, .site > div > header .search-form ul li {
+  display: block;
+}
+
+.site > div > footer .form-container label, .site > div > footer .search-form label, .site > div > header .form-container label, .site > div > header .search-form label {
+  text-transform: uppercase;
+  font-size: 12pt;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.site > div > footer .form-container input[type="date"],
+  .site > div > footer .form-container input[type="time"],
+  .site > div > footer .form-container input[type="datetime-local"],
+  .site > div > footer .form-container input[type="week"],
+  .site > div > footer .form-container input[type="month"],
+  .site > div > footer .form-container input[type="text"],
+  .site > div > footer .form-container input[type="email"],
+  .site > div > footer .form-container input[type="url"],
+  .site > div > footer .form-container input[type="password"],
+  .site > div > footer .form-container input[type="search"],
+  .site > div > footer .form-container input[type="tel"],
+  .site > div > footer .form-container input[type="number"],
+  .site > div > footer .form-container textarea, .site > div > footer .search-form input[type="date"],
+  .site > div > footer .search-form input[type="time"],
+  .site > div > footer .search-form input[type="datetime-local"],
+  .site > div > footer .search-form input[type="week"],
+  .site > div > footer .search-form input[type="month"],
+  .site > div > footer .search-form input[type="text"],
+  .site > div > footer .search-form input[type="email"],
+  .site > div > footer .search-form input[type="url"],
+  .site > div > footer .search-form input[type="password"],
+  .site > div > footer .search-form input[type="search"],
+  .site > div > footer .search-form input[type="tel"],
+  .site > div > footer .search-form input[type="number"],
+  .site > div > footer .search-form textarea, .site > div > header .form-container input[type="date"],
+  .site > div > header .form-container input[type="time"],
+  .site > div > header .form-container input[type="datetime-local"],
+  .site > div > header .form-container input[type="week"],
+  .site > div > header .form-container input[type="month"],
+  .site > div > header .form-container input[type="text"],
+  .site > div > header .form-container input[type="email"],
+  .site > div > header .form-container input[type="url"],
+  .site > div > header .form-container input[type="password"],
+  .site > div > header .form-container input[type="search"],
+  .site > div > header .form-container input[type="tel"],
+  .site > div > header .form-container input[type="number"],
+  .site > div > header .form-container textarea, .site > div > header .search-form input[type="date"],
+  .site > div > header .search-form input[type="time"],
+  .site > div > header .search-form input[type="datetime-local"],
+  .site > div > header .search-form input[type="week"],
+  .site > div > header .search-form input[type="month"],
+  .site > div > header .search-form input[type="text"],
+  .site > div > header .search-form input[type="email"],
+  .site > div > header .search-form input[type="url"],
+  .site > div > header .search-form input[type="password"],
+  .site > div > header .search-form input[type="search"],
+  .site > div > header .search-form input[type="tel"],
+  .site > div > header .search-form input[type="number"],
+  .site > div > header .search-form textarea {
+  margin: 10px 0px 10px auto;
+  border-radius: 2px;
+  width: 200px;
+  right: 0px;
+  border: none;
+}
+
+.site > div > footer .form-container input[type="submit"],
+  .site > div > footer .form-container input[type="submit"][disabled]:hover,
+  .site > div > footer .form-container input[type="submit"][disabled]:focus,
+  .site > div > footer .form-container .action-btn,
+  .site > div > footer .form-container .action-btn[disabled]:hover,
+  .site > div > footer .form-container .action-btn[disabled]:focus,
+  .site > div > footer .form-container .comment-reply-link, .site > div > footer .search-form input[type="submit"],
+  .site > div > footer .search-form input[type="submit"][disabled]:hover,
+  .site > div > footer .search-form input[type="submit"][disabled]:focus,
+  .site > div > footer .search-form .action-btn,
+  .site > div > footer .search-form .action-btn[disabled]:hover,
+  .site > div > footer .search-form .action-btn[disabled]:focus,
+  .site > div > footer .search-form .comment-reply-link, .site > div > header .form-container input[type="submit"],
+  .site > div > header .form-container input[type="submit"][disabled]:hover,
+  .site > div > header .form-container input[type="submit"][disabled]:focus,
+  .site > div > header .form-container .action-btn,
+  .site > div > header .form-container .action-btn[disabled]:hover,
+  .site > div > header .form-container .action-btn[disabled]:focus,
+  .site > div > header .form-container .comment-reply-link, .site > div > header .search-form input[type="submit"],
+  .site > div > header .search-form input[type="submit"][disabled]:hover,
+  .site > div > header .search-form input[type="submit"][disabled]:focus,
+  .site > div > header .search-form .action-btn,
+  .site > div > header .search-form .action-btn[disabled]:hover,
+  .site > div > header .search-form .action-btn[disabled]:focus,
+  .site > div > header .search-form .comment-reply-link {
+  color: #000000;
+  background: #FC0262;
+}
+
+.site > div > footer .form-container .action-btn:hover,
+  .site > div > footer .form-container input[type="submit"]:hover,
+  .site > div > footer .form-container input[type="submit"]:focus,
+  .site > div > footer .form-container .comment-reply-link:hover,
+  .site > div > footer .form-container .comment-reply-link:focus, .site > div > footer .search-form .action-btn:hover,
+  .site > div > footer .search-form input[type="submit"]:hover,
+  .site > div > footer .search-form input[type="submit"]:focus,
+  .site > div > footer .search-form .comment-reply-link:hover,
+  .site > div > footer .search-form .comment-reply-link:focus, .site > div > header .form-container .action-btn:hover,
+  .site > div > header .form-container input[type="submit"]:hover,
+  .site > div > header .form-container input[type="submit"]:focus,
+  .site > div > header .form-container .comment-reply-link:hover,
+  .site > div > header .form-container .comment-reply-link:focus, .site > div > header .search-form .action-btn:hover,
+  .site > div > header .search-form input[type="submit"]:hover,
+  .site > div > header .search-form input[type="submit"]:focus,
+  .site > div > header .search-form .comment-reply-link:hover,
+  .site > div > header .search-form .comment-reply-link:focus {
+  color: #000000;
+  background: #FF9E01;
+}
+
+.site > div > footer .form-container #mc-embedded-subscribe, .site > div > footer .search-form #mc-embedded-subscribe, .site > div > header .form-container #mc-embedded-subscribe, .site > div > header .search-form #mc-embedded-subscribe {
+  float: right;
+  width: auto;
+  margin-right: 16px;
+  color: #000000;
+  background: #FC0262;
+}
+
+.site > div > footer .form-container #mc-embedded-subscribe:hover, .site > div > footer .search-form #mc-embedded-subscribe:hover, .site > div > header .form-container #mc-embedded-subscribe:hover, .site > div > header .search-form #mc-embedded-subscribe:hover {
+  color: #000000;
+  background: #FF9E01;
+}
+
+.site > div > footer .form-container .signup-options, .site > div > footer .search-form .signup-options, .site > div > header .form-container .signup-options, .site > div > header .search-form .signup-options {
+  display: inline;
+  white-space: nowrap;
+  font-size: 9px;
+}
+
+.site > div > footer .form-container input[type="checkbox"], .site > div > footer .search-form input[type="checkbox"], .site > div > header .form-container input[type="checkbox"], .site > div > header .search-form input[type="checkbox"] {
+  width: auto;
+  margin: 6px;
+  vertical-align: bottom;
+}
+
+.site > div > footer .form-container label, .site > div > footer .search-form label, .site > div > header .form-container label, .site > div > header .search-form label {
+  font-size: inherit;
+}
+
+.site > div > footer .search-form {
+  display: none;
+}
+
+@media all and (min-width: 760px) {
+  .site > div > header .search-form {
+    display: none;
+  }
+
+  .site > div > footer .search-form {
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  .site > div > footer .search-form input {
+    margin: 0;
+  }
 }
 
 /** 6.0 - Navigation **/
@@ -880,14 +1078,14 @@ a:active {
   display: block;
   right: 0px;
   top: 120px;
-  width: 240px;
+  width: 260px;
   height: 100%;
   background: #000000;
   z-index: 5;
 }
 
 .main-navigation {
-  font-family: Proxima Nova, "Helvetica Neue", sans-serif;
+  font-family: Proxima Nova Bold, "Helvetica Neue", sans-serif;
   margin: 24px 0 48px;
 }
 
@@ -962,45 +1160,45 @@ a:active {
   width: 170px;
 }
 
-.site-header .dropdown-toggle {
+.site-header .dropdown-toggle, .site-header .icon-btn, .site-footer .dropdown-toggle, .site-footer .icon-btn {
   background-color: transparent;
-  border: 0;
-  border-radius: 0;
-  color: #D8EB00;
+  border: 3px dotted #fc0262;
+  border-radius: 100%;
+  color: #FC0262;
   content: "";
   height: 40px;
   padding: 0;
-  position: absolute;
-  right: 0;
   text-transform: uppercase;
-  top: -0.84375em;
   width: 40px;
+}
+
+.site-header .dropdown-toggle, .site-footer .dropdown-toggle {
+  position: absolute;
+  right: -2px;
+  top: -12px;
   z-index: 8;
 }
 
-.site-header .dropdown-toggle:after {
-  border: 0 solid #FC0262;
-  border-left-width: 1px;
+.site-header .dropdown-toggle:after, .site-footer .dropdown-toggle:after {
   content: "\f431";
   font-size: 24px;
-  left: 1px;
-  position: relative;
-  width: 40px;
+  font-weight: 900;
+}
+
+.site-header .icon-btn:after, .site-footer .icon-btn:after {
+  font-size: 24px;
+  font-weight: 900;
 }
 
 .site-header .dropdown-toggle:hover,
-.site-header .dropdown-toggle:focus {
-  background-color: #D8EB00;
-  color: black;
-}
-
-.site-header .dropdown-toggle:focus {
-  outline: thin dotted;
-  outline-offset: -1px;
-}
-
-.site-header .dropdown-toggle:focus:after {
-  border-color: transparent;
+.site-header .dropdown-toggle:focus,
+.site-header .icon-btn:hover,
+.site-header .icon-btn:focus, .site-footer .dropdown-toggle:hover,
+.site-footer .dropdown-toggle:focus,
+.site-footer .icon-btn:hover,
+.site-footer .icon-btn:focus {
+  border: 3px solid #D8EB00;
+  color: #D8EB00;
 }
 
 .site-header .sub-menu {
@@ -1019,16 +1217,16 @@ a:active {
 }
 
 .site-header .dropdown-toggle.toggled-on:after {
-  content: "\f432";
+  content: "\f431";
 }
 
 .site-header .sub-menu li a {
   display: block;
-  padding: 20px;
-  margin: 6px auto;
+  padding: 12px 20px;
+  margin: 4px auto;
   background-color: #D8EB00;
   color: #000000;
-  width: 160px;
+  min-width: 160px;
 }
 
 .sharing-title {
@@ -1425,7 +1623,7 @@ footer .social-navigation a {
   .site-header-menu {
     display: block;
     position: static;
-    margin-top: -80px;
+    margin-top: -70px;
     margin-left: 70px;
   }
 
@@ -1446,20 +1644,12 @@ footer .social-navigation a {
   .site-header .main-navigation .sub-menu {
     display: none;
     border: 0px transparent;
-    margin-top: 0px;
+    margin-top: 10px;
   }
 
   .site-header .main-navigation .sub-menu:toggled-on {
     display: block;
     background-color: transparent;
-  }
-
-  .site-header .main-navigation .sub-menu li a {
-    display: block;
-    padding: 20px;
-    margin: 6px auto;
-    background-color: #D8EB00;
-    color: #000000;
   }
 
   .site-header .main-navigation .primary-menu {
@@ -2104,7 +2294,7 @@ article.post {
 
 .comments-title,
 .comment-reply-title {
-  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-family: Proxima Nova, "Helvetica Neue", sans-serif;
   font-size: 23px;
   font-size: 1.4375rem;
   font-weight: 700;
@@ -2163,7 +2353,7 @@ article.post {
 .comment-metadata,
 .pingback .edit-link {
   color: #686868;
-  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-family: Proxima Nova, "Helvetica Neue", sans-serif;
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 1.6153846154;
@@ -2224,7 +2414,7 @@ article.post {
 .comment-form label {
   color: #686868;
   display: block;
-  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-family: Proxima Nova, "Helvetica Neue", sans-serif;
   font-size: 13px;
   font-size: 0.8125rem;
   letter-spacing: 0.076923077em;
@@ -2250,7 +2440,7 @@ article.post {
 
 .no-comments {
   border-top: 1px solid #d1d1d1;
-  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-family: Proxima Nova, "Helvetica Neue", sans-serif;
   font-weight: 700;
   margin: 0;
   padding-top: 1.75em;
@@ -2262,7 +2452,7 @@ article.post {
 }
 
 .form-allowed-tags code {
-  font-family: Inconsolata, monospace;
+  font-family: Helvetica, monospace;
 }
 
 .form-submit {
@@ -2342,6 +2532,13 @@ article.post {
   padding: 16px auto;
 }
 
+.site > div > footer .subscribe-form .form-container {
+  padding: 20px;
+  width: 342px;
+  border: 2px solid #FEFEFE;
+  border-radius: 2px;
+}
+
 .site > div > footer .nav-link {
   box-sizing: border-box;
 }
@@ -2361,93 +2558,25 @@ article.post {
   border-radius: 2px;
 }
 
-.site > div > footer .subscribe-form .form-container {
-  font-family: "Proxima Nova", Helvetica, sans-serif;
-  width: 342px;
-  border: 2px solid #FEFEFE;
-  border-radius: 2px;
-  padding: 20px;
-  margin: 0 auto;
-  color: inherit;
-}
-
-.site > div > footer .subscribe-form .form-container .form-title {
-  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
-  color: inherit;
-  text-align: center;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.site > div > footer .subscribe-form .form-container ul li {
-  display: block;
-}
-
-.site > div > footer .subscribe-form .form-container label {
-  text-transform: uppercase;
-  font-size: 12pt;
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-.site > div > footer .subscribe-form .form-container input[type="date"],
-    .site > div > footer .subscribe-form .form-container input[type="time"],
-    .site > div > footer .subscribe-form .form-container input[type="datetime-local"],
-    .site > div > footer .subscribe-form .form-container input[type="week"],
-    .site > div > footer .subscribe-form .form-container input[type="month"],
-    .site > div > footer .subscribe-form .form-container input[type="text"],
-    .site > div > footer .subscribe-form .form-container input[type="email"],
-    .site > div > footer .subscribe-form .form-container input[type="url"],
-    .site > div > footer .subscribe-form .form-container input[type="password"],
-    .site > div > footer .subscribe-form .form-container input[type="search"],
-    .site > div > footer .subscribe-form .form-container input[type="tel"],
-    .site > div > footer .subscribe-form .form-container input[type="number"],
-    .site > div > footer .subscribe-form .form-container textarea {
-  margin: 10px 0px 10px auto;
-  border-radius: 2px;
-  width: 200px;
-  right: 0px;
-  border: none;
-}
-
-.site > div > footer .subscribe-form .form-container #mc-embedded-subscribe {
-  float: right;
-  width: auto;
-  margin-right: 16px;
-  color: #000000;
-  background: #FC0262;
-}
-
-.site > div > footer .subscribe-form .form-container #mc-embedded-subscribe:hover {
-  color: #000000;
-  background: #FF9E01;
-}
-
-.site > div > footer .subscribe-form .form-container .signup-options {
-  display: inline;
-  white-space: nowrap;
-  font-size: 9px;
-}
-
-.site > div > footer .subscribe-form .form-container input[type="checkbox"] {
-  width: auto;
-  margin: 6px;
-  vertical-align: bottom;
-}
-
-.site > div > footer .subscribe-form .form-container label {
-  font-size: inherit;
-}
-
 @media all and (min-width: 660px) {
   footer .subscribe-form {
     display: inline-flex;
     margin: 0 0 32px 32px;
   }
 
-  footer .social-nav.link-list {
+  footer .lower-right {
     float: right;
     margin-right: 32px;
+  }
+
+  footer .lower-right div {
+    display: block;
+  }
+
+  footer .lower-right .footer-search {
+    position: relative;
+    right: 20px;
+    top: 160px;
   }
 }
 
