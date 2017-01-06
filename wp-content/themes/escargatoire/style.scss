@@ -67,6 +67,35 @@ $header-color: $accent;
 $light-text: #FEFEFE;
 $dark-text: #000000;
 $medium-text: #c0c0c0;
+
+
+/* KEYFRAME ANIMATIONS */
+
+@keyframes slide-in-from-right {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes slide-out-right {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+
+
+.slide-out-right {
+    -webkit-animation: slide-out-right 5s infinite; /* Safari 4+ */
+    -moz-animation:    slide-out-right 5s infinite; /* Fx 5+ */
+    -o-animation:      slide-out-right 5s infinite; /* Opera 12+ */
+    animation:         slide-out-right 5s infinite; /* IE 10+, Fx 29+ */
+}
+  
+.slide-in-from-right {  
+    -webkit-animation: slide-in-from-right 5s infinite; /* Safari 4+ */
+    -moz-animation:    slide-in-from-right 5s infinite; /* Fx 5+ */
+    -o-animation:      slide-in-from-right 5s infinite; /* Opera 12+ */
+    animation:         slide-in-from-right 5s infinite; /* IE 10+, Fx 29+ */
+}
+
 /* IMAGE SIZE CONSTRAINTS */
 
 @mixin aspect-ratio($width, $height) {
@@ -830,9 +859,8 @@ textarea:focus {
 }
 
 .search-form {
-  position:absolute;
-   width:340px;
-   right:0;
+  position: relative;
+  left: 20px;
    ul {
     list-style: none;
     margin: 0;
@@ -960,6 +988,7 @@ input[type="search"].search-field {
     }
     label {
       font-size: inherit;
+      display: block;
     }
   }
 }
@@ -1073,7 +1102,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
   display: block;
   right: 0px;
   top: 120px;
-  width: 260px;
+  width: 280px;
   height: 100%;
   background: #000000;
   z-index: 5;
@@ -1094,8 +1123,8 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
   position: relative;
   display: inline-block;
   min-width: 100px;
-  height: ($font-size-px * 1.5);
-  margin: ($font-size-px * 1.5) 0px ($font-size-px * 1.5) 20px;
+  height: 24px;
+  margin: 24px 20px;
 }
 
 .menu-item {
@@ -1107,7 +1136,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 .site-header .main-navigation a {
   color: $light-text;
   outline-offset: -1px;
-  padding: 20px;
+  padding: 10px 19px;
   text-transform: uppercase;
 }
 
@@ -1150,6 +1179,8 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 
 .site-header .main-navigation .primary-menu {
   border-bottom: 1px solid $header-color;
+  margin: 0;
+  padding-left: 20px;
 }
 
 .site-header .main-navigation .menu-item-has-children > a {
@@ -1807,9 +1838,8 @@ blockquote:after,
   }
 
   .site-branding {
-    margin: ($font-size-px * .875) 0;
     /* Avoid overflowing wide custom logo in small screens in Firefox and IEs */
-    max-width: 78%;
+    max-width: 100%;
     overflow: hidden;
     :focus {
       outline: none;
@@ -1824,7 +1854,7 @@ blockquote:after,
   }
 
   .custom-logo {
-    width: 100%;
+    width: 90%;
   }
 
   .site-title {
@@ -1873,15 +1903,19 @@ blockquote:after,
 
 // ************************* menu drawer ***************
 .menu-toggle {
-  background-color: transparent;
-  border: 1px solid $primary-action;
-  border-radius: 2px;
-  color: $primary-action;
-  font-size: 16pt;
-  width: 50px;
-  margin: 8px 0px 0 10px;
-  padding: 14px;
-    :before { 
+    position: absolute;
+    background-color: transparent;
+    border: 3px dotted #FC0262;
+    border-radius: 100%;
+    color: #FC0262;
+    font-size: 12.8pt;
+    margin: 1.076923077em 0;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    top: 0;
+    right: 16px;
+  :before { 
     content:'\2630'; 
   }
   a {
@@ -1978,15 +2012,6 @@ blockquote:after,
     margin: ($font-size * .5) 0 0;
   }
 
-  .menu-toggle {
-    background-color: transparent;
-    border: 1px solid $primary-action;
-    color: $primary-action;
-    font-size: $font-size * .8;
-    margin: 1.076923077em 0;
-    padding: 0.769230769em;
-  }
-
   .no-js .menu-toggle {
     display: none;
   }
@@ -2031,6 +2056,10 @@ blockquote:after,
   
 
    @media all and (min-width: 980px) {
+
+    .custom-logo {
+      width: 100%;
+    }
 
      .custom-logo-link {
     display: inline;

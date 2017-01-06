@@ -52,6 +52,49 @@ This theme and all its content copyright © 2016 SaltyRunning.com
  * 15.0 - Print
  */
 /* COLOR VARIABLES */
+/* KEYFRAME ANIMATIONS */
+@keyframes slide-in-from-right {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.slide-out-right {
+  -webkit-animation: slide-out-right 5s infinite;
+  /* Safari 4+ */
+  -moz-animation: slide-out-right 5s infinite;
+  /* Fx 5+ */
+  -o-animation: slide-out-right 5s infinite;
+  /* Opera 12+ */
+  animation: slide-out-right 5s infinite;
+  /* IE 10+, Fx 29+ */;
+}
+
+.slide-in-from-right {
+  -webkit-animation: slide-in-from-right 5s infinite;
+  /* Safari 4+ */
+  -moz-animation: slide-in-from-right 5s infinite;
+  /* Fx 5+ */
+  -o-animation: slide-in-from-right 5s infinite;
+  /* Opera 12+ */
+  animation: slide-in-from-right 5s infinite;
+  /* IE 10+, Fx 29+ */;
+}
+
 /* IMAGE SIZE CONSTRAINTS */
 .sixteen-nine {
   position: relative;
@@ -796,9 +839,8 @@ textarea:focus {
 }
 
 .search-form {
-  position: absolute;
-  width: 340px;
-  right: 0;
+  position: relative;
+  left: 20px;
 }
 
 .search-form ul {
@@ -997,6 +1039,7 @@ input[type="search"].search-field {
 
 .site > div > footer .form-container label, .site > div > footer .search-form label, .site > div > header .form-container label, .site > div > header .search-form label {
   font-size: inherit;
+  display: block;
 }
 
 .site > div > footer .search-form {
@@ -1082,7 +1125,7 @@ a:active {
   display: block;
   right: 0px;
   top: 120px;
-  width: 260px;
+  width: 280px;
   height: 100%;
   background: #000000;
   z-index: 5;
@@ -1104,7 +1147,7 @@ a:active {
   display: inline-block;
   min-width: 100px;
   height: 24px;
-  margin: 24px 0px 24px 20px;
+  margin: 24px 20px;
 }
 
 .menu-item {
@@ -1114,7 +1157,7 @@ a:active {
 .site-header .main-navigation a {
   color: #FEFEFE;
   outline-offset: -1px;
-  padding: 20px;
+  padding: 10px 19px;
   text-transform: uppercase;
 }
 
@@ -1157,6 +1200,8 @@ a:active {
 
 .site-header .main-navigation .primary-menu {
   border-bottom: 1px solid #D8EB00;
+  margin: 0;
+  padding-left: 20px;
 }
 
 .site-header .main-navigation .menu-item-has-children > a {
@@ -1811,9 +1856,8 @@ blockquote:after,
 }
 
 .site-branding {
-  margin: 14px 0;
   /* Avoid overflowing wide custom logo in small screens in Firefox and IEs */
-  max-width: 78%;
+  max-width: 100%;
   overflow: hidden;
 }
 
@@ -1830,7 +1874,7 @@ blockquote:after,
 }
 
 .custom-logo {
-  width: 100%;
+  width: 90%;
 }
 
 .site-title {
@@ -1876,14 +1920,18 @@ blockquote:after,
 }
 
 .menu-toggle {
+  position: absolute;
   background-color: transparent;
-  border: 1px solid #FC0262;
-  border-radius: 2px;
+  border: 3px dotted #FC0262;
+  border-radius: 100%;
   color: #FC0262;
-  font-size: 16pt;
-  width: 50px;
-  margin: 8px 0px 0 10px;
-  padding: 14px;
+  font-size: 12.8pt;
+  margin: 1.076923077em 0;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  top: 0;
+  right: 16px;
 }
 
 .menu-toggle :before {
@@ -1980,15 +2028,6 @@ blockquote:after,
   margin: 8pt 0 0;
 }
 
-.menu-toggle {
-  background-color: transparent;
-  border: 1px solid #FC0262;
-  color: #FC0262;
-  font-size: 12.8pt;
-  margin: 1.076923077em 0;
-  padding: 0.769230769em;
-}
-
 .no-js .menu-toggle {
   display: none;
 }
@@ -2028,6 +2067,10 @@ blockquote:after,
 }
 
 @media all and (min-width: 980px) {
+  .custom-logo {
+    width: 100%;
+  }
+
   .custom-logo-link {
     display: inline;
   }
