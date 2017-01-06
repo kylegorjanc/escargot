@@ -796,7 +796,7 @@ textarea:focus {
 }
 
 .search-form {
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .search-form ul {
@@ -838,6 +838,7 @@ input[type="search"].search-field {
 }
 
 .site > div > footer .form-container .search-form, .site > div > footer .search-form .search-form, .site > div > header .form-container .search-form, .site > div > header .search-form .search-form {
+  max-width: 100%;
   position: absolute;
   right: 0px;
 }
@@ -1285,8 +1286,12 @@ a:active {
   border: 3px solid currentColor;
 }
 
+footer .social-navigation ul {
+  text-align: inherit;
+}
+
 footer .social-navigation a {
-  margin: 0 12px;
+  margin-left: 24px;
 }
 
 .social-navigation a[href*="codepen.io"]:before {
@@ -2502,6 +2507,15 @@ article.post {
   font-size: 12pt;
 }
 
+.site > div > footer p {
+  color: inherit;
+  margin: 0;
+}
+
+.site > div > footer .copyright {
+  text-align: inherit;
+}
+
 .site > div > footer .footer-content {
   max-width: 980px;
   margin: 0 auto;
@@ -2509,6 +2523,10 @@ article.post {
 
 .site > div > footer .footer-content .lower {
   margin: 0 auto;
+}
+
+.site > div > footer .footer-content .lower-right {
+  text-align: center;
 }
 
 .site > div > footer .footer-section {
@@ -2566,7 +2584,7 @@ article.post {
 
   footer .lower-right {
     float: right;
-    margin-right: 32px;
+    text-align: right;
   }
 
   footer .lower-right div {
@@ -2575,8 +2593,11 @@ article.post {
 
   footer .lower-right .footer-search {
     position: relative;
-    right: 20px;
-    top: 160px;
+  }
+
+  footer .lower-right .copyright {
+    top: 100px;
+    text-align: right;
   }
 }
 

@@ -830,7 +830,7 @@ textarea:focus {
 }
 
 .search-form {
-   max-width: 80%;
+   max-width: 100%;
    ul {
     list-style: none;
     margin: 0;
@@ -871,6 +871,7 @@ input[type="search"].search-field {
       padding: 20px;
     }
     .search-form {
+      max-width: 100%;
       position: absolute;
       right: 0px;
     }
@@ -1270,8 +1271,14 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
   border: 3px solid currentColor;
 }
 
-footer .social-navigation a {
-  margin: 0 ($font-size-px * .75);
+footer .social-navigation {
+  ul {
+    text-align: inherit;
+  }
+
+  a {
+    margin-left: 24px;
+  }
 }
 
 .social-navigation a[href*="codepen.io"]:before {
@@ -2496,12 +2503,21 @@ article.post {
   color: $light-text;
   padding-bottom: 10px;
   font-size: $font-size * .75;
-
+  p {
+    color: inherit;
+    margin: 0;
+  }
+  .copyright {  
+    text-align: inherit;
+  }
   .footer-content {
     max-width: 980px;
     margin: 0 auto;
     .lower {
       margin: 0 auto;
+    }
+    .lower-right {
+      text-align:center;
     }
   }
 
@@ -2517,7 +2533,6 @@ article.post {
   ul, ol {
     list-style: none;
     margin: 0 auto;
-    text-align: center;
     padding: 24px 0;
 
     li {
@@ -2560,14 +2575,19 @@ article.post {
     }
     .lower-right {
       float: right;
-      margin-right: 32px;
+      text-align:right;
+      ul {
+        text-align: right;
+      }
       div {
         display:block;
       }
       .footer-search {
         position: relative;
-        right: 20px;
-        top: 160px;
+      }
+      .copyright {
+        top: 100px;
+        text-align: right;
       }
     }
   }
