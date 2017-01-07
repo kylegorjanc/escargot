@@ -24,7 +24,7 @@
 					</ul>
 				</div>
 				<div class="lower">
-					<div class="outline-box subscribe-form footer-section" id="footer-subscribe">
+					<div class="outline-box subscribe-form" id="footer-subscribe">
 						<div class="form-container">
 						<p class="form-title">Subscribe</p>
 							<ul>
