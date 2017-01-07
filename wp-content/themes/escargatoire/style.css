@@ -31,6 +31,7 @@ This theme and all its content copyright © 2016 SaltyRunning.com
  *    11.1 - Header
  *    11.2 - Posts and pages
   *    11.2a - Home Page
+  *    11.2a1 - Blog Page
   *    11.2b - Regular Post
   *    11.2c - Regular Page
   *    11.2d - Short Bio
@@ -2137,6 +2138,18 @@ blockquote:after,
 }
 
 /** **    11.2a - End Home Page **/
+/** **    11.2a1 - Blog Page **/
+.blog-main p img {
+  display: none;
+}
+
+.blog-main .post-thumbnail img {
+  height: 337.5px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/** **    11.2a1 - End Blog Page **/
 /** **    11.2a - Regular Post **/
 .entry-header {
   margin-bottom: 10px;
@@ -2250,8 +2263,49 @@ article.post {
   margin: 20px 16px 40px;
 }
 
+.page-main img {
+  max-width: 100%;
+}
+
 .page-entry-header {
   margin: auto 16px;
+}
+
+.sidebar-right-content {
+  float: left;
+  max-width: 742px;
+  min-width: 290px;
+  padding: 40px 60px;
+}
+
+.sidebar-right {
+  width: 234px;
+  border-left: 4px solid black;
+  list-style-type: none;
+  padding: 60px 30px;
+}
+
+.sidebar-right .categories, .sidebar-right .tags, .sidebar-right .archives {
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.sidebar-right .categories ul, .sidebar-right .categories li, .sidebar-right .tags ul, .sidebar-right .tags li, .sidebar-right .archives ul, .sidebar-right .archives li {
+  list-style: none;
+  text-transform: capitalize;
+}
+
+.sidebar-right .categories a, .sidebar-right .tags a, .sidebar-right .archives a {
+  color: #000000;
+}
+
+.sidebar-right .categories a:hover, .sidebar-right .tags a:hover, .sidebar-right .archives a:hover {
+  color: #D8EB00;
+}
+
+@media all and (min-width: 800px) {
+  border-left: 4px solid black;
+  float: right;
 }
 
 /** **    11.2b - end Regular Page **/

@@ -32,6 +32,7 @@ This theme and all its content copyright © 2016 SaltyRunning.com
  *    11.1 - Header
  *    11.2 - Posts and pages
   *    11.2a - Home Page
+  *    11.2a1 - Blog Page
   *    11.2b - Regular Post
   *    11.2c - Regular Page
   *    11.2d - Short Bio
@@ -2127,6 +2128,22 @@ blockquote:after,
 
 
   /** **    11.2a - End Home Page **/
+  /** **    11.2a1 - Blog Page **/
+
+.blog-main {
+  p img {
+    display: none;
+  }
+  .post-thumbnail img {
+    height: 337.5px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+
+  /** **    11.2a1 - End Blog Page **/
+  
     /** **    11.2a - Regular Post **/
 
 .entry-header {
@@ -2234,10 +2251,50 @@ article.post {
 
   .page-main {
     margin: 20px 16px 40px;
+    img {
+      max-width: 100%;
+    }
   }
   .page-entry-header {
     margin: auto 16px;
   }
+
+  .sidebar-right-content {
+    float: left;
+    max-width: 742px;
+    min-width: 290px;
+    padding: 40px 60px;
+  }
+
+  .sidebar-right {
+      width: 234px;
+      border-left: 4px solid black;
+      list-style-type: none;
+      padding: 60px 30px;
+    .categories, .tags, .archives{
+      font-family: $bold-font;
+      text-transform: uppercase;
+      ul, li {
+        list-style: none;
+        text-transform: capitalize;
+      }
+      a {
+        color: $dark-text;
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+
+  }
+
+@media all and (min-width: 800px) {
+}
+
+@media all and (min-width: 800px) {
+    border-left: 4px solid black;
+    float: right;
+}
 
   /** **    11.2b - end Regular Page **/
   /** **    11.2d - Short Bio **/
