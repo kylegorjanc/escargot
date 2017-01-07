@@ -1026,7 +1026,7 @@ input[type="search"].search-field {
 }
 
 .site > div > footer .form-container .signup-options, .site > div > footer .search-form .signup-options, .site > div > header .form-container .signup-options, .site > div > header .search-form .signup-options {
-  display: inline;
+  display: inline-flex;
   white-space: nowrap;
   font-size: 9px;
 }
@@ -1040,28 +1040,6 @@ input[type="search"].search-field {
 .site > div > footer .form-container label, .site > div > footer .search-form label, .site > div > header .form-container label, .site > div > header .search-form label {
   font-size: inherit;
   display: block;
-}
-
-.site > div > footer .search-form {
-  display: none;
-}
-
-@media all and (min-width: 760px) {
-  .site > div > header .search-form {
-    display: none;
-  }
-
-  .site > div > footer .search-form {
-    display: block;
-    position: relative;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .site > div > footer .search-form input {
-    margin: 0;
-  }
 }
 
 /** 6.0 - Navigation **/
@@ -1198,7 +1176,7 @@ a:active {
   display: inline-block;
 }
 
-.site-header .main-navigation .primary-menu {
+.site-header .main-navigation {
   border-bottom: 1px solid #D8EB00;
   margin: 0;
   padding-left: 20px;
@@ -1662,6 +1640,14 @@ footer .social-navigation a {
 }
 
 @media all and (min-width: 760px) {
+  .site > div > header .search-form label {
+    display: inline;
+  }
+
+  .site > div > header .search-form ul li {
+    text-align: right;
+  }
+
   .menu-toggle {
     display: none;
   }
@@ -1680,12 +1666,15 @@ footer .social-navigation a {
     margin-left: 70px;
   }
 
-  .site-header .main-navigation {
-    margin: 40px 30px;
+  .site-header-menu .search-form {
+    position: absolute;
+    top: 0px;
+    right: 16px;
   }
 
-  .site-header .main-navigation a {
-    padding: 20px;
+  .site-header .main-navigation {
+    margin: 40px 30px;
+    border-bottom: 0px;
   }
 
   .site-header .main-navigation li {
@@ -1705,8 +1694,11 @@ footer .social-navigation a {
     background-color: transparent;
   }
 
-  .site-header .main-navigation .primary-menu {
+  .main-navigation .primary-menu {
     border-bottom: 0px;
+    text-align: center;
+    padding: 0px;
+    margin: 0;
   }
 }
 

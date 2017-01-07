@@ -977,7 +977,7 @@ input[type="search"].search-field {
       background: $accent-2;
     }
     .signup-options {
-      display:inline;
+      display:inline-flex;;
       white-space:nowrap;
       font-size: 9px;
     }
@@ -992,29 +992,10 @@ input[type="search"].search-field {
     }
   }
 }
-.site > div > footer .search-form {
-  display: none;
-}
 
 @media all and (min-width: 760px) {
-  .search-form {
-  }
   .site > div > header {
     .search-form {
-      display: none;
-    }
-  }
-
-  .site > div > footer {
-    .search-form {
-      display: block;
-      position: relative;
-      width:100%;
-      padding: 0;
-      margin: 0;
-      input {
-        margin: 0;
-      }
     }
   }
 }
@@ -1177,7 +1158,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
   display: inline-block;
 }
 
-.site-header .main-navigation .primary-menu {
+.site-header .main-navigation  {
   border-bottom: 1px solid $header-color;
   margin: 0;
   padding-left: 20px;
@@ -1636,54 +1617,67 @@ footer .social-navigation {
   padding: 0 0.538461538em;
 }
 
-   @media all and (min-width: 760px) {
-     .menu-toggle {
-      display:none;
-      }
+ @media all and (min-width: 760px) {
 
-    #site-header-menu.toggled-on, .no-js .site-header-menu {
-      display:block;
-      position: static;
-      background:transparent;
-      margin: 0;
+  .site > div > header .search-form {
+        label {
+          display: inline;
+        }
+        ul li {
+          text-align: right;
+        }
+      }
+   .menu-toggle {
+    display:none;
     }
 
-    .site-header-menu {
+  #site-header-menu.toggled-on, .no-js .site-header-menu {
     display:block;
     position: static;
-    margin-top: -70px;
-    margin-left: 70px;
-    }
-    .site-header {
+    background:transparent;
+    margin: 0;
+  }
 
-      .main-navigation {
-        margin: 40px 30px;
-        a {
-          padding:20px;
+  .site-header-menu {
+      display:block;
+      position: static;
+      margin-top: -70px;
+      margin-left: 70px;
+    .search-form {
+        position: absolute;
+        top: 0px;
+        right: 16px;
+    }
+  }
+  .site-header {
+    .main-navigation {
+      margin: 40px 30px;
+      border-bottom: 0px ;
+      li {
+        margin:0;
+        height:auto;
+        min-width: 0;
+      }
+      .sub-menu {
+        display: none;
+        border: 0px transparent;
+        margin-top: 10px;
+        &:toggled-on {
+          display: block;
+          background-color: transparent;
         }
-        li {
-          margin:0;
-          height:auto;
-          min-width: 0;
-        }
-        .sub-menu {
-          display: none;
-          border: 0px transparent;
-          margin-top: 10px;
-          &:toggled-on {
-            display: block;
-            background-color: transparent;
-          }
-          li a {
-          }
+        li a {
         }
       }
-      .main-navigation .primary-menu {
-        border-bottom:0px;
-      }
     }
+  }
 
-    
+    .main-navigation .primary-menu {
+      border-bottom: 0px;
+      text-align: center;
+      padding: 0px;
+      margin: 0;
+    }
 }
 
  /** 7.0 - Accessibility **/

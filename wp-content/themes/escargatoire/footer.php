@@ -60,7 +60,7 @@
 							</ul>
 						</div>
 						<div class="footer-search">
-							<?php get_search_form(); ?>
+							
 						</div>
 						<div class="copyright">
 							<p><small>All content ©2012 <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" rel="contact">Salty Running</a></small></p>
