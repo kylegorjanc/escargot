@@ -19,13 +19,12 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main page-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<?php the_title( '<h3 class="entry-title">', '</h3>' ); 
-				escargatoire_entry_date();
+				<?php the_archive_title( '<h3 class="archive-title">', '</h3>' ); 
 				?>
 			</header><!-- .page-header -->
 
