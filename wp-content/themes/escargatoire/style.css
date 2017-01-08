@@ -877,16 +877,6 @@ input[type="search"].search-field {
   color: inherit;
 }
 
-.site > div > footer .form-container .form-container, .site > div > footer .search-form .form-container, .site > div > header .form-container .form-container, .site > div > header .search-form .form-container {
-  padding: 20px;
-}
-
-.site > div > footer .form-container .search-form, .site > div > footer .search-form .search-form, .site > div > header .form-container .search-form, .site > div > header .search-form .search-form {
-  width: 100%;
-  position: absolute;
-  right: 0px;
-}
-
 .site > div > footer .form-container .form-title, .site > div > footer .search-form .form-title, .site > div > header .form-container .form-title, .site > div > header .search-form .form-title {
   font-family: "Proxima Nova Bold", Helvetica, sans-serif;
   color: inherit;
@@ -895,15 +885,12 @@ input[type="search"].search-field {
   text-transform: uppercase;
 }
 
-.site > div > footer .form-container ul li, .site > div > footer .search-form ul li, .site > div > header .form-container ul li, .site > div > header .search-form ul li {
-  display: block;
-}
-
 .site > div > footer .form-container label, .site > div > footer .search-form label, .site > div > header .form-container label, .site > div > header .search-form label {
   text-transform: uppercase;
   font-size: 12pt;
   font-weight: bold;
   margin-right: 10px;
+  display: inline;
 }
 
 .site > div > footer .form-container input[type="date"],
@@ -1037,8 +1024,11 @@ input[type="search"].search-field {
   vertical-align: bottom;
 }
 
-.site > div > footer .form-container label, .site > div > footer .search-form label, .site > div > header .form-container label, .site > div > header .search-form label {
-  font-size: inherit;
+.site > div > footer .subscribe-form label, .site > div > header .subscribe-form label {
+  display: inline;
+}
+
+header .search-form label {
   display: block;
 }
 
@@ -1279,7 +1269,7 @@ a:active {
 }
 
 .social-navigation a, .post-sharing a {
-  border-radius: 50%;
+  border-radius: 100%;
   box-sizing: border-box;
   display: inline-flex;
   position: relative;
@@ -1288,11 +1278,14 @@ a:active {
 }
 
 .social-navigation a:before, .post-sharing a:before {
+  color: #FEFEFE;
   content: "\f415";
   height: 40px;
   line-height: 36px;
   text-align: center;
   width: 40px;
+  border: 2px solid currentColor;
+  border-radius: 100%;
 }
 
 .social-navigation a:hover:before,
@@ -1302,22 +1295,13 @@ a:active {
   border-color: #2FF6F6;
 }
 
-.social-navigation a {
-  color: #FEFEFE;
-  border: 3px solid currentColor;
-}
-
-.post-sharing a {
-  color: #FC0262;
-  border: 3px solid currentColor;
-}
-
 footer .social-navigation ul {
   text-align: inherit;
 }
 
 footer .social-navigation a {
   margin-left: 24px;
+  color: #FEFEFE;
 }
 
 .social-navigation a[href*="codepen.io"]:before {
@@ -2590,7 +2574,7 @@ article.post {
 
 .site > div > footer .subscribe-form .form-container {
   padding: 20px;
-  width: 342px;
+  width: 350px;
   border: 2px solid #FEFEFE;
   border-radius: 2px;
 }
@@ -2618,6 +2602,10 @@ article.post {
   footer .subscribe-form {
     display: inline-block;
     text-align: center;
+  }
+
+  footer .subscribe-form li {
+    white-space: nowrap;
   }
 
   footer .lower {

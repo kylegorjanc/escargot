@@ -897,33 +897,21 @@ input[type="search"].search-field {
     .form-container, .search-form {
       margin: 0 auto;
       color: inherit;
-    .form-container {
-      padding: 20px;
-    }
-    .search-form {
-      width: 100%;
-      position: absolute;
-      right: 0px;
-    }
     .form-title {
       font-family: $bold-font;
       color: inherit;
       text-align: center;
       margin: 0;
       text-transform: uppercase;
-
-    }
-    ul li {
-      display: block;
-      
     }
     label {
       text-transform: uppercase;
       font-size: $font-size * .75;
       font-weight: bold;
       margin-right: 10px;
+      display: inline;
     }
-    
+  
     input[type="date"],
     input[type="time"],
     input[type="datetime-local"],
@@ -986,19 +974,17 @@ input[type="search"].search-field {
       margin: 6px;
       vertical-align: bottom;
     }
-    label {
-      font-size: inherit;
-      display: block;
-    }
+  }
+  .subscribe-form label {
+    display: inline;
   }
 }
 
-@media all and (min-width: 760px) {
-  .site > div > header {
-    .search-form {
-    }
-  }
+header .search-form label {
+      display: block;
 }
+
+
 
 
 
@@ -1256,7 +1242,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
     float: left;
   }
   a {
-    border-radius: 50%;
+    border-radius: 100%;
     box-sizing: border-box;
     display: inline-flex;
     position: relative;
@@ -1264,11 +1250,14 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
     width: 40px;
   }
   a:before {
+    color: $light-text;
     content: "\f415";
     height: 40px;
     line-height: 36px;
     text-align: center;
     width: 40px;
+    border: 2px solid currentColor;
+    border-radius:100%;
   }
   a:hover:before,
   a:focus:before {
@@ -1278,16 +1267,6 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 }
 
 
-.social-navigation a {
-  color: $light-text;
-  border: 3px solid currentColor;
-}
-
-.post-sharing a {
-  color: $primary-action;
-  border: 3px solid currentColor;
-}
-
 footer .social-navigation {
   ul {
     text-align: inherit;
@@ -1295,6 +1274,7 @@ footer .social-navigation {
 
   a {
     margin-left: 24px;
+    color: $light-text;
   }
 }
 
@@ -2573,7 +2553,7 @@ article.post {
 
   .subscribe-form .form-container {
     padding: 20px;
-    width: 342px;
+    width: 350px;
     border: 2px solid $light-text;
     border-radius: 2px;
   }
@@ -2601,6 +2581,9 @@ article.post {
     .subscribe-form {
       display:inline-block;
       text-align: center;
+      li {
+        white-space: nowrap;
+      }
     }
     .lower {
       text-align: left;
