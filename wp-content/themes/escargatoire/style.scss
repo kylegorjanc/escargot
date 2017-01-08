@@ -34,6 +34,7 @@ This theme and all its content copyright © 2016 SaltyRunning.com
   *    11.2a - Home Page
   *    11.2b - Regular Post
   *    11.2c - Regular Page
+  *    11.2c1 - Archive Page
   *    11.2d - Short Bio
   *    11.2e - Long Bio
  *    11.3 - Post Formats
@@ -1762,7 +1763,7 @@ blockquote:after,
 .site-content {
   word-wrap: break-word;
   max-width: 980px;
-  margin: auto auto 32px;
+  margin: auto auto 40px;
 }
 
 /* Do not show the outline on the skip link target. */
@@ -1771,7 +1772,6 @@ blockquote:after,
 }
 
 .page-main {
-  margin: 20px 0;
   :first-child {
     margin-top: 0px;
   }
@@ -2210,13 +2210,20 @@ article.post {
   }
 
   .page-main {
-    margin: 20px 16px 40px;
+    margin: 50px 16px 20px;
   }
   .page-entry-header {
     margin: auto 16px;
   }
 
   /** **    11.2b - end Regular Page **/
+  /** **    11.2c1 - Archive Page **/
+
+.archive-title {
+
+}
+
+  /** **    11.2c1 - End Archive Page **/
   /** **    11.2d - Short Bio **/
 
 .author-info {
