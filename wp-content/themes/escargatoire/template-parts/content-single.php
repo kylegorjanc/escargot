@@ -61,13 +61,14 @@
 				 ?>
 				</ul>
 			</div>
-
+			<div class="author-info">
 			<?php
 
 			if ( '' !== get_the_author_meta( 'description' ) ) {
 				get_template_part( 'template-parts/biography' );
 			}
 		?>
+		</div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

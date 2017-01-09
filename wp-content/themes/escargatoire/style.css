@@ -301,6 +301,12 @@ optgroup {
   font-weight: bold;
 }
 
+.black {
+  background-color: #000000;
+}
+
+/** End Normalize
+
 /**  2.0 Genericons - copied from Twenty Sixteen theme **/
 .menu-item-has-children a:after,
 .social-navigation a:before,
@@ -556,6 +562,14 @@ hr {
   width: 80%;
   text-align: center;
   margin: 0 auto 16pt;
+}
+
+hr.hr2 {
+  height: 2px;
+}
+
+hr.hr4 {
+  height: 4px;
 }
 
 ul,

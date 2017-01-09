@@ -307,6 +307,11 @@ optgroup {
   font-weight: bold;
 }
 
+.black {
+  background-color: #000000;
+}
+/** End Normalize
+
 /**  2.0 Genericons - copied from Twenty Sixteen theme **/
 
 .menu-item-has-children a:after,
@@ -577,6 +582,13 @@ hr {
   margin: 0 auto $font-size;
 }
 
+hr.hr2 {
+  height: 2px;
+}
+
+hr.hr4 {
+  height: 4px;
+}
 ul,
 ol {
   margin: 0 0 $font-size * 1.75 $font-size * 1.25;
@@ -2226,6 +2238,7 @@ article.post {
   /** **    11.2c1 - End Archive Page **/
   /** **    11.2d - Short Bio **/
 
+//in post 
 .author-info {
   max-width: 600px;
   border-radius: 12px;
@@ -2256,12 +2269,14 @@ article.post {
   }
 
   .author-description img {
-
     position: relative;
     display: inline-block;
     float: left;
     border-radius: 12px;
-    margin-right: 10px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    height: 100px;
+    width: 100px;
   }
   .author-buttons {
     border-top: 1px dotted $accent-2;
@@ -2283,6 +2298,10 @@ article.post {
   }
 
 }
+
+// On Our Team Page 
+
+
 
   /** **    11.d - end Short Bio **/
 

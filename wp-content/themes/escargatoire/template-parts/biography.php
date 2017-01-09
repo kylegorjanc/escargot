@@ -8,8 +8,7 @@
  */
 ?>
 
-<div class="author-info short-bio">
-	<div class="author-description">
+	<div class="author-description short-bio">
 		<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php
 		/**
 		 * Filter the Twenty Sixteen author bio avatar size.
@@ -18,7 +17,7 @@
 		 *
 		 * @param int $size The avatar height and width size in pixels.
 		 */
-		$author_bio_avatar_size = apply_filters( 'escargatoire_author_bio_avatar_size', 100 );
+		$author_bio_avatar_size = apply_filters( 'escargatoire_author_bio_avatar_size', 300 );
 
 		echo get_avatar( get_the_author_meta( 'user_email' ), $author_bio_avatar_size );
 		?></a><!-- .author-avatar -->
@@ -41,4 +40,3 @@
 		</p>
 	</div><!-- .author-description -->
 
-</div><!-- .author-info -->

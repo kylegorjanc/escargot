@@ -59,6 +59,7 @@ get_header(); ?>
       }
     ?>
         </div>
+        <hr class="black hr2">
         <?php
                 }
                 wp_reset_postdata();
