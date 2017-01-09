@@ -33,6 +33,7 @@ This theme and all its content copyright © 2016 SaltyRunning.com
   *    11.2a - Home Page
   *    11.2b - Regular Post
   *    11.2c - Regular Page
+  *    11.2c1 - Archive Page
   *    11.2d - Short Bio
   *    11.2e - Long Bio
  *    11.3 - Post Formats
@@ -240,7 +241,7 @@ input[type="radio"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin-right: 0.4375em;
+  margin: 0 6px 0 12px;
   padding: 0;
 }
 
@@ -885,23 +886,11 @@ input[type="search"].search-field {
   text-transform: uppercase;
 }
 
-<<<<<<< HEAD
-.site > div > footer .form-container ul li, .site > div > footer .search-form ul li, .site > div > header .form-container ul li, .site > div > header .search-form ul li {
-  display: block;
-  margin-top: 48px;
-}
-
-=======
->>>>>>> header-footer
 .site > div > footer .form-container label, .site > div > footer .search-form label, .site > div > header .form-container label, .site > div > header .search-form label {
   text-transform: uppercase;
   font-weight: bold;
   margin-right: 10px;
-<<<<<<< HEAD
-  display: none;
-=======
   display: inline;
->>>>>>> header-footer
 }
 
 .site > div > footer .form-container input[type="date"],
@@ -1029,9 +1018,13 @@ input[type="search"].search-field {
   font-size: 9px;
 }
 
-.site > div > footer .form-container input[type="checkbox"], .site > div > footer .search-form input[type="checkbox"], .site > div > header .form-container input[type="checkbox"], .site > div > header .search-form input[type="checkbox"] {
+.site > div > footer .form-container input[type="checkbox"],
+  .site > div > footer .form-container label[type="checkbox"], .site > div > footer .search-form input[type="checkbox"],
+  .site > div > footer .search-form label[type="checkbox"], .site > div > header .form-container input[type="checkbox"],
+  .site > div > header .form-container label[type="checkbox"], .site > div > header .search-form input[type="checkbox"],
+  .site > div > header .search-form label[type="checkbox"] {
   width: auto;
-  margin: 6px;
+  margin-top: 10px;
   vertical-align: bottom;
 }
 
@@ -1799,20 +1792,12 @@ blockquote:after,
 .site-content {
   word-wrap: break-word;
   max-width: 980px;
-  margin: auto auto 32px;
+  margin: auto auto 40px;
 }
 
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
   outline: 0;
-}
-
-.page-main {
-  margin: 20px 0;
-}
-
-.page-main :first-child {
-  margin-top: 0px;
 }
 
 .page-main :last-child {
@@ -2242,7 +2227,7 @@ article.post {
 }
 
 .page-main {
-  margin: 20px 16px 40px;
+  margin: 50px 16px 20px;
 }
 
 .page-entry-header {
@@ -2250,6 +2235,8 @@ article.post {
 }
 
 /** **    11.2b - end Regular Page **/
+/** **    11.2c1 - Archive Page **/
+/** **    11.2c1 - End Archive Page **/
 /** **    11.2d - Short Bio **/
 .author-info {
   max-width: 600px;
@@ -2261,6 +2248,10 @@ article.post {
 .author-info p {
   margin: auto 0px 8pt;
   font-size: 14pt;
+}
+
+.author-info a {
+  text-decoration: underline;
 }
 
 .author-info h3 > a {
@@ -2579,8 +2570,7 @@ article.post {
 }
 
 .site > div > footer ul li, .site > div > footer ol li {
-  display: inline;
-  padding: 16px auto;
+  display: inline-block;
 }
 
 .site > div > footer .subscribe-form .form-container {

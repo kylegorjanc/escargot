@@ -22,14 +22,56 @@ get_header(); ?>
       // Include the page content template.
       get_template_part( 'template-parts/content', 'page' );
 
-      // If comments are open or we have at least one comment, load up the comment template.
-      if ( comments_open() || get_comments_number() ) {
-        comments_template();
-      }
-
       // End of the loop.
     endwhile;
     ?>
+
+
+  <?php
+    $authors=get_users();
+    $i=0;
+    //get all users list
+    foreach($authors as $author){
+        $authorList[$i]['id']=$author->data->ID;
+        $authorList[$i]['name']=$author->data->display_name;
+        $i++;
+    }
+    ?>
+    <div class="authors-list">
+        <?php 
+        foreach($authorList as $author){
+            $args=array(
+                    'showposts'=>1,
+                    'author'=>$author['id'],
+                    'caller_get_posts'=>1
+                   );
+            $query = new WP_Query($args);
+            if($query->have_posts() ) {
+                while ($query->have_posts()){
+                    $query->the_post();
+        ?>
+        <div id="author-<?php echo $author['name'] ?>" class="author" >
+         <!-- <h3><?php echo $author['name']; ?></h3> -->
+              <?php
+
+      if ( '' !== get_the_author_meta( 'description' ) ) {
+        get_template_part( 'template-parts/biography' );
+      }
+    ?>
+        </div>
+        <?php
+                }
+                wp_reset_postdata();
+            }
+        }
+        ?>
+    </div>
+
+
+
+
+
+
 
   </main><!-- .site-main -->
 

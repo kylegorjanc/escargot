@@ -37,11 +37,11 @@
 									<input type="email" name="EMAIL" class="required email text_field" id="mce-EMAIL"value="">
 								</li>
 								<li>
-										<div class="signup-options"><input type="checkbox" value="1" name="group[10365][1]" id="mce-group[10365]-10365-0"><label for="mce-group[10365]-10365-0">DAILY</label>
+										<div class="signup-options"><input type="checkbox" value="1" name="group[10365][1]" id="mce-group[10365]-10365-0"><label for="mce-group[10365]-10365-0" type="checkbox">DAILY</label>
 										</div>
-										<div class="signup-options"><input type="checkbox" value="2" name="group[10365][2]" id="mce-group[10365]-10365-1" checked><label for="mce-group[10365]-10365-1">WEEKLY</label>
+										<div class="signup-options"><input type="checkbox" value="2" name="group[10365][2]" id="mce-group[10365]-10365-1" checked><label for="mce-group[10365]-10365-1" type="checkbox">WEEKLY</label>
 										</div>
-										<div class="signup-options"><input type="checkbox" value="4" name="group[10365][4]" id="mce-group[10365]-10365-2"><label for="mce-group[10365]-10365-2">UPDATES ONLY</label>
+										<div class="signup-options"><input type="checkbox" value="4" name="group[10365][4]" id="mce-group[10365]-10365-2"><label for="mce-group[10365]-10365-2" type="checkbox">UPDATES ONLY</label>
 										</div>
 								</li>
 								</ul>

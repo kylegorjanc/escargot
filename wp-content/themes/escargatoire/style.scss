@@ -247,7 +247,7 @@ input[type="radio"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin-right: 0.4375em;
+  margin: 0 6px 0 12px;
   padding: 0;
 }
 
@@ -904,24 +904,12 @@ input[type="search"].search-field {
       text-align: center;
       margin: 0;
       text-transform: uppercase;
-<<<<<<< HEAD
-
-    }
-    ul li {
-      display: block;
-      margin-top: 48px;
-=======
->>>>>>> header-footer
     }
     label {
       text-transform: uppercase;
       font-weight: bold;
       margin-right: 10px;
-<<<<<<< HEAD
-      display:none;
-=======
       display: inline;
->>>>>>> header-footer
     }
   
     input[type="date"],
@@ -981,9 +969,10 @@ input[type="search"].search-field {
       white-space:nowrap;
       font-size: 9px;
     }
-    input[type="checkbox"] {
+    input[type="checkbox"], 
+    label[type="checkbox"] {
       width: auto;
-      margin: 6px;
+      margin-top: 10px;
       vertical-align: bottom;
     }
   }
@@ -1788,9 +1777,6 @@ blockquote:after,
 }
 
 .page-main {
-  :first-child {
-    margin-top: 0px;
-  }
   :last-child {
     margin-bottom: 0px;
   }
@@ -2249,6 +2235,9 @@ article.post {
     margin: auto 0px ($font-size * .5);
     font-size: 14pt;
   }
+  a {
+    text-decoration: underline;
+  }
   h3 > a {
     text-decoration: none;
     color: #000000;
@@ -2563,8 +2552,7 @@ article.post {
     padding: 24px 0;
 
     li {
-      display: inline;  
-      padding: 16px auto; 
+      display: inline-block;  
     }
 
   }
