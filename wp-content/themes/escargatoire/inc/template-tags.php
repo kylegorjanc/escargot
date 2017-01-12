@@ -21,7 +21,7 @@ function escargatoire_entry_meta() {
 	if ( 'post' === get_post_type() ) {
 		$author_avatar_size = apply_filters( 'escargatoire_author_avatar_size', 80 );
 		printf( '<span class="byline"><span class="author vcard">%1$s<span class="screen-reader-text">%2$s </span> <a class="url fn n" href="%3$s">%4$s</a></span></span>',
-			get_avatar( get_the_author_meta( 'user_email' ), $author_avatar_size ),
+			get_avatar( get_the_author_meta( 'user_id' ), $author_avatar_size ),
 			_x( 'Written by', 'Used before post author name.', 'escargatoire' ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			get_the_author()

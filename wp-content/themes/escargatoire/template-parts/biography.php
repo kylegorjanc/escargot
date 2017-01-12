@@ -19,7 +19,7 @@
 		 */
 		$author_bio_avatar_size = apply_filters( 'escargatoire_author_bio_avatar_size', 300 );
 
-		echo get_avatar( get_the_author_meta( 'user_email' ), $author_bio_avatar_size );
+		echo get_avatar( get_the_author_meta( 'id' ), $author_bio_avatar_size );
 		?></a><!-- .author-avatar -->
 		<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
 		<h3 class="author-title"><span class="author-heading">

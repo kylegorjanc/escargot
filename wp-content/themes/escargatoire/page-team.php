@@ -12,7 +12,7 @@
  */
 
 get_header(); ?>
-
+ 
 <div id="primary" class="content-area">
   <main id="main" class="site-main page-main" role="main">
     <?php
@@ -51,7 +51,8 @@ get_header(); ?>
                     $query->the_post();
         ?>
         <div id="author-<?php echo $author['name'] ?>" class="author" >
-         <!-- <h3><?php echo $author['name']; ?></h3> -->
+         <!-- <h3><?php echo $author['name']; ?></h3>
+         <?php echo get_avatar( $author['id'] ); ?> -->
               <?php
 
       if ( '' !== get_the_author_meta( 'description' ) ) {
