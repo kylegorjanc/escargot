@@ -382,8 +382,8 @@ $body-font: 'Proxima Nova', Helvetica, sans-serif;
 $light-font: 'Proxima Nova Light', Helvetica, sans-serif;
 $bold-font: 'Proxima Nova Bold', Helvetica, sans-serif;
 $extrabold-font: 'Proxima Nova Extrabold', Helvetica, sans-serif;
-$font-size: 16pt;
-$font-size-px: 16px;
+$font-size: 14pt;
+$font-size-px: 14px;
 $font-color: #222222;
 $small-font-size: $font-size * .75;
 
@@ -443,8 +443,9 @@ textarea {
     text-transform: uppercase;
   }
 
-  h1, h2 {
+  h1, h2, h3 {
     font-family: $extrabold-font;
+    letter-spacing: 2px;
   }
 
   h1 {
@@ -458,10 +459,6 @@ textarea {
 
  h3, h4, h5, h6 {
     font-size: $font-size * 1;
-  }
-
-  h3 {
-    font-family: "Proxima Nova Extrabold", Helvetica, sans-serif;
   }
 
  h4, h5, h6 {
@@ -1090,6 +1087,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 
 .main-navigation {
   font-family: Proxima Nova Bold, "Helvetica Neue", sans-serif;
+  font-size: 16px;
   margin: ($font-size-px * 1.5) 0 ($font-size-px * 3);
 }
 
@@ -1105,6 +1103,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
   min-width: 100px;
   height: 24px;
   margin: 24px 20px;
+  letter-spacing: 2px;
 }
 
 .menu-item {
@@ -1114,6 +1113,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 // HEADER NAV //
 
 .site-header .main-navigation a {
+  border: 2px solid transparent;
   color: $light-text;
   outline-offset: -1px;
   padding: 10px 19px;
@@ -2260,23 +2260,28 @@ article.post {
   }
   .author-title {
     text-transform: uppercase;
+    text-decoration: none;
     clear: none;
     line-height: 1;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-right: 124px;
   }
 
   .author-description {
     min-height: 100px;
   }
 
-  .author-description img {
+ .author-bio > .author-avatar {
     position: relative;
     display: inline-block;
     float: left;
-    border-radius: 12px;
-    margin-right: 24px;
-    margin-bottom: 24px;
-    height: 100px;
-    width: 100px;
+    margin: 36px 24px 10px 0;
+    img {
+      border-radius: 12px;
+      height: 100px;
+      width: 100px;
+    }
   }
   .author-buttons {
     border-top: 1px dotted $accent-2;
@@ -2297,12 +2302,66 @@ article.post {
     margin: ($font-size * 0.5) auto;
   }
 
+  .author-bio-link {
+    text-align: center;
+  }
+
 }
 
 // On Our Team Page 
 
+.authors-list {
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    margin-right:40px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0,.5);
+    background-color: black;
+  }
+  .author-bio {
+    margin: 40px 0 60px;
+    max-width: 100%;
+  }
+  .author-avatar {
+    display: inline-block;
+    float:right;
+    :first-child {
+      vertical-align: top;
+    }
+  }
+  .author-title {
+    margin-bottom: 20px;
+    font-size: ($font-size * 1.25);
+  }
+  .author-bio-content {
+    display:inline-block;
+    max-width: 710px;
+  }
+  .author-bio-link {
+    display: block;
+    text-align: center;
+  }
+}
 
+@media all and (min-width: 670px) {
+  .authors-list {
+    .author-avatar {
+      float:left;
+    }
+    .author-bio-content {
+      width: 60%;
+    }
+  }
+}
 
+@media all and (min-width: 836px) {
+  .authors-list {
+    .author-bio-content {
+      width: 70%;
+    }
+  }
+}
   /** **    11.d - end Short Bio **/
 
   /** **    11.2e - Long Bio **/
@@ -2584,8 +2643,11 @@ article.post {
   }
 
   .nav-link {
+    font-size: 16px;
     box-sizing: border-box;
+    letter-spacing: 1px;
      a {
+      border: 2px solid transparent;
       padding: 16px 20px;
       text-transform: uppercase;
       white-space: nowrap;

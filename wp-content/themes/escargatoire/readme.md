@@ -10,6 +10,7 @@ Configuration Notes:
 - Reading: change Front page displays to 'a static page'
 - Reading: Front page should be "Home" (http://*.com/home) and Posts page should be "Blog" (http://*.com/blog)
 - Discussion
+  - Uncheck allow pingbacks and trackbacks
   - Uncheck Users must be registered and logged in to comment 
   - Uncheck Automatically close comments on articles older than
   - Uncheck Break comments into pages 

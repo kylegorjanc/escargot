@@ -371,7 +371,7 @@ strong {
 }
 
 small {
-  font-size: 12pt;
+  font-size: 10.5pt;
 }
 
 sub,
@@ -403,9 +403,9 @@ body p ul ol li,
   input p ul ol li,
   select p ul ol li,
   textarea p ul ol li {
-  font-size: 16pt;
+  font-size: 14pt;
   color: #222222;
-  line-height: 28pt;
+  line-height: 24.5pt;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
   -webkit-font-feature-settings: "kern";
@@ -425,37 +425,33 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "Proxima Nova Extrabold", Helvetica, sans-serif;
+  letter-spacing: 1px;
 }
 
 h1 {
-  font-size: 32pt;
+  font-size: 28pt;
 }
 
 h2 {
-  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
-  font-size: 20pt;
+  font-size: 17.5pt;
 }
 
 h3, h4, h5, h6 {
-  font-size: 16pt;
-}
-
-h3 {
-  font-family: "Proxima Nova Extrabold", Helvetica, sans-serif;
+  font-size: 14pt;
 }
 
 h4, h5, h6 {
-  font-size: 16pt;
+  font-size: 14pt;
   font-family: "Proxima Nova Bold", Helvetica, sans-serif;
 }
 
 p {
-  margin: 0 0 16pt;
-  font-size: 16pt;
+  margin: 0 0 14pt;
+  font-size: 14pt;
   color: #222222;
-  line-height: 28pt;
+  line-height: 24.5pt;
 }
 
 dfn,
@@ -469,12 +465,12 @@ blockquote {
   border: 0 solid #D8EB00;
   border-left-width: 4px;
   color: #333333;
-  font-size: 16pt;
+  font-size: 14pt;
   font-style: italic;
   line-height: 1.4;
-  margin: 0 0 22.4pt;
+  margin: 0 0 19.6pt;
   overflow: hidden;
-  padding: 0 0 0 19.2pt;
+  padding: 0 0 0 16.8pt;
 }
 
 blockquote,
@@ -490,7 +486,7 @@ q:after {
 }
 
 blockquote p {
-  margin-bottom: 22.4pt;
+  margin-bottom: 19.6pt;
 }
 
 blockquote cite,
@@ -516,10 +512,10 @@ blockquote > :last-child {
 
 pre {
   border: 1px solid #2FF6F6;
-  margin: 0 0 28pt;
+  margin: 0 0 24.5pt;
   max-width: 100%;
   overflow: auto;
-  padding: 28pt;
+  padding: 24.5pt;
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -527,7 +523,7 @@ pre {
 
 code {
   background-color: #FFF;
-  padding: 2pt 4pt;
+  padding: 1.75pt 3.5pt;
 }
 
 big {
@@ -561,7 +557,7 @@ hr {
   height: 1px;
   width: 80%;
   text-align: center;
-  margin: 0 auto 16pt;
+  margin: 0 auto 14pt;
 }
 
 hr.hr2 {
@@ -574,7 +570,7 @@ hr.hr4 {
 
 ul,
 ol {
-  margin: 0 0 28pt 20pt;
+  margin: 0 0 24.5pt 17.5pt;
   padding: 0;
 }
 
@@ -584,7 +580,7 @@ ul {
 
 ol {
   list-style: decimal;
-  margin-left: 24pt;
+  margin-left: 21pt;
 }
 
 li > ul,
@@ -593,7 +589,7 @@ li > ol {
 }
 
 dl {
-  margin: 0 0 28pt;
+  margin: 0 0 24.5pt;
 }
 
 dt {
@@ -601,7 +597,7 @@ dt {
 }
 
 dd {
-  margin: 0 0 28pt;
+  margin: 0 0 24.5pt;
 }
 
 img {
@@ -626,7 +622,7 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   border-width: 1px 0 0 1px;
-  margin: 0 0 28pt;
+  margin: 0 0 24.5pt;
   table-layout: fixed;
   /* Prevents HTML tables from becoming too wide */
   width: 100%;
@@ -650,7 +646,7 @@ td {
 
 th,
 td {
-  padding: 6.4pt;
+  padding: 5.6pt;
 }
 
 /* Placeholder text color -- selectors need to be separate to work. */
@@ -683,7 +679,7 @@ input {
   background-color: #000;
   color: #FEFEFE;
   font-family: "Proxima Nova Bold", Helvetica, sans-serif;
-  font-size: 14pt;
+  font-size: 12.25pt;
   border-radius: 12px;
   white-space: nowrap;
 }
@@ -869,7 +865,7 @@ input[type="search"].search-field {
 
 .search-submit:before {
   content: "\f400";
-  font-size: 24pt;
+  font-size: 21pt;
   left: 2px;
   line-height: 1;
   position: relative;
@@ -1119,7 +1115,8 @@ a:active {
 
 .main-navigation {
   font-family: Proxima Nova Bold, "Helvetica Neue", sans-serif;
-  margin: 24px 0 48px;
+  font-size: 16px;
+  margin: 21px 0 42px;
 }
 
 .main-navigation ul {
@@ -1134,6 +1131,7 @@ a:active {
   min-width: 100px;
   height: 24px;
   margin: 24px 20px;
+  letter-spacing: 2px;
 }
 
 .menu-item {
@@ -1141,6 +1139,7 @@ a:active {
 }
 
 .site-header .main-navigation a {
+  border: 2px solid transparent;
   color: #FEFEFE;
   outline-offset: -1px;
   padding: 10px 19px;
@@ -1265,8 +1264,8 @@ a:active {
 }
 
 .sharing-title {
-  font-size: 12pt;
-  margin-bottom: 12pt;
+  font-size: 10.5pt;
+  margin-bottom: 10.5pt;
 }
 
 .social-navigation, .post-sharing {
@@ -1437,7 +1436,7 @@ footer .social-navigation a {
   margin: 16px auto;
   text-align: center;
   max-width: 780px;
-  padding-top: 28pt;
+  padding-top: 24.5pt;
 }
 
 .post-navigation nav-links {
@@ -1448,7 +1447,7 @@ footer .social-navigation a {
 .post-navigation a {
   color: #1a1a1a;
   display: block;
-  padding: 32pt 0;
+  padding: 28pt 0;
 }
 
 .post-navigation span {
@@ -1485,7 +1484,7 @@ footer .social-navigation a {
 
 .pagination {
   border-top: 4px solid #000000;
-  font-size: 16pt;
+  font-size: 14pt;
   font-size: 1rem;
   max-width: 80%;
   margin: 0 auto 40px;
@@ -1504,7 +1503,7 @@ footer .social-navigation a {
 }
 
 .pagination .nav-links {
-  margin-top: 12pt;
+  margin-top: 10.5pt;
   padding: 10px 54px 0;
   position: relative;
 }
@@ -1536,7 +1535,7 @@ footer .social-navigation a {
   letter-spacing: 0.013157895em;
   line-height: 1;
   margin: 0 auto;
-  padding: 16pt 4% 0;
+  padding: 14pt 4% 0;
   text-transform: uppercase;
 }
 
@@ -1865,7 +1864,7 @@ blockquote:after,
 
 .site-title {
   font-family: Pantra, "Helvetica Neue", sans-serif;
-  font-size: 16pt;
+  font-size: 14pt;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1;
@@ -1892,7 +1891,7 @@ blockquote:after,
 }
 
 .wp-custom-logo .site-title {
-  margin-top: 9.6pt;
+  margin-top: 8.4pt;
 }
 
 .site-description {
@@ -1976,7 +1975,7 @@ blockquote:after,
 
 .site-title {
   font-family: Pantra, "Helvetica Neue", sans-serif;
-  font-size: 16pt;
+  font-size: 14pt;
   font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2002,7 +2001,7 @@ blockquote:after,
 }
 
 .wp-custom-logo .site-title {
-  margin-top: 8pt;
+  margin-top: 7pt;
 }
 
 .site-description {
@@ -2011,7 +2010,7 @@ blockquote:after,
   font-size: 13px;
   font-weight: 400;
   line-height: 1.2;
-  margin: 8pt 0 0;
+  margin: 7pt 0 0;
 }
 
 .no-js .menu-toggle {
@@ -2162,7 +2161,7 @@ blockquote:after,
 .byline {
   margin: 10px 16px 0px;
   width: 100%;
-  font-size: 12pt;
+  font-size: 10.5pt;
 }
 
 .byline img {
@@ -2255,12 +2254,12 @@ article.post {
 .author-info {
   max-width: 600px;
   border-radius: 12px;
-  padding: 16pt;
+  padding: 14pt;
   margin: 0 auto;
 }
 
 .author-info p {
-  margin: auto 0px 8pt;
+  margin: auto 0px 7pt;
   font-size: 14pt;
 }
 
@@ -2281,18 +2280,26 @@ article.post {
   text-transform: uppercase;
   clear: none;
   line-height: 1;
+  text-align: center;
+  margin-bottom: 12px;
+  margin-right: 124px;
 }
 
 .author-info .author-description {
   min-height: 100px;
 }
 
-.author-info .author-description img {
+.author-info .author-bio > .author-avatar {
   position: relative;
   display: inline-block;
   float: left;
+  margin: 36px 24px 10px 0;
+}
+
+.author-info .author-bio > .author-avatar img {
   border-radius: 12px;
-  margin-right: 10px;
+  height: 100px;
+  width: 100px;
 }
 
 .author-info .author-buttons {
@@ -2314,7 +2321,65 @@ article.post {
 
 .author-info button {
   min-width: 260px;
-  margin: 8pt auto;
+  margin: 7pt auto;
+}
+
+.author-info .author-bio-link {
+  text-align: center;
+}
+
+.authors-list img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  margin-right: 40px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  background-color: black;
+}
+
+.authors-list .author-bio {
+  margin: 40px 0 60px;
+  max-width: 100%;
+}
+
+.authors-list .author-avatar {
+  display: inline-block;
+  float: right;
+}
+
+.authors-list .author-avatar :first-child {
+  vertical-align: top;
+}
+
+.authors-list .author-title {
+  margin-bottom: 20px;
+  font-size: 17.5pt;
+}
+
+.authors-list .author-bio-content {
+  display: inline-block;
+  max-width: 710px;
+}
+
+.authors-list .author-bio-link {
+  display: block;
+  text-align: center;
+}
+
+@media all and (min-width: 670px) {
+  .authors-list .author-avatar {
+    float: left;
+  }
+
+  .authors-list .author-bio-content {
+    width: 60%;
+  }
+}
+
+@media all and (min-width: 836px) {
+  .authors-list .author-bio-content {
+    width: 70%;
+  }
 }
 
 /** **    11.d - end Short Bio **/
@@ -2382,7 +2447,7 @@ article.post {
   height: 48px;
   width: 48px;
   border-radius: 6px;
-  margin-right: 14pt;
+  margin-right: 12.25pt;
   position: relative;
 }
 
@@ -2403,7 +2468,7 @@ article.post {
 }
 
 .comment-metadata {
-  margin-bottom: 20pt;
+  margin-bottom: 17.5pt;
 }
 
 .comment-metadata a,
@@ -2542,7 +2607,7 @@ article.post {
   background-color: #000000;
   color: #FEFEFE;
   padding-bottom: 10px;
-  font-size: 12pt;
+  font-size: 10.5pt;
 }
 
 .site > div > footer p {
@@ -2595,10 +2660,13 @@ article.post {
 }
 
 .site > div > footer .nav-link {
+  font-size: 16px;
   box-sizing: border-box;
+  letter-spacing: 1px;
 }
 
 .site > div > footer .nav-link a {
+  border: 2px solid transparent;
   padding: 16px 20px;
   text-transform: uppercase;
   white-space: nowrap;
