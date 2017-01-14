@@ -22,11 +22,12 @@ get_header(); ?>
 		<main id="main" class="site-main page-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
-
+     
 			<header class="page-header">
 				<?php the_archive_title( '<h3 class="archive-title">', '</h3>' ); 
 				?>
 			</header><!-- .page-header -->
+		<div class="page-level-bios">
 		<div class="author-avatar"><?php
 		/**
 		 * Filter the Escargatoire author bio avatar size.
@@ -40,7 +41,7 @@ get_header(); ?>
 		echo get_avatar( get_the_author_meta( 'id' ), $author_bio_avatar_size );
 		?></a></div><!-- .author-avatar -->
 		<p><?php the_author_meta( 'description' ); ?></p>
-
+</div>
 
 
 			<?php

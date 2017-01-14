@@ -37,7 +37,7 @@ get_header(); ?>
         $i++;
     }
     ?>
-    <div class="authors-list">
+    <div class="page-level-bios">
         <?php 
         foreach($authorList as $author){
             $args=array(

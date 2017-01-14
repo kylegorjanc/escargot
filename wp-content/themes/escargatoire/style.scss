@@ -2236,6 +2236,15 @@ article.post {
 }
 
   /** **    11.2c1 - End Archive Page **/
+
+  /** **    11.2c1 - Author Archive Page **/
+
+.archive-title {
+
+}
+
+  /** **    11.2c1 - End Author Archive Page **/
+
   /** **    11.2d - Short Bio **/
 
 //in post 
@@ -2308,16 +2317,15 @@ article.post {
 
 }
 
-// On Our Team Page 
+// Page Level Bios (Our Team page, Author archive page) 
 
-.authors-list {
+.page-level-bios {
   img {
     height: 200px;
     width: 200px;
     border-radius: 100%;
-    margin-right:40px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0,.5);
-    background-color: black;
+    background-color: $accent-3;
   }
   .author-bio {
     margin: 40px 0 60px;
@@ -2345,9 +2353,10 @@ article.post {
 }
 
 @media all and (min-width: 670px) {
-  .authors-list {
+  .page-level-bios {
     .author-avatar {
       float:left;
+      margin: 20px 40px 0 0;
     }
     .author-bio-content {
       width: 60%;
@@ -2356,7 +2365,7 @@ article.post {
 }
 
 @media all and (min-width: 836px) {
-  .authors-list {
+  .page-level-bios {
     .author-bio-content {
       width: 70%;
     }
