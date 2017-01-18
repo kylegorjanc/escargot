@@ -863,6 +863,7 @@ textarea:focus {
 .search-form ul {
   list-style: none;
   margin: 0;
+  white-space: nowrap;
 }
 
 input[type="search"].search-field {
@@ -907,6 +908,7 @@ input[type="search"].search-field {
   font-weight: bold;
   margin-right: 10px;
   display: inline;
+  margin-left: -72px;
 }
 
 .site > div > footer .form-container input[type="date"],
@@ -1054,6 +1056,14 @@ header .search-form label {
 
 /** 6.0 - Navigation **/
 /** 6.1 - Links **/
+.link-list ul, .link-list ol {
+  list-style: none;
+}
+
+.link-list ul li, .link-list ol li {
+  display: inline;
+}
+
 a {
   color: #C900A0;
   text-decoration: none;
@@ -1113,9 +1123,9 @@ a:active {
   display: block;
   right: 0px;
   top: 100px;
-  width: 340px;
+  width: 280px;
   height: 100%;
-  background: #000000;
+  background: rgba(0, 0, 0, 0.93);
   z-index: 5;
 }
 
@@ -1821,10 +1831,6 @@ blockquote:after,
   outline: 0;
 }
 
-.page-main :last-child {
-  margin-bottom: 0px;
-}
-
 /** *    11.1 - Header **/
 .site-header {
   background-color: #000000;
@@ -2255,6 +2261,11 @@ article.post {
 /** **    11.2c1 - Archive Page **/
 /** **    11.2c1 - End Archive Page **/
 /** **    11.2c1 - Author Archive Page **/
+.profile-info {
+  display: block;
+}
+
+
 /** **    11.2c1 - End Author Archive Page **/
 /** **    11.2d - Short Bio **/
 .author-info {

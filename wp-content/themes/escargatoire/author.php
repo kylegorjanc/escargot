@@ -16,7 +16,11 @@
  * @since Twenty Sixteen 1.0
  */
 
-get_header(); ?>
+get_header(); 
+include("inc/author-profile-template.php"); 
+$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+$user_id = sprintf("user_$curauth->id"); 
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main page-main" role="main">
@@ -27,57 +31,43 @@ get_header(); ?>
 				<?php the_archive_title( '<h3 class="archive-title">', '</h3>' ); 
 				?>
 			</header><!-- .page-header -->
-		<div class="page-level-bios">
-		<div class="author-avatar"><?php
-		/**
-		 * Filter the Escargatoire author bio avatar size.
-		 *
-		 * @since Twenty Sixteen 1.0
-		 *
-		 * @param int $size The avatar height and width size in pixels.
-		 */
-		$author_bio_avatar_size = apply_filters( 'escargatoire_author_bio_avatar_size', 300 );
 
-		echo get_avatar( get_the_author_meta( 'id' ), $author_bio_avatar_size );
-		?></a></div><!-- .author-avatar -->
-		<p><?php the_author_meta( 'description' ); ?></p>
-</div>
-<div class="profile-info">Here
-<!-- 	<h3><?php 
-	$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
-	$user_id = sprintf("user_$curauth->id"); ?>
+		<div class="author-profile">
+				<div class="page-level-bios">
+					<div class="author-avatar"><?php
+					/**
+					 * Filter the Escargatoire author bio avatar size.
+					 *
+					 * @since Twenty Sixteen 1.0
+					 *
+					 * @param int $size The avatar height and width size in pixels.
+					 */
+					$author_bio_avatar_size = apply_filters( 'escargatoire_author_bio_avatar_size', 300 );
 
-	<?php the_field('public_email', $user_id); ?></h3> -->
+					echo get_avatar( get_the_author_meta( 'id' ), $author_bio_avatar_size );
+					?></a></div><!-- .author-avatar -->
+				<p><?php the_author_meta( 'description' ); ?></p>
+				</div> <!-- bio -->
+				<div class="profile-info">
 
 
-	<?php 
-$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
-  $user_id = sprintf("user_$curauth->id"); ?>
 
 
-<ul class="author-contacts post-sharing">
-	<h4>Contact <?php $curauth ?></h4>
 
-	<?php
-  echo '<li class="menu-item social-icon social-navigation .light-bg"><a href="mailto:' . get_field('public_email', $user_id) . '</a></li>';
 
-  echo '<li><a href="https://twitter.com/' . get_field('twitter', $user_id) . '</a></li>';
+<a href="mailto:<?php the_field('public_email', $user_id); ?>"><button class="author-contact contact-btn">Contact <?php 	print("$author_name"); ?></button></a>
+	<?php fetch_author_profile($user_id); ?>
 
-  echo '<li><a href="https://facebook.com/' . get_field('facebook', $user_id) . '</a></li>';
-
-  echo '<li><a href="https://instagram.com/' . get_field('instagram', $user_id) . '</a></li>';
-
-  echo '<li><a href="https://pinterest.com/' . get_field('pinterest', $user_id) . '</a></li>';
-
-  echo '<li><a href="https://snapchat.com/' . get_field('snapchat', $user_id) . '</a></li>';
-
-	?>
-
-</ul>
 
 </div> <!-- profile-info -->
 
 
+
+
+
+		</div> <!-- author-profile -->
+
+<div class="author-posts">
 			<?php
 			// Start the Loop.
 			while ( have_posts() ) : the_post();
@@ -105,6 +95,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 
 		endif;
 		?>
+		</div> <!-- author-posts -->
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->

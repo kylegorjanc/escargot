@@ -433,6 +433,7 @@ textarea {
     -moz-font-feature-settings: "kern=1";
   }
 
+
 }
 
   h1, h2, h3, h4, h5, h6 {
@@ -1006,6 +1007,15 @@ header .search-form label {
 
  /** 6.0 - Navigation **/
  /** 6.1 - Links **/
+
+ .link-list {
+  ul, ol {
+    list-style: none;
+    li {
+      display: inline;
+    }
+  }
+ }
 
 a {
   color: $link-color;
@@ -1797,11 +1807,6 @@ blockquote:after,
   outline: 0;
 }
 
-.page-main {
-  :last-child {
-    margin-bottom: 0px;
-  }
-}
 
 
 
@@ -2244,8 +2249,8 @@ article.post {
 
   /** **    11.2c1 - Author Archive Page **/
 
-.archive-title {
-
+.profile-info {
+  display:block;
 }
 
   /** **    11.2c1 - End Author Archive Page **/
