@@ -714,10 +714,9 @@ $(document).ready(function(){
 				// title 
 				if( $options['page_action'] == "edit" && $options['page_type'] == 'user' )
 				{
-					if( $title )
-					{
+				
 						echo '<h3>' .$acf['title'] . '</h3>';
-					}
+					
 					
 					echo '<table class="form-table"><tbody>';
 				}

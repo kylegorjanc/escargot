@@ -6,10 +6,10 @@ function escargatoire_get_the_archive_title() {
     $title = sprintf( __( 'Category: %s' ), single_cat_title( '', false ) );
   } elseif ( is_tag() ) {
     /* translators: Tag archive title. 1: Tag name */
-    $title = sprintf( __( 'Tag: %s' ), single_tag_title( '', false ) );
+    $title = sprintf( __( 'Topic: %s' ), single_tag_title( '', false ) );
   } elseif ( is_author() ) {
     /* translators: Author archive title. 1: Author name */
-    $title = sprintf( __( 'Author: %s' ), '<span class="vcard">' . get_the_author() . '</span>' );
+    $title = sprintf( __( '%s' ), '<span class="vcard">' . get_the_author() . '</span>' );
   } elseif ( is_year() ) {
     /* translators: Yearly archive title. 1: Year */
     $title = sprintf( __( 'Year: %s' ), get_the_date( _x( 'Y', 'yearly archives date format' ) ) );
@@ -59,3 +59,20 @@ function escargatoire_get_the_archive_title() {
 }
 
 endif;
+
+
+
+
+$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+  $user_id = sprintf("user_$curauth->id"); ?>
+
+
+
+<?php
+
+if(get_field('public_email'))
+{
+  echo '<p>' . get_field('public_email', $user_id) . '</p>';
+}
+
+?>
