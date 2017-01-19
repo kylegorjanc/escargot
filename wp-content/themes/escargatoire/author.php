@@ -42,40 +42,10 @@ get_header(); ?>
 		?></a></div><!-- .author-avatar -->
 		<p><?php the_author_meta( 'description' ); ?></p>
 </div>
-<div class="profile-info">Here
-<!-- 	<h3><?php 
-	$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
-	$user_id = sprintf("user_$curauth->id"); ?>
-
-	<?php the_field('public_email', $user_id); ?></h3> -->
+<!-- <div class="profile-info">Profile info Here
 
 
-	<?php 
-$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
-  $user_id = sprintf("user_$curauth->id"); ?>
-
-
-<ul class="author-contacts post-sharing">
-	<h4>Contact <?php $curauth ?></h4>
-
-	<?php
-  echo '<li class="menu-item social-icon social-navigation .light-bg"><a href="mailto:' . get_field('public_email', $user_id) . '</a></li>';
-
-  echo '<li><a href="https://twitter.com/' . get_field('twitter', $user_id) . '</a></li>';
-
-  echo '<li><a href="https://facebook.com/' . get_field('facebook', $user_id) . '</a></li>';
-
-  echo '<li><a href="https://instagram.com/' . get_field('instagram', $user_id) . '</a></li>';
-
-  echo '<li><a href="https://pinterest.com/' . get_field('pinterest', $user_id) . '</a></li>';
-
-  echo '<li><a href="https://snapchat.com/' . get_field('snapchat', $user_id) . '</a></li>';
-
-	?>
-
-</ul>
-
-</div> <!-- profile-info -->
+</div> --> <!-- profile-info -->
 
 
 			<?php

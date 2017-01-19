@@ -1797,11 +1797,7 @@ blockquote:after,
   outline: 0;
 }
 
-.page-main {
-  :last-child {
-    margin-bottom: 0px;
-  }
-}
+
 
 
 
@@ -2339,6 +2335,7 @@ article.post {
   .author-avatar {
     display: inline-block;
     float:right;
+    margin-bottom: -28px;
     :first-child {
       vertical-align: top;
     }
@@ -2363,7 +2360,7 @@ article.post {
     min-height: 200px;
     .author-avatar {
       float:left;
-      margin: 20px 40px 0 0;
+      margin: 0px 40px 0 0;
     }
     .author-bio-content {
       width: 60%;
