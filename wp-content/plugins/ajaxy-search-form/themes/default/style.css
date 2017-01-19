@@ -54,13 +54,22 @@
 }
 .sf_search .sf_button,.sf_search  .searchsubmit
 {
-	background-image: url("images/sf_search.png") !important;
+  border: 3px dotted #fc0262;
+  border-radius: 100%;
 	background-repeat: no-repeat !important;
 	background-position: 0px 0 !important;
-	background-color: white !important;
+	background-color: transparent; !important;
 	-webkit-box-shadow: 0 0 0 0 !important;
 	-moz-box-shadow:0 0 0 0 !important;
 	box-shadow:0 0 0 0 !important;
+}
+.searchsubmit:hover {
+  border: 3px dotted #2FF6F6;
+}
+.sf_search .sf_button,.sf_search  .searchsubmit:before {
+  font-family: "Genericons";
+  content: "\f400";
+  font-size: 16px;
 }
 #sf_loading
 {

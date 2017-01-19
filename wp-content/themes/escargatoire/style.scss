@@ -872,6 +872,14 @@ textarea:focus {
   margin-bottom: 0;
 }
 
+.sf_container {
+    text-align: center;
+  .screen-reader-text {
+    display: inline;
+    margin-right: 10px;
+  }
+}
+
 .search-form {
   position: relative;
   left: 20px;
@@ -881,6 +889,7 @@ textarea:focus {
     white-space:nowrap;
    }
 }
+
 
 input[type="search"].search-field {
   border-radius: 2px;
@@ -909,6 +918,23 @@ input[type="search"].search-field {
 
 
 .site > div > footer, .site > div > header {
+
+      .sf_container {
+        display:none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        .screen-reader-text {
+          display:inline;
+          visibility: hidden;
+        }
+      }
+      .menu-search {
+        position: relative;
+        .sf_container {
+            display: block;
+        }
+      }
     .form-container, .search-form {
       margin: 0 auto;
       color: inherit;
@@ -942,9 +968,28 @@ input[type="search"].search-field {
     textarea {
       margin: 10px 0px 10px auto;
       border-radius: 2px;
-      width: 200px;
       right: 0px;
       border: none;
+    }
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="month"],
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="number"] {
+      width: 200px;
+      height: 40px;
+    }
+
+    textarea {
+      width: 300px;
+      min-width: 200px;
     }
 
     input[type="submit"],
@@ -1099,6 +1144,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
 
 .main-navigation ul {
   list-style: none;
+  top: 30px;
 }
 
 .main-navigation li {
@@ -1619,16 +1665,25 @@ footer .social-navigation {
   padding: 0 0.538461538em;
 }
 
- @media all and (min-width: 760px) {
+ @media all and (min-width: 767px) {
 
-  .site > div > header .search-form {
-        label {
-          display: inline;
+  .site > div > header {
+    .sf_container {
+      display: block;
+    }
+    .menu-search .sf_container {
+      display:none;
+    }
+        .search-form {
+          label {
+            display: inline;
+          }
+          ul li {
+            text-align: right;
+          }
         }
-        ul li {
-          text-align: right;
-        }
-      }
+
+  }
    .menu-toggle {
     display:none;
     }

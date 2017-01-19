@@ -855,6 +855,15 @@ textarea:focus {
   margin-bottom: 0;
 }
 
+.sf_container {
+  text-align: center;
+}
+
+.sf_container .screen-reader-text {
+  display: inline;
+  margin-right: 10px;
+}
+
 .search-form {
   position: relative;
   left: 20px;
@@ -888,6 +897,26 @@ input[type="search"].search-field {
   padding: 0;
   border-color: #FC0262;
   color: #FC0262;
+}
+
+.site > div > footer .sf_container, .site > div > header .sf_container {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.site > div > footer .sf_container .screen-reader-text, .site > div > header .sf_container .screen-reader-text {
+  display: inline;
+  visibility: hidden;
+}
+
+.site > div > footer .menu-search, .site > div > header .menu-search {
+  position: relative;
+}
+
+.site > div > footer .menu-search .sf_container, .site > div > header .menu-search .sf_container {
+  display: block;
 }
 
 .site > div > footer .form-container, .site > div > footer .search-form, .site > div > header .form-container, .site > div > header .search-form {
@@ -962,9 +991,62 @@ input[type="search"].search-field {
   .site > div > header .search-form textarea {
   margin: 10px 0px 10px auto;
   border-radius: 2px;
-  width: 200px;
   right: 0px;
   border: none;
+}
+
+.site > div > footer .form-container input[type="date"],
+  .site > div > footer .form-container input[type="time"],
+  .site > div > footer .form-container input[type="datetime-local"],
+  .site > div > footer .form-container input[type="week"],
+  .site > div > footer .form-container input[type="month"],
+  .site > div > footer .form-container input[type="text"],
+  .site > div > footer .form-container input[type="email"],
+  .site > div > footer .form-container input[type="url"],
+  .site > div > footer .form-container input[type="password"],
+  .site > div > footer .form-container input[type="search"],
+  .site > div > footer .form-container input[type="tel"],
+  .site > div > footer .form-container input[type="number"], .site > div > footer .search-form input[type="date"],
+  .site > div > footer .search-form input[type="time"],
+  .site > div > footer .search-form input[type="datetime-local"],
+  .site > div > footer .search-form input[type="week"],
+  .site > div > footer .search-form input[type="month"],
+  .site > div > footer .search-form input[type="text"],
+  .site > div > footer .search-form input[type="email"],
+  .site > div > footer .search-form input[type="url"],
+  .site > div > footer .search-form input[type="password"],
+  .site > div > footer .search-form input[type="search"],
+  .site > div > footer .search-form input[type="tel"],
+  .site > div > footer .search-form input[type="number"], .site > div > header .form-container input[type="date"],
+  .site > div > header .form-container input[type="time"],
+  .site > div > header .form-container input[type="datetime-local"],
+  .site > div > header .form-container input[type="week"],
+  .site > div > header .form-container input[type="month"],
+  .site > div > header .form-container input[type="text"],
+  .site > div > header .form-container input[type="email"],
+  .site > div > header .form-container input[type="url"],
+  .site > div > header .form-container input[type="password"],
+  .site > div > header .form-container input[type="search"],
+  .site > div > header .form-container input[type="tel"],
+  .site > div > header .form-container input[type="number"], .site > div > header .search-form input[type="date"],
+  .site > div > header .search-form input[type="time"],
+  .site > div > header .search-form input[type="datetime-local"],
+  .site > div > header .search-form input[type="week"],
+  .site > div > header .search-form input[type="month"],
+  .site > div > header .search-form input[type="text"],
+  .site > div > header .search-form input[type="email"],
+  .site > div > header .search-form input[type="url"],
+  .site > div > header .search-form input[type="password"],
+  .site > div > header .search-form input[type="search"],
+  .site > div > header .search-form input[type="tel"],
+  .site > div > header .search-form input[type="number"] {
+  width: 200px;
+  height: 40px;
+}
+
+.site > div > footer .form-container textarea, .site > div > footer .search-form textarea, .site > div > header .form-container textarea, .site > div > header .search-form textarea {
+  width: 300px;
+  min-width: 200px;
 }
 
 .site > div > footer .form-container input[type="submit"],
@@ -1129,6 +1211,7 @@ a:active {
 
 .main-navigation ul {
   list-style: none;
+  top: 30px;
 }
 
 .main-navigation li {
@@ -1650,7 +1733,15 @@ footer .social-navigation a {
   padding: 0 0.538461538em;
 }
 
-@media all and (min-width: 760px) {
+@media all and (min-width: 767px) {
+  .site > div > header .sf_container {
+    display: block;
+  }
+
+  .site > div > header .menu-search .sf_container {
+    display: none;
+  }
+
   .site > div > header .search-form label {
     display: inline;
   }
