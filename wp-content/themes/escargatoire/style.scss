@@ -938,19 +938,12 @@ input[type="search"].search-field {
     .form-container, .search-form {
       margin: 0 auto;
       color: inherit;
-    .form-title {
-      font-family: $bold-font;
-      color: inherit;
-      text-align: center;
-      margin: 0;
-      text-transform: uppercase;
-    }
+
     label {
       text-transform: uppercase;
       font-weight: bold;
       margin-right: 10px;
       display: inline;
-      margin-left: -72px;
     }
   
     input[type="date"],
@@ -1024,11 +1017,7 @@ input[type="search"].search-field {
       color: $dark-text;
       background: $accent-2;
     }
-    .signup-options {
-      display:inline-flex;;
-      white-space:nowrap;
-      font-size: 9px;
-    }
+
     input[type="checkbox"], 
     label[type="checkbox"] {
       width: auto;
@@ -1036,9 +1025,40 @@ input[type="search"].search-field {
       vertical-align: bottom;
     }
   }
-  .subscribe-form label {
-    display: inline;
+  .subscribe-form {
+    .form-container {
+      padding: 20px;
+      width: 350px;
+      border: 2px solid $light-text;
+      border-radius: 2px;
+    }
+    .form-title {
+      font-family: "Proxima Nova Bold", Helvetica, sans-serif;
+      color: inherit;
+      text-align: center;
+      margin: 0;
+      text-transform: uppercase;
+    }
+    .subscribe-form-elements {
+      padding: 0;
+    }
+    li {
+      width: 100%;
+    }
+    label {
+      display: inline;
+    }
+    .signup-options-list {
+      display:inline-flex;
+      font-size: 9px;
+      padding: 0 0 16px;
+      .signup-options {
+        white-space: nowrap;
+      }
+    }
   }
+
+
 }
 
 header .search-form label {
@@ -1048,7 +1068,7 @@ header .search-form label {
 
 
 
-
+ /** 5.0 - End Forms **/
  /** 6.0 - Navigation **/
  /** 6.1 - Links **/
 
@@ -2703,12 +2723,7 @@ article.post {
 
   }
 
-  .subscribe-form .form-container {
-    padding: 20px;
-    width: 350px;
-    border: 2px solid $light-text;
-    border-radius: 2px;
-  }
+
 
   .nav-link {
     font-size: 16px;
@@ -2722,9 +2737,9 @@ article.post {
       overflow: hidden;
       line-height: 40px;
       }
-      :hover {
+      a:hover {
         background-color: transparent;
-        border: 1px solid $accent-1;
+        border: 2px solid $accent-1;
         color: $accent-1;
         border-radius: 2px;
       }

@@ -924,20 +924,11 @@ input[type="search"].search-field {
   color: inherit;
 }
 
-.site > div > footer .form-container .form-title, .site > div > footer .search-form .form-title, .site > div > header .form-container .form-title, .site > div > header .search-form .form-title {
-  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
-  color: inherit;
-  text-align: center;
-  margin: 0;
-  text-transform: uppercase;
-}
-
 .site > div > footer .form-container label, .site > div > footer .search-form label, .site > div > header .form-container label, .site > div > header .search-form label {
   text-transform: uppercase;
   font-weight: bold;
   margin-right: 10px;
   display: inline;
-  margin-left: -72px;
 }
 
 .site > div > footer .form-container input[type="date"],
@@ -1112,12 +1103,6 @@ input[type="search"].search-field {
   background: #FF9E01;
 }
 
-.site > div > footer .form-container .signup-options, .site > div > footer .search-form .signup-options, .site > div > header .form-container .signup-options, .site > div > header .search-form .signup-options {
-  display: inline-flex;
-  white-space: nowrap;
-  font-size: 9px;
-}
-
 .site > div > footer .form-container input[type="checkbox"],
   .site > div > footer .form-container label[type="checkbox"], .site > div > footer .search-form input[type="checkbox"],
   .site > div > footer .search-form label[type="checkbox"], .site > div > header .form-container input[type="checkbox"],
@@ -1128,14 +1113,48 @@ input[type="search"].search-field {
   vertical-align: bottom;
 }
 
+.site > div > footer .subscribe-form .form-container, .site > div > header .subscribe-form .form-container {
+  padding: 20px;
+  width: 350px;
+  border: 2px solid #FEFEFE;
+  border-radius: 2px;
+}
+
+.site > div > footer .subscribe-form .form-title, .site > div > header .subscribe-form .form-title {
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
+  color: inherit;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.site > div > footer .subscribe-form .subscribe-form-elements, .site > div > header .subscribe-form .subscribe-form-elements {
+  padding: 0;
+}
+
+.site > div > footer .subscribe-form li, .site > div > header .subscribe-form li {
+  width: 100%;
+}
+
 .site > div > footer .subscribe-form label, .site > div > header .subscribe-form label {
   display: inline;
+}
+
+.site > div > footer .subscribe-form .signup-options-list, .site > div > header .subscribe-form .signup-options-list {
+  display: inline-flex;
+  font-size: 9px;
+  padding: 0 0 16px;
+}
+
+.site > div > footer .subscribe-form .signup-options-list .signup-options, .site > div > header .subscribe-form .signup-options-list .signup-options {
+  white-space: nowrap;
 }
 
 header .search-form label {
   display: block;
 }
 
+/** 5.0 - End Forms **/
 /** 6.0 - Navigation **/
 /** 6.1 - Links **/
 a {
@@ -2754,13 +2773,6 @@ article.post {
   display: inline-block;
 }
 
-.site > div > footer .subscribe-form .form-container {
-  padding: 20px;
-  width: 350px;
-  border: 2px solid #FEFEFE;
-  border-radius: 2px;
-}
-
 .site > div > footer .nav-link {
   font-size: 16px;
   box-sizing: border-box;
@@ -2776,9 +2788,9 @@ article.post {
   line-height: 40px;
 }
 
-.site > div > footer .nav-link :hover {
+.site > div > footer .nav-link a:hover {
   background-color: transparent;
-  border: 1px solid #2FF6F6;
+  border: 2px solid #2FF6F6;
   color: #2FF6F6;
   border-radius: 2px;
 }
