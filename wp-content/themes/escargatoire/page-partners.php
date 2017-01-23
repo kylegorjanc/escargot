@@ -29,7 +29,7 @@ get_header(); ?>
                   <li>Written specifically for your needs</li>
                   <li>You choose the topic</li>
                 </ul>
-                <button>$300 and up</button>
+                <button>Contact Us</button>
               </div>
             </div> <!-- package -->
             <div id="standard" class="package">
@@ -41,7 +41,7 @@ get_header(); ?>
                   <li>Custom professional photo shoot</li>
                   <li>1 High Res Photo</li>
                 </ul>
-                <button>$450 and up</button>
+                <button>Contact Us</button>
               </div>
             </div> <!-- package -->
             <div id="deluxe" class="package">
@@ -53,7 +53,7 @@ get_header(); ?>
                   <li>3 High Res Photos</li>
                   <li>Social Media Promotions</li>
                 </ul>
-                <button>$650 and up</button>
+                <button>Contact Us</button>
               </div>
             </div> <!-- package -->
         </div>

@@ -13,7 +13,6 @@
 	<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php escargatoire_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
