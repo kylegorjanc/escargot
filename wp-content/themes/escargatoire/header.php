@@ -27,6 +27,8 @@
 
 		<header id="masthead" class="site-header dark-bg" role="banner">
 			<div class="site-header-main">
+
+					<?php get_search_form(); ?>
 				<div class="site-branding">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel=""><img src="<?php echo esc_url( home_url( '//wp-content/themes/escargatoire/assets/logo.png' ) ); ?>" alt="" class="custom-logo"></a>
 
@@ -41,7 +43,6 @@
 						<p class="site-description"><?php echo $description; ?></p>
 					<?php endif; ?>
 				</div><!-- .site-branding -->
-
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
 					<button id="menu-toggle" class="menu-toggle"><?php _e( '&#x2630', 'escargatoire' ); ?></button>
 
@@ -56,6 +57,7 @@
 								?>
 							</nav><!-- .main-navigation -->
 						<?php endif; ?>
+						<div class="menu-search"><?php get_search_form(); ?></div>
 
 						<?php if ( has_nav_menu( 'social' ) ) : ?>
 							<nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'escargatoire' ); ?>">
@@ -70,7 +72,7 @@
 								?>
 							</nav><!-- .social-navigation -->
 						<?php endif; ?>
-						<?php get_search_form(); ?>
+					
 					</div><!-- .site-header-menu -->
 				<?php endif; ?>
 			</div><!-- .site-header-main -->

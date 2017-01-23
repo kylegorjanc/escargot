@@ -9,8 +9,24 @@ Configuration Notes:
 - General: uncheck 'anyone can register'
 - Reading: change Front page displays to 'a static page'
 - Reading: Front page should be "Home" (http://*.com/home) and Posts page should be "Blog" (http://*.com/blog)
+- Discussion
+  - Uncheck allow pingbacks and trackbacks
+  - Uncheck Users must be registered and logged in to comment 
+  - Uncheck Automatically close comments on articles older than
+  - Uncheck Break comments into pages 
+  - SELECT 'newer'
+  - Uncheck Comment must be manually approved  
+  - CHECK Comment author must have a previously approved comment
+  - SELECT Hold a comment in the queue if it contains ** 2 ** or more
+  - CHECK show avatars
 - Media: Set all sizes to 0 x 0
 - Permalinks: Link structure should be set to Post name (http://localhost:8000/sample-post/)
+- WP User Avatar 
+  - CHECK Add avatar button to Visual Editor
+  - uncheck Allow Contributors and Subscribers to upload
+  - CHECK Disable Gravatar and use only local avatars
+  - CHECK Show Avatars
+
 
 # Plugins
 
@@ -31,9 +47,9 @@ Configuration Notes:
     - Contact form on
     - Spelling and Grammar on
 -   Co-Authors Plus
-- Profile Xtra
-- (Link First Image to Post)[*/?tab=plugin-information&plugin=link-first-image-to-post&TB_iframe=true&width=772&height=579]
-- (WP Category Permalink)[*/?tab=plugin-information&plugin=wp-category-permalink&TB_iframe=true&width=772&height=579]
+- (Link First Image to Post)[]
+- (WP Category Permalink)[]
+- (WP User Avatar)[https://wordpress.org/plugins/wp-user-avatar/]
 
 # Home Page:
 

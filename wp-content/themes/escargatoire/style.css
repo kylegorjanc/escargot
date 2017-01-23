@@ -34,6 +34,7 @@ This theme and all its content copyright © 2016 SaltyRunning.com
   *    11.2a1 - Blog Page
   *    11.2b - Regular Post
   *    11.2c - Regular Page
+  *    11.2c1 - Archive Page
   *    11.2d - Short Bio
   *    11.2e - Long Bio
  *    11.3 - Post Formats
@@ -241,7 +242,7 @@ input[type="radio"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin-right: 0.4375em;
+  margin: 0 6px 0 12px;
   padding: 0;
 }
 
@@ -300,6 +301,17 @@ textarea {
 optgroup {
   font-weight: bold;
 }
+
+.black {
+  background-color: #000000;
+}
+
+.light-bg {
+  color: #000000;
+  border-color: currentColor;
+}
+
+/** End Normalize
 
 /**  2.0 Genericons - copied from Twenty Sixteen theme **/
 .menu-item-has-children a:after,
@@ -365,7 +377,7 @@ strong {
 }
 
 small {
-  font-size: 12pt;
+  font-size: 10.5pt;
 }
 
 sub,
@@ -397,9 +409,9 @@ body p ul ol li,
   input p ul ol li,
   select p ul ol li,
   textarea p ul ol li {
-  font-size: 16pt;
+  font-size: 14pt;
   color: #222222;
-  line-height: 28pt;
+  line-height: 24.5pt;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
   -webkit-font-feature-settings: "kern";
@@ -419,37 +431,34 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "Proxima Nova Extrabold", Helvetica, sans-serif;
+  letter-spacing: 2px;
 }
 
 h1 {
-  font-size: 32pt;
+  font-size: 28pt;
 }
 
 h2 {
   font-family: "Proxima Nova Bold", Helvetica, sans-serif;
-  font-size: 20pt;
+  font-size: 17.5pt;
 }
 
 h3, h4, h5, h6 {
-  font-size: 16pt;
-}
-
-h3 {
-  font-family: "Proxima Nova Extrabold", Helvetica, sans-serif;
+  font-size: 14pt;
 }
 
 h4, h5, h6 {
-  font-size: 16pt;
+  font-size: 14pt;
   font-family: "Proxima Nova Bold", Helvetica, sans-serif;
 }
 
 p {
-  margin: 0 0 16pt;
-  font-size: 16pt;
+  margin: 0 0 14pt;
+  font-size: 14pt;
   color: #222222;
-  line-height: 28pt;
+  line-height: 24.5pt;
 }
 
 dfn,
@@ -463,12 +472,12 @@ blockquote {
   border: 0 solid #D8EB00;
   border-left-width: 4px;
   color: #333333;
-  font-size: 16pt;
+  font-size: 14pt;
   font-style: italic;
   line-height: 1.4;
-  margin: 0 0 22.4pt;
+  margin: 0 0 19.6pt;
   overflow: hidden;
-  padding: 0 0 0 19.2pt;
+  padding: 0 0 0 16.8pt;
 }
 
 blockquote,
@@ -484,7 +493,7 @@ q:after {
 }
 
 blockquote p {
-  margin-bottom: 22.4pt;
+  margin-bottom: 19.6pt;
 }
 
 blockquote cite,
@@ -510,10 +519,10 @@ blockquote > :last-child {
 
 pre {
   border: 1px solid #2FF6F6;
-  margin: 0 0 28pt;
+  margin: 0 0 24.5pt;
   max-width: 100%;
   overflow: auto;
-  padding: 28pt;
+  padding: 24.5pt;
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -521,7 +530,7 @@ pre {
 
 code {
   background-color: #FFF;
-  padding: 2pt 4pt;
+  padding: 1.75pt 3.5pt;
 }
 
 big {
@@ -555,12 +564,20 @@ hr {
   height: 1px;
   width: 80%;
   text-align: center;
-  margin: 0 auto 16pt;
+  margin: 0 auto 14pt;
+}
+
+hr.hr2 {
+  height: 2px;
+}
+
+hr.hr4 {
+  height: 4px;
 }
 
 ul,
 ol {
-  margin: 0 0 28pt 20pt;
+  margin: 0 0 24.5pt 17.5pt;
   padding: 0;
 }
 
@@ -570,7 +587,7 @@ ul {
 
 ol {
   list-style: decimal;
-  margin-left: 24pt;
+  margin-left: 21pt;
 }
 
 li > ul,
@@ -579,7 +596,7 @@ li > ol {
 }
 
 dl {
-  margin: 0 0 28pt;
+  margin: 0 0 24.5pt;
 }
 
 dt {
@@ -587,7 +604,7 @@ dt {
 }
 
 dd {
-  margin: 0 0 28pt;
+  margin: 0 0 24.5pt;
 }
 
 img {
@@ -612,7 +629,7 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   border-width: 1px 0 0 1px;
-  margin: 0 0 28pt;
+  margin: 0 0 24.5pt;
   table-layout: fixed;
   /* Prevents HTML tables from becoming too wide */
   width: 100%;
@@ -636,7 +653,7 @@ td {
 
 th,
 td {
-  padding: 6.4pt;
+  padding: 5.6pt;
 }
 
 /* Placeholder text color -- selectors need to be separate to work. */
@@ -669,7 +686,7 @@ input {
   background-color: #000;
   color: #FEFEFE;
   font-family: "Proxima Nova Bold", Helvetica, sans-serif;
-  font-size: 14pt;
+  font-size: 12.25pt;
   border-radius: 12px;
   white-space: nowrap;
 }
@@ -839,6 +856,15 @@ textarea:focus {
   margin-bottom: 0;
 }
 
+.sf_container {
+  text-align: center;
+}
+
+.sf_container .screen-reader-text {
+  display: inline;
+  margin-right: 10px;
+}
+
 .search-form {
   position: relative;
   left: 20px;
@@ -847,6 +873,7 @@ textarea:focus {
 .search-form ul {
   list-style: none;
   margin: 0;
+  white-space: nowrap;
 }
 
 input[type="search"].search-field {
@@ -855,7 +882,7 @@ input[type="search"].search-field {
 
 .search-submit:before {
   content: "\f400";
-  font-size: 24pt;
+  font-size: 21pt;
   left: 2px;
   line-height: 1;
   position: relative;
@@ -873,38 +900,36 @@ input[type="search"].search-field {
   color: #FC0262;
 }
 
+.site > div > footer .sf_container, .site > div > header .sf_container {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.site > div > footer .sf_container .screen-reader-text, .site > div > header .sf_container .screen-reader-text {
+  display: inline;
+  visibility: hidden;
+}
+
+.site > div > footer .menu-search, .site > div > header .menu-search {
+  position: relative;
+}
+
+.site > div > footer .menu-search .sf_container, .site > div > header .menu-search .sf_container {
+  display: block;
+}
+
 .site > div > footer .form-container, .site > div > footer .search-form, .site > div > header .form-container, .site > div > header .search-form {
   margin: 0 auto;
   color: inherit;
 }
 
-.site > div > footer .form-container .form-container, .site > div > footer .search-form .form-container, .site > div > header .form-container .form-container, .site > div > header .search-form .form-container {
-  padding: 20px;
-}
-
-.site > div > footer .form-container .search-form, .site > div > footer .search-form .search-form, .site > div > header .form-container .search-form, .site > div > header .search-form .search-form {
-  width: 100%;
-  position: absolute;
-  right: 0px;
-}
-
-.site > div > footer .form-container .form-title, .site > div > footer .search-form .form-title, .site > div > header .form-container .form-title, .site > div > header .search-form .form-title {
-  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
-  color: inherit;
-  text-align: center;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.site > div > footer .form-container ul li, .site > div > footer .search-form ul li, .site > div > header .form-container ul li, .site > div > header .search-form ul li {
-  display: block;
-}
-
 .site > div > footer .form-container label, .site > div > footer .search-form label, .site > div > header .form-container label, .site > div > header .search-form label {
   text-transform: uppercase;
-  font-size: 12pt;
   font-weight: bold;
   margin-right: 10px;
+  display: inline;
 }
 
 .site > div > footer .form-container input[type="date"],
@@ -958,9 +983,62 @@ input[type="search"].search-field {
   .site > div > header .search-form textarea {
   margin: 10px 0px 10px auto;
   border-radius: 2px;
-  width: 200px;
   right: 0px;
   border: none;
+}
+
+.site > div > footer .form-container input[type="date"],
+  .site > div > footer .form-container input[type="time"],
+  .site > div > footer .form-container input[type="datetime-local"],
+  .site > div > footer .form-container input[type="week"],
+  .site > div > footer .form-container input[type="month"],
+  .site > div > footer .form-container input[type="text"],
+  .site > div > footer .form-container input[type="email"],
+  .site > div > footer .form-container input[type="url"],
+  .site > div > footer .form-container input[type="password"],
+  .site > div > footer .form-container input[type="search"],
+  .site > div > footer .form-container input[type="tel"],
+  .site > div > footer .form-container input[type="number"], .site > div > footer .search-form input[type="date"],
+  .site > div > footer .search-form input[type="time"],
+  .site > div > footer .search-form input[type="datetime-local"],
+  .site > div > footer .search-form input[type="week"],
+  .site > div > footer .search-form input[type="month"],
+  .site > div > footer .search-form input[type="text"],
+  .site > div > footer .search-form input[type="email"],
+  .site > div > footer .search-form input[type="url"],
+  .site > div > footer .search-form input[type="password"],
+  .site > div > footer .search-form input[type="search"],
+  .site > div > footer .search-form input[type="tel"],
+  .site > div > footer .search-form input[type="number"], .site > div > header .form-container input[type="date"],
+  .site > div > header .form-container input[type="time"],
+  .site > div > header .form-container input[type="datetime-local"],
+  .site > div > header .form-container input[type="week"],
+  .site > div > header .form-container input[type="month"],
+  .site > div > header .form-container input[type="text"],
+  .site > div > header .form-container input[type="email"],
+  .site > div > header .form-container input[type="url"],
+  .site > div > header .form-container input[type="password"],
+  .site > div > header .form-container input[type="search"],
+  .site > div > header .form-container input[type="tel"],
+  .site > div > header .form-container input[type="number"], .site > div > header .search-form input[type="date"],
+  .site > div > header .search-form input[type="time"],
+  .site > div > header .search-form input[type="datetime-local"],
+  .site > div > header .search-form input[type="week"],
+  .site > div > header .search-form input[type="month"],
+  .site > div > header .search-form input[type="text"],
+  .site > div > header .search-form input[type="email"],
+  .site > div > header .search-form input[type="url"],
+  .site > div > header .search-form input[type="password"],
+  .site > div > header .search-form input[type="search"],
+  .site > div > header .search-form input[type="tel"],
+  .site > div > header .search-form input[type="number"] {
+  width: 200px;
+  height: 40px;
+}
+
+.site > div > footer .form-container textarea, .site > div > footer .search-form textarea, .site > div > header .form-container textarea, .site > div > header .search-form textarea {
+  width: 300px;
+  min-width: 200px;
 }
 
 .site > div > footer .form-container input[type="submit"],
@@ -1026,23 +1104,58 @@ input[type="search"].search-field {
   background: #FF9E01;
 }
 
-.site > div > footer .form-container .signup-options, .site > div > footer .search-form .signup-options, .site > div > header .form-container .signup-options, .site > div > header .search-form .signup-options {
-  display: inline-flex;
-  white-space: nowrap;
-  font-size: 9px;
-}
-
-.site > div > footer .form-container input[type="checkbox"], .site > div > footer .search-form input[type="checkbox"], .site > div > header .form-container input[type="checkbox"], .site > div > header .search-form input[type="checkbox"] {
+.site > div > footer .form-container input[type="checkbox"],
+  .site > div > footer .form-container label[type="checkbox"], .site > div > footer .search-form input[type="checkbox"],
+  .site > div > footer .search-form label[type="checkbox"], .site > div > header .form-container input[type="checkbox"],
+  .site > div > header .form-container label[type="checkbox"], .site > div > header .search-form input[type="checkbox"],
+  .site > div > header .search-form label[type="checkbox"] {
   width: auto;
-  margin: 6px;
+  margin-top: 10px;
   vertical-align: bottom;
 }
 
-.site > div > footer .form-container label, .site > div > footer .search-form label, .site > div > header .form-container label, .site > div > header .search-form label {
-  font-size: inherit;
+.site > div > footer .subscribe-form .form-container, .site > div > header .subscribe-form .form-container {
+  padding: 20px;
+  width: 350px;
+  border: 2px solid #FEFEFE;
+  border-radius: 2px;
+}
+
+.site > div > footer .subscribe-form .form-title, .site > div > header .subscribe-form .form-title {
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
+  color: inherit;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.site > div > footer .subscribe-form .subscribe-form-elements, .site > div > header .subscribe-form .subscribe-form-elements {
+  padding: 0;
+}
+
+.site > div > footer .subscribe-form li, .site > div > header .subscribe-form li {
+  width: 100%;
+}
+
+.site > div > footer .subscribe-form label, .site > div > header .subscribe-form label {
+  display: inline;
+}
+
+.site > div > footer .subscribe-form .signup-options-list, .site > div > header .subscribe-form .signup-options-list {
+  display: inline-flex;
+  font-size: 9px;
+  padding: 0 0 16px;
+}
+
+.site > div > footer .subscribe-form .signup-options-list .signup-options, .site > div > header .subscribe-form .signup-options-list .signup-options {
+  white-space: nowrap;
+}
+
+header .search-form label {
   display: block;
 }
 
+/** 5.0 - End Forms **/
 /** 6.0 - Navigation **/
 /** 6.1 - Links **/
 a {
@@ -1103,20 +1216,22 @@ a:active {
   position: absolute;
   display: block;
   right: 0px;
-  top: 120px;
+  top: 100px;
   width: 280px;
   height: 100%;
-  background: #000000;
+  background: rgba(0, 0, 0, 0.93);
   z-index: 5;
 }
 
 .main-navigation {
   font-family: Proxima Nova Bold, "Helvetica Neue", sans-serif;
-  margin: 24px 0 48px;
+  font-size: 16px;
+  margin: 21px 0 42px;
 }
 
 .main-navigation ul {
   list-style: none;
+  top: 30px;
 }
 
 .main-navigation li {
@@ -1127,6 +1242,7 @@ a:active {
   min-width: 100px;
   height: 24px;
   margin: 24px 20px;
+  letter-spacing: 2px;
 }
 
 .menu-item {
@@ -1134,14 +1250,15 @@ a:active {
 }
 
 .site-header .main-navigation a {
+  border: 2px solid transparent;
   color: #FEFEFE;
   outline-offset: -1px;
   padding: 10px 19px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.site-header .main-navigation a:hover,
-.site-header .main-navigation a:focus {
+.site-header .main-navigation a:hover, .site-header .main-navigation a:focus, .site-header .main-navigation a:active {
   border: 2px solid #D8EB00;
   border-radius: 2px;
   background-color: transparent;
@@ -1198,6 +1315,7 @@ a:active {
   padding: 0;
   text-transform: uppercase;
   width: 40px;
+  outline: none;
 }
 
 .site-header .dropdown-toggle, .site-footer .dropdown-toggle {
@@ -1258,11 +1376,12 @@ a:active {
 }
 
 .sharing-title {
-  font-size: 12pt;
-  margin-bottom: 12pt;
+  font-size: 10.5pt;
+  margin-bottom: 10.5pt;
 }
 
 .social-navigation, .post-sharing {
+  color: inherit;
   padding: 0 6px;
   margin-bottom: 1.75em;
   min-width: 70px;
@@ -1280,7 +1399,7 @@ a:active {
 }
 
 .social-navigation a, .post-sharing a {
-  border-radius: 50%;
+  border-radius: 100%;
   box-sizing: border-box;
   display: inline-flex;
   position: relative;
@@ -1289,11 +1408,14 @@ a:active {
 }
 
 .social-navigation a:before, .post-sharing a:before {
+  color: inherit;
   content: "\f415";
   height: 40px;
   line-height: 36px;
   text-align: center;
   width: 40px;
+  border: 2px solid currentColor;
+  border-radius: 100%;
 }
 
 .social-navigation a:hover:before,
@@ -1303,22 +1425,13 @@ a:active {
   border-color: #2FF6F6;
 }
 
-.social-navigation a {
-  color: #FEFEFE;
-  border: 3px solid currentColor;
-}
-
-.post-sharing a {
-  color: #FC0262;
-  border: 3px solid currentColor;
-}
-
 footer .social-navigation ul {
   text-align: inherit;
 }
 
 footer .social-navigation a {
   margin-left: 24px;
+  color: #FEFEFE;
 }
 
 .social-navigation a[href*="codepen.io"]:before {
@@ -1436,7 +1549,7 @@ footer .social-navigation a {
   margin: 16px auto;
   text-align: center;
   max-width: 780px;
-  padding-top: 28pt;
+  padding-top: 24.5pt;
 }
 
 .post-navigation nav-links {
@@ -1447,7 +1560,7 @@ footer .social-navigation a {
 .post-navigation a {
   color: #1a1a1a;
   display: block;
-  padding: 32pt 0;
+  padding: 28pt 0;
 }
 
 .post-navigation span {
@@ -1484,7 +1597,7 @@ footer .social-navigation a {
 
 .pagination {
   border-top: 4px solid #000000;
-  font-size: 16pt;
+  font-size: 14pt;
   font-size: 1rem;
   max-width: 80%;
   margin: 0 auto 40px;
@@ -1503,7 +1616,7 @@ footer .social-navigation a {
 }
 
 .pagination .nav-links {
-  margin-top: 12pt;
+  margin-top: 10.5pt;
   padding: 10px 54px 0;
   position: relative;
 }
@@ -1535,7 +1648,7 @@ footer .social-navigation a {
   letter-spacing: 0.013157895em;
   line-height: 1;
   margin: 0 auto;
-  padding: 16pt 4% 0;
+  padding: 14pt 4% 0;
   text-transform: uppercase;
 }
 
@@ -1640,7 +1753,15 @@ footer .social-navigation a {
   padding: 0 0.538461538em;
 }
 
-@media all and (min-width: 760px) {
+@media all and (min-width: 767px) {
+  .site > div > header .sf_container {
+    display: block;
+  }
+
+  .site > div > header .menu-search .sf_container {
+    display: none;
+  }
+
   .site > div > header .search-form label {
     display: inline;
   }
@@ -1674,7 +1795,7 @@ footer .social-navigation a {
   }
 
   .site-header .main-navigation {
-    margin: 40px 30px;
+    margin: 0px 30px;
     border-bottom: 0px;
   }
 
@@ -1805,24 +1926,12 @@ blockquote:after,
 .site-content {
   word-wrap: break-word;
   max-width: 980px;
-  margin: auto auto 32px;
+  margin: auto auto 40px;
 }
 
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
   outline: 0;
-}
-
-.page-main {
-  margin: 20px 0;
-}
-
-.page-main :first-child {
-  margin-top: 0px;
-}
-
-.page-main :last-child {
-  margin-bottom: 0px;
 }
 
 /** *    11.1 - Header **/
@@ -1872,7 +1981,7 @@ blockquote:after,
 
 .site-title {
   font-family: Pantra, "Helvetica Neue", sans-serif;
-  font-size: 16pt;
+  font-size: 14pt;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1;
@@ -1899,7 +2008,7 @@ blockquote:after,
 }
 
 .wp-custom-logo .site-title {
-  margin-top: 9.6pt;
+  margin-top: 8.4pt;
 }
 
 .site-description {
@@ -1919,12 +2028,12 @@ blockquote:after,
   border-radius: 100%;
   color: #FC0262;
   font-size: 12.8pt;
-  margin: 1.076923077em 0;
+  margin: 0;
   height: 40px;
   width: 40px;
   padding: 0;
-  top: 0;
-  right: 16px;
+  top: 10px;
+  right: 10px;
 }
 
 .menu-toggle :before {
@@ -1960,11 +2069,7 @@ blockquote:after,
 }
 
 .menu-toggle:focus {
-  outline: 0;
-}
-
-.menu-toggle.toggled-on:focus {
-  outline: thin dotted;
+  outline: none;
 }
 
 .header-image {
@@ -1983,7 +2088,7 @@ blockquote:after,
 
 .site-title {
   font-family: Pantra, "Helvetica Neue", sans-serif;
-  font-size: 16pt;
+  font-size: 14pt;
   font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2009,7 +2114,7 @@ blockquote:after,
 }
 
 .wp-custom-logo .site-title {
-  margin-top: 8pt;
+  margin-top: 7pt;
 }
 
 .site-description {
@@ -2018,7 +2123,7 @@ blockquote:after,
   font-size: 13px;
   font-weight: 400;
   line-height: 1.2;
-  margin: 8pt 0 0;
+  margin: 7pt 0 0;
 }
 
 .no-js .menu-toggle {
@@ -2181,7 +2286,7 @@ blockquote:after,
 .byline {
   margin: 10px 16px 0px;
   width: 100%;
-  font-size: 12pt;
+  font-size: 10.5pt;
 }
 
 .byline img {
@@ -2260,7 +2365,7 @@ article.post {
 }
 
 .page-main {
-  margin: 20px 16px 40px;
+  margin: 50px 16px 20px;
 }
 
 .page-main img {
@@ -2309,17 +2414,25 @@ article.post {
 }
 
 /** **    11.2b - end Regular Page **/
+/** **    11.2c1 - Archive Page **/
+/** **    11.2c1 - End Archive Page **/
+/** **    11.2c1 - Author Archive Page **/
+/** **    11.2c1 - End Author Archive Page **/
 /** **    11.2d - Short Bio **/
 .author-info {
   max-width: 600px;
   border-radius: 12px;
-  padding: 16pt;
+  padding: 14pt;
   margin: 0 auto;
 }
 
 .author-info p {
-  margin: auto 0px 8pt;
+  margin: auto 0px 7pt;
   font-size: 14pt;
+}
+
+.author-info a {
+  text-decoration: underline;
 }
 
 .author-info h3 > a {
@@ -2333,20 +2446,29 @@ article.post {
 
 .author-info .author-title {
   text-transform: uppercase;
+  text-decoration: none;
   clear: none;
   line-height: 1;
+  text-align: center;
+  margin-bottom: 12px;
+  margin-right: 124px;
 }
 
 .author-info .author-description {
   min-height: 100px;
 }
 
-.author-info .author-description img {
+.author-info .author-bio > .author-avatar {
   position: relative;
   display: inline-block;
   float: left;
+  margin: 36px 24px 10px 0;
+}
+
+.author-info .author-bio > .author-avatar img {
   border-radius: 12px;
-  margin-right: 10px;
+  height: 100px;
+  width: 100px;
 }
 
 .author-info .author-buttons {
@@ -2368,7 +2490,71 @@ article.post {
 
 .author-info button {
   min-width: 260px;
-  margin: 8pt auto;
+  margin: 7pt auto;
+}
+
+.author-info .author-bio-link {
+  text-align: center;
+}
+
+.page-level-bios img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  background-color: #C900A0;
+}
+
+.page-level-bios .author-bio {
+  margin: 40px 0 60px;
+  max-width: 100%;
+}
+
+.page-level-bios .author-avatar {
+  display: inline-block;
+  float: right;
+  margin-bottom: -28px;
+}
+
+.page-level-bios .author-avatar :first-child {
+  vertical-align: top;
+}
+
+.page-level-bios .author-title {
+  margin-bottom: 20px;
+  font-size: 17.5pt;
+}
+
+.page-level-bios .author-bio-content {
+  display: inline-block;
+  max-width: 710px;
+}
+
+.page-level-bios .author-bio-link {
+  display: block;
+  text-align: center;
+}
+
+@media all and (min-width: 670px) {
+  .page-level-bios {
+    display: block;
+    min-height: 200px;
+  }
+
+  .page-level-bios .author-avatar {
+    float: left;
+    margin: 0px 40px 0 0;
+  }
+
+  .page-level-bios .author-bio-content {
+    width: 60%;
+  }
+}
+
+@media all and (min-width: 836px) {
+  .page-level-bios .author-bio-content {
+    width: 70%;
+  }
 }
 
 /** **    11.d - end Short Bio **/
@@ -2436,7 +2622,7 @@ article.post {
   height: 48px;
   width: 48px;
   border-radius: 6px;
-  margin-right: 14pt;
+  margin-right: 12.25pt;
   position: relative;
 }
 
@@ -2457,7 +2643,7 @@ article.post {
 }
 
 .comment-metadata {
-  margin-bottom: 20pt;
+  margin-bottom: 17.5pt;
 }
 
 .comment-metadata a,
@@ -2596,7 +2782,7 @@ article.post {
   background-color: #000000;
   color: #FEFEFE;
   padding-bottom: 10px;
-  font-size: 12pt;
+  font-size: 10.5pt;
 }
 
 .site > div > footer p {
@@ -2638,22 +2824,17 @@ article.post {
 }
 
 .site > div > footer ul li, .site > div > footer ol li {
-  display: inline;
-  padding: 16px auto;
-}
-
-.site > div > footer .subscribe-form .form-container {
-  padding: 20px;
-  width: 342px;
-  border: 2px solid #FEFEFE;
-  border-radius: 2px;
+  display: inline-block;
 }
 
 .site > div > footer .nav-link {
+  font-size: 16px;
   box-sizing: border-box;
+  letter-spacing: 1px;
 }
 
 .site > div > footer .nav-link a {
+  border: 2px solid transparent;
   padding: 16px 20px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -2661,9 +2842,9 @@ article.post {
   line-height: 40px;
 }
 
-.site > div > footer .nav-link :hover {
+.site > div > footer .nav-link a:hover {
   background-color: transparent;
-  border: 1px solid #2FF6F6;
+  border: 2px solid #2FF6F6;
   color: #2FF6F6;
   border-radius: 2px;
 }
@@ -2672,6 +2853,10 @@ article.post {
   footer .subscribe-form {
     display: inline-block;
     text-align: center;
+  }
+
+  footer .subscribe-form li {
+    white-space: nowrap;
   }
 
   footer .lower {
