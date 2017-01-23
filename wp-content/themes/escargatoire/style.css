@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 /*
 Theme Name: Escargatoire
@@ -2244,6 +2245,10 @@ blockquote:after,
 
 /** **    11.2a - End Home Page **/
 /** **    11.2a1 - Blog Page **/
+.blog-main {
+  display: flex;
+}
+
 .blog-main p img {
   display: none;
 }
@@ -2364,40 +2369,53 @@ article.post {
   height: 0px;
 }
 
-.page-main {
-  margin: 50px 16px 20px;
-}
-
-.page-main img {
-  max-width: 100%;
-}
-
 .page-entry-header {
-  margin: auto 16px;
+  margin: 50px 16px 0px;
+}
+
+.page-header {
+  margin-top: 50px;
 }
 
 .sidebar-right-content {
   float: left;
-  max-width: 742px;
-  min-width: 290px;
-  padding: 40px 60px;
+  width: 420px;
+  padding-right: 60px;
+  flex-grow: 1;
+}
+
+.sidebar-right-content .wrapper {
+  width: 100%;
 }
 
 .sidebar-right {
+  float: right;
   width: 234px;
   border-left: 4px solid black;
   list-style-type: none;
   padding: 60px 30px;
 }
 
+.sidebar-right .archive-list {
+  margin-bottom: 60px;
+  display: block;
+}
+
 .sidebar-right .categories, .sidebar-right .tags, .sidebar-right .archives {
   font-family: "Proxima Nova Bold", Helvetica, sans-serif;
+  font-size: 16pt;
   text-transform: uppercase;
 }
 
-.sidebar-right .categories ul, .sidebar-right .categories li, .sidebar-right .tags ul, .sidebar-right .tags li, .sidebar-right .archives ul, .sidebar-right .archives li {
+.sidebar-right .categories > ul, .sidebar-right .tags > ul, .sidebar-right .archives > ul {
+  font-size: 12pt;
   list-style: none;
-  text-transform: capitalize;
+  line-height: 1.4;
+  margin-left: 12px;
+}
+
+.sidebar-right .categories > ul > li, .sidebar-right .tags > ul > li, .sidebar-right .archives > ul > li {
+  margin-top: 12px;
 }
 
 .sidebar-right .categories a, .sidebar-right .tags a, .sidebar-right .archives a {
@@ -2406,6 +2424,22 @@ article.post {
 
 .sidebar-right .categories a:hover, .sidebar-right .tags a:hover, .sidebar-right .archives a:hover {
   color: #D8EB00;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.flexbox .flex-section-third {
+  width: 280px;
+  height: 300px;
+  border: 2px solid #2FF6F6;
+}
+
+@media all and (max-width: 670px) {
+  .sidebar-right {
+    display: none;
+  }
 }
 
 @media all and (min-width: 800px) {
@@ -2847,6 +2881,67 @@ article.post {
   border: 2px solid #2FF6F6;
   color: #2FF6F6;
   border-radius: 2px;
+}
+
+@media all and (min-width: 740px) {
+  footer .subscribe-form {
+    display: inline-block;
+    text-align: center;
+  }
+
+  footer .subscribe-form li {
+    white-space: nowrap;
+  }
+
+  footer .lower {
+    text-align: left;
+    padding: 0 30px;
+  }
+
+  footer .lower-right {
+    position: relative;
+    float: right;
+    text-align: right;
+    height: 372.67px;
+  }
+
+  footer .lower-right ul, footer .lower-right p {
+    text-align: right;
+  }
+
+  footer .lower-right div {
+    display: block;
+  }
+
+  footer .lower-right .footer-search {
+    position: relative;
+  }
+
+  footer .lower-right .copyright {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+}
+
+@media all and (min-width: 980px) {
+  footer .lower {
+    padding: 0;
+  }
+}
+
+/** *    11.6 - END Footer **/
+/** 12.0 - Media **/
+/** *    12.1 - Captions **/
+/** *    12.2 - Galleries **/
+/** 13.0 - Multisite **/
+/** 14.0 - Media Queries **/
+/** *    14.1 - >= 710px **/
+/** *    14.2 - >= 783px **/
+/** *    14.3 - >= 910px **/
+/** *    14.4 - >= 985px **/
+/** *    14.5 - >= 1200px **/
+/** 15.0 - Print **/;
 }
 
 @media all and (min-width: 740px) {
