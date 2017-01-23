@@ -2196,6 +2196,7 @@ blockquote:after,
   /** **    11.2a1 - Blog Page **/
 
 .blog-main {
+  display: flex;
   p img {
     display: none;
   }
@@ -2314,31 +2315,46 @@ article.post {
 
   }
 
-  .page-main {
-    margin: 50px 16px 20px;
-  }
   .page-entry-header {
-    margin: auto 16px;
+    margin: 50px 16px 0px;
+  }
+
+  .page-header {
+    margin-top: 50px;
   }
 
   .sidebar-right-content {
     float: left;
-    max-width: 742px;
-    min-width: 290px;
-    padding: 40px 60px;
+    width: 420px;
+    padding-right: 60px;
+    flex-grow: 1;
+    .wrapper {
+      width: 100%;
+    }
   }
 
   .sidebar-right {
+      float: right;
       width: 234px;
       border-left: 4px solid black;
       list-style-type: none;
       padding: 60px 30px;
+    .archive-list {
+      margin-bottom: 60px;
+      display: block;
+    }
     .categories, .tags, .archives{
       font-family: $bold-font;
+      font-size: 16pt;
       text-transform: uppercase;
-      ul, li {
+      > ul {
+        font-size: 12pt;
         list-style: none;
-        text-transform: capitalize;
+        line-height: 1.4;
+        margin-left: 12px;
+        > li {
+          margin-top: 12px;
+        }
       }
       a {
         color: $dark-text;
@@ -2350,7 +2366,20 @@ article.post {
 
   }
 
-@media all and (min-width: 800px) {
+
+.flexbox {
+  display: flex;
+  .flex-section-third {
+    width: 280px;
+    height: 300px;
+    border: 2px solid $accent-1;
+  }
+}
+
+@media all and (max-width: 670px) {
+  .sidebar-right {
+    display: none;
+  }
 }
 
 @media all and (min-width: 800px) {

@@ -20,8 +20,8 @@
 }
 #sf_val ul li.sf_selected
 {
-	background-color: #6D84B4 !important;
-	border-color: #3B5998 !important;
+	background-color: #000000 !important;
+	border-color: transparent !important;
 	color: white !important;
 }
 #sf_val ul li.sf_selected a, #sf_val ul li.sf_selected span

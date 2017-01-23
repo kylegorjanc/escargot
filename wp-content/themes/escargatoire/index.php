@@ -18,7 +18,9 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main blog-main" role="main">
+
 			<div id="blog-content" class="blog-content sidebar-right-content"> 
+			<div class="wrapper">
 		
 				<?php if ( have_posts() ) : ?>
 
@@ -55,35 +57,11 @@ get_header(); ?>
 
 				endif;
 				?>
+				</div> <!-- wrapper -->
 				</div>  <!-- blog content -->
-				<div id="blog-sidebar" class="sidebar-right">
-					<div id="category-list" class="archive-list">
-						<?php
-							wp_list_categories();
-						 ?>
-					</div> <!-- category list -->
-					<div id="date-list" class="archive-list">
-						<li class="archives">Archives
-							<ul>
-								<?php
-									wp_get_archives();
-								?>
-							</ul>
-						</li>
-					</div>  <!-- date list -->
-					<div id="training-cat-list" class="archive-list">
-						<li class="archives">Category Post Archives
-							<ul>
-									<?php query_posts('cat=1'); ?>
-									<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-									   <?php the_title( '<li class="archive-title">', '</li>' ); ?>
-									<?php endwhile; endif; ?>
-							</ul>
-						</li>
-					</div>  <!-- date list -->
-				</div> <!-- blog sidebar -->
+				<?php get_sidebar(); ?>
+
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
