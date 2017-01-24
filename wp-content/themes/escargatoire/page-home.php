@@ -20,7 +20,7 @@ get_header(); ?>
 			<div class="main-gallery js-flickity carousel"  data-flickity-options='{ "cellAlign": "center", "contain": true, "wrapAround": "true", "setGallerySize": "false"}'>
 			  <div class="carousel-cell">
 				  <div class="cell-wrap banner-wrap">	 
-					  <a href="./subscribe">
+					  <a href="<?php echo esc_url( home_url( '/subscribe' ) ); ?>" rel="subscribe">
 							<img src="http://localhost:8000/wp-content/uploads/2017/01/banner-1.jpg" alt="">
 								<h2>Subscribe</h2>
 						</a>
@@ -29,7 +29,7 @@ get_header(); ?>
 			 
 			  <div class="carousel-cell">	
 				  <div class="cell-wrap banner-wrap>
-					  <a href="./subscribe">
+					  <a href="<?php echo esc_url( home_url( '/category/training-logs/' ) ); ?>" rel="subscribe">
 						<img src="http://localhost:8000/wp-content/uploads/2017/01/site_header_photos_009.jpg" alt="" >
 							<h2>Training Logs</h2>
 						</a>
@@ -38,7 +38,7 @@ get_header(); ?>
 	
 			  <div class="carousel-cell">	
 				  	<div class="cell-wrap banner-wrap>	 	 
-					  <a href="./subscribe">
+					  <a href="<?php echo esc_url( home_url( '/category/features/interviews/' ) ); ?>" rel="subscribe">
 							<img src="http://localhost:8000/wp-content/uploads/2017/01/banner-3.jpg" alt="" >
 								<h2>Subscribe</h2>
 						</a>
