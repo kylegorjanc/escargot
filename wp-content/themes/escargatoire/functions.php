@@ -246,9 +246,6 @@ function escargatoire_scripts() {
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'escargatoire-fonts', escargatoire_fonts_url(), array(), null );
   
-  // Flickity CSS
-	wp_enqueue_style( 'flickity', get_stylesheet_uri() . '/css/flickity.css', array(), null );
-
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
 
@@ -266,10 +263,6 @@ function escargatoire_scripts() {
 	// Load the Internet Explorer 7 specific stylesheet.
 	wp_enqueue_style( 'escargatoire-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'escargatoire-style' ), '20160816' );
 	wp_style_add_data( 'escargatoire-ie7', 'conditional', 'lt IE 8' );
-
-	//Flickitty javascript
-	wp_enqueue_script( 'flickity', '/js/flickity.pkgd.min.js',  array ( 'jquery' ), 1.1, true);
-
 
 	// Load the html5 shiv.
 	wp_enqueue_script( 'escargatoire-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
@@ -293,6 +286,26 @@ function escargatoire_scripts() {
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'escargatoire_scripts' );
+
+
+
+function wpb_adding_scripts() {
+wp_register_script('flickity-js', get_template_directory_uri() . '/js/flickity.pkgd.min.js', array('jquery'),'1.1', true);
+wp_enqueue_script('flickity-js');
+}
+
+add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts' );  
+
+
+
+
+function wpb_adding_styles() {
+wp_register_style('flickity', get_template_directory_uri() . '/css/flickity.css', array(),'3.4.1', true);
+wp_enqueue_style('flickity');
+}
+
+add_action( 'wp_enqueue_styles', 'wpb_adding_styles' );  
+
 
 /**
  * Adds custom classes to the array of body classes.
