@@ -704,9 +704,14 @@ input {
   color: $light-text;
   font-family: "Proxima Nova Bold", Helvetica, sans-serif;
   font-size: $font-size * .875;
-  border-radius: 12px;
+  border-radius: 4px;
   white-space: nowrap;
 }
+
+.btn-home:hover {
+    background-color: $accent-1;
+    color: $dark-text;
+  }
 
 button,
 button[disabled]:hover,
@@ -2186,7 +2191,7 @@ blockquote:after,
       }
       li {
         display: inline-block;
-        margin-bottom: 20px;
+        margin: 10px;
       }
     }
 
