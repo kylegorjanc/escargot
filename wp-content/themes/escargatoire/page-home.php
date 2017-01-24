@@ -46,13 +46,13 @@ get_header(); ?>
 				</div>
 			</div>
 
-		<div class="home-section sixteen-nine" id="home-carousel-section">
+<!-- 		<div class="home-section sixteen-nine" id="home-carousel-section">
 		 <a href="./subscribe">
 			<div class="section-content banner-wrap" id="home-banner-1">
 				<span class="screen-reader-text link-text"><h2>Subscribe</h2></span>
 			</a>
 			</div>
-		</div> <!-- Section -->
+		</div> <!-- Section --> -->
 
 				<div class="home-section" id="home-buttons-section">
 			<div class="section-content" id="home-buttons">
