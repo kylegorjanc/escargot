@@ -474,3 +474,12 @@ function escargatoire_infinite_scroll_enqueue_styles() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'escargatoire_infinite_scroll_enqueue_styles', 25 );
+
+
+
+function exclude_category( $query ) {
+if ( $query->is_home() && $query->is_main_query() ) {
+$query->set( 'cat', '-14, -10' );
+}
+}
+add_action( 'pre_get_posts', 'exclude_category' );
