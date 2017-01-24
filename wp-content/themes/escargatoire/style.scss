@@ -2377,9 +2377,12 @@ article.post {
   }
 }
 
-@media all and (max-width: 670px) {
+@media all and (max-width: 660px) {
   .sidebar-right {
     display: none;
+  }
+  .sidebar-right-content {
+    padding-right: 16px;
   }
 }
 
