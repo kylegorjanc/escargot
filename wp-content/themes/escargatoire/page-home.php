@@ -17,7 +17,7 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 
-			<div class="main-gallery js-flickity carousel"  data-flickity-options='{ "cellAlign": "center", "contain": true, "wrapAround": "true", "setGallerySize": "false"}'>
+			<div class="main-gallery js-flickity carousel;"  data-flickity-options='{ "cellAlign": "center", "contain": true, "wrapAround": "true", "setGallerySize": "false"}'>
 			  <div class="carousel-cell">
 				  <div class="cell-wrap banner-wrap">	 
 					  <a href="<?php echo esc_url( home_url( '/subscribe' ) ); ?>" rel="subscribe">
@@ -82,53 +82,25 @@ get_header(); ?>
 
 
 <div class="home-section" id="home-recent-posts-section">
-		<div class="recent-posts flexbox">
-				<h1>Recent Posts</h1>
-			<?php
-			    $args = array( 'numberposts' => '10', 'tax_query' => array(
-			        array(
-			            'taxonomy' => 'post_format',
-			            'field'    => 'slug',
-			            'terms'    => 'post-format-aside',
-			            'operator' => 'NOT IN'
-			        ), 
-			        array(
-			            'taxonomy' => 'post_format',
-			            'field'    => 'slug',
-			            'terms'    => 'post-format-image',
-			            'operator' => 'NOT IN'
-			        )
-			    ) );
-			    $recent_posts = wp_get_recent_posts( $args );
-			 
-			    foreach( $recent_posts as $recent ){
-			    	get_the_post_thumbnail($recent['ID']);
-			        printf( '<div class="rpost flex-section-3" style="background-image: url('
-			        	);
+		<div class="recent-posts-wrapper">
+				<h2 class="black">Recent Posts</h2>
 
-			        printf(');"><a href=%1$s"><span>%2$s</span></a></div>',
-			            esc_url( get_permalink( $recent['ID'] ) ),
-			            apply_filters( 'the_title', $recent['post_title'], $recent['ID'] )
-			        );
-			    }
-			?>
-		</div>
+				<?php 
+				$args = array( 'numberposts' => 6, 'post_status'=>"publish",'post_type'=>"post",'orderby'=>"post_date");
+
+				$postslist = get_posts( $args );
+				echo '<div class="recent-posts flexbox">';
+				 foreach ($postslist as $post) :  setup_postdata($post);
+				 		 echo "<div class=\"flex-section-3 rpost-thumb\" style=\"background-image: url(";
+				 		 the_post_thumbnail_url();
+				 		 echo ")\";"; ?>
+				<strong><?php the_date(); ?></strong><br />
+				 <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"> <?php the_title(); ?></a>
+				</div>
+				<?php endforeach; ?>
+				 </div>
+ 		</div>
 </div>
-
-<?php 
-$args = array( 'numberposts' => 6, 'post_status'=>"publish",'post_type'=>"post",'orderby'=>"post_date");
-
-$postslist = get_posts( $args );
-echo '<div id="recent-posts">';
- foreach ($postslist as $post) :  setup_postdata($post);
- 		 echo "<div class=\"flex-section-3 rpost-thumb\" style=\"background-image: url(";
- 		 the_post_thumbnail_url();
- 		 echo ")\";"; ?>
-<strong><?php the_date(); ?></strong><br />
- <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"> <?php the_title(); ?></a>
-</div>
-<?php endforeach; ?>
- </div>
 
 
 <!-- 

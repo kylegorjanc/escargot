@@ -304,6 +304,7 @@ optgroup {
 
 .black {
   background-color: #000000;
+  color: #FEFEFE;
 }
 
 .light-bg {
@@ -2247,11 +2248,12 @@ blockquote:after,
   margin: 10px;
 }
 
-.recent-posts {
+.recent-posts-wrapper {
   text-align: center;
 }
 
-.recent-posts .flex-section-3 {
+.recent-posts-wrapper .flex-section-3 {
+  display: inline-flex;
   width: 312px;
   height: 175.5px;
   max-width: 100%;
@@ -2261,6 +2263,7 @@ blockquote:after,
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  margin: 20px auto 0;
 }
 
 /** **    11.2a - End Home Page **/
@@ -2448,6 +2451,8 @@ article.post {
 
 .flexbox {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .flexbox .flex-section-third {
@@ -3124,6 +3129,14 @@ http://flickity.metafizzy.co
   align-items: center;
 }
 
+.carousel .carousel-cell h2 {
+  color: #FFFFFF;
+  position: absolute;
+  mix-blend-mode: overlay;
+  bottom: 33%;
+  right: 10%;
+}
+
 .carousel .carousel-cell.is-selected img {
   opacity: 1;
   -webkit-transform: scale(1);
@@ -3135,7 +3148,7 @@ http://flickity.metafizzy.co
 .carousel .carousel-cell img {
   display: block;
   max-width: 100%;
-  height: 100%;
+  min-height: 100%;
   opacity: 0.7;
   -webkit-transform: scale(0.85);
   transform: scale(0.85);
@@ -3143,9 +3156,4 @@ http://flickity.metafizzy.co
   filter: blur(5px);
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
   transition: opacity 0.3s, transform 0.3s, filter 0.3s;
-}
-
-.carousel h2 {
-  bottom: 33%;
-  right: 10%;
 }
