@@ -2198,6 +2198,22 @@ blockquote:after,
   }
 
 
+
+.recent-posts {
+  text-align: center;
+  .flex-section-3 {
+    width: 312px;
+    height: 175.5px;
+    max-width: 100%;
+    border: 1px solid rgba(0,0,0,0.2);
+    overflow: hidden;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;  }
+}
+
+
   /** **    11.2a - End Home Page **/
   /** **    11.2a1 - Blog Page **/
 
@@ -3061,6 +3077,6 @@ http://flickity.metafizzy.co
     }
     h2 {
       bottom: 33%;
-      right: 10%;
+       right: 10%;
     }
 }
