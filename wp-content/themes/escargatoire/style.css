@@ -1162,6 +1162,126 @@ header .search-form label {
 }
 
 /** 5.0 - End Forms **/
+/** * 5.1 - Ajaxy Search Form **/
+#sf_results {
+  background: #fff;
+  box-shadow: 0 0 5px #aaa;
+  border-color: #333 #333 #293e6a;
+}
+
+.sf_more {
+  background: #F7F7F7;
+  border-top: 1px solid #DDD;
+}
+
+#sf_val ul.sf_main {
+  background: #fff;
+}
+
+#sf_val ul ul li {
+  color: #000;
+  border-color: #fff;
+}
+
+#sf_val ul li.sf_selected {
+  background-color: #000000 !important;
+  border-color: transparent !important;
+  color: white !important;
+}
+
+#sf_val ul li.sf_selected a, #sf_val ul li.sf_selected span {
+  color: white !important;
+}
+
+#sf_val ul li.sf_header {
+  background: #eee;
+  border-top: 1px solid #DDD;
+}
+
+#sf_val li.sf_item img {
+  background-color: #eceff5;
+}
+
+#sf_val li .sf_small {
+  color: #666;
+}
+
+.sf_search .sf_input {
+  color: #aaa !important;
+  background: #fff !important;
+}
+
+.sf_search .sf_focused {
+  color: #333 !important;
+}
+
+.sf_search {
+  background: #fff;
+}
+
+.sf_search .sf_button, .sf_search .searchsubmit {
+  border: 3px dotted #fc0262;
+  border-radius: 100%;
+  background-repeat: no-repeat !important;
+  background-position: 0px 0 !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 0 !important;
+  -moz-box-shadow: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.searchsubmit:hover {
+  border: 3px dotted #2FF6F6;
+}
+
+.sf_search .sf_button, .sf_search .searchsubmit:before {
+  font-family: "Genericons";
+  content: "\f400";
+  font-size: 16px;
+}
+
+#sf_loading {
+  background-image: url("images/sf_loading.gif") !important;
+}
+
+/* selective search css */
+.sf_ajaxy-selective-search {
+  color: rgba(255, 255, 255, 0.498039);
+  text-decoration: none solid rgba(255, 255, 255, 0.498039);
+  background: white none repeat scroll 0% 0%/auto padding-box border-box;
+  border-color: rgba(0, 0, 0, 0.247059) rgba(0, 0, 0, 0.14902) rgba(0, 0, 0, 0.14902) rgba(0, 0, 0, 0.14902);
+  font: 16px/24px Arial, sans-serif;
+  outline: rgba(255, 255, 255, 0.498039) none 0px;
+}
+
+.sf_ajaxy-selective-item {
+  color: white;
+  text-decoration: none solid white;
+  background: #6d84b4 -webkit-linear-gradient(top, #748cbe, #667caa) repeat scroll 0% 0%/auto padding-box border-box;
+  border: 1px solid #62769e;
+  border-radius: 2px 2px 2px 2px;
+  font: normal normal bold 11px/19px Arial, sans-serif;
+  outline: white none 0px;
+  padding: 0px 8px;
+  transition: all 0.218s ease 0s;
+}
+
+.sf_ajaxy-selective-close {
+  color: white;
+  text-decoration: none solid white;
+  border: 0px none white;
+  font: normal normal bold 11px/19px Arial, sans-serif;
+  margin: 16.5px 0px;
+  outline: white none 0px;
+  background: transparent;
+}
+
+.sf_ajaxy-selective-search input.sf_ajaxy-selective-input {
+  background: transparent none repeat scroll 0% 0%/auto padding-box border-box;
+  border: 0px none black;
+  box-shadow: 0 0 0;
+}
+
 /** 6.0 - Navigation **/
 /** 6.1 - Links **/
 a {
