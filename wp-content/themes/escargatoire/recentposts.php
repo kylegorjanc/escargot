@@ -19,16 +19,17 @@
                 <?php the_title(); ?>
               </a>
             </div>
-            <div class="rpost-author">by <span style="text-transform:capitalize;"><?php the_author(); ?></span></div>
+            <div class="rpost-author">by <span style="text-transform:capitalize;"><?php the_author(); ?></span>
+            </div>
             <div class="rpost-comments">
                 <a href="<?php the_permalink(); ?>#comments" title="<?php the_title();?>">
                   <?php comments_number( 'Leave a Comment', '1 Comment', '% Comments' ); ?>
                 </a>
             </div>
-            </div>
-        </div>
-        </div>
+          </div> <!-- rpost-meta-wrapper -->
+        </div> <!-- rpost-meta -->
+        </div> <!-- flex-section-3 rpost-thumb -->
         <?php endforeach; ?>
-         </div>
-    </div>
+         </div> <!-- recent-posts flexbox -->
+    </div> <!-- recent-posts-wrapper -->
 </div>
