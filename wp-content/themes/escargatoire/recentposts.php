@@ -1,6 +1,6 @@
 <div class="home-section recent-posts" id="recent-posts-section">
     <div class="recent-posts-wrapper">
-        <h2 class="black">Recent Posts</h2>
+        <h2 class="black">The Latest Posts</h2>
 
         <?php 
         $args = array( 'numberposts' => 6, 'post_status'=>"publish",'post_type'=>"post",'orderby'=>"post_date");
@@ -12,6 +12,9 @@
              the_post_thumbnail_url();
              echo ")\";"; ?>
         <strong></strong><br />
+        <h4 class="rpost-category">
+         <?php escargatoire_entry_category(); ?>
+        </h4>
         <div class="rpost-meta">
           <div class="rpost-meta-wrapper">
            <div class="rpost-title">
@@ -19,7 +22,7 @@
                 <?php the_title(); ?>
               </a>
             </div>
-            <div class="rpost-author">by <span style="text-transform:capitalize;"><?php the_author(); ?></span>
+            <div class="rpost-author">by <span style="text-transform:capitalize;"><?php the_author(); ?></span><br />
             </div>
             <div class="rpost-comments">
                 <a href="<?php the_permalink(); ?>#comments" title="<?php the_title();?>">

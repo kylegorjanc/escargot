@@ -421,7 +421,6 @@ body p ul ol li,
 }
 
 h1, h2, h3, h4, h5, h6 {
-  clear: both;
   color: #000000;
   margin: 0;
   text-rendering: optimizeLegibility;
@@ -827,7 +826,7 @@ textarea:focus {
   border-radius: 2px;
   color: #000000;
   padding: 16px;
-  min-width: 200px;
+  width: 100% !important;
 }
 
 .comment-form-comment textarea:focus {
@@ -1964,7 +1963,7 @@ footer .social-navigation a {
   .alignleft, .alignright, .aligncenter {
     clear: both;
     position: relative;
-    margin-bottom: 16px;
+    margin: 0 auto 16px;
   }
 
   .alignleft, .alignright {
@@ -2374,6 +2373,7 @@ blockquote:after,
 
 .recent-posts-wrapper .flex-section-3 {
   display: inline-flex;
+  position: relative;
   width: 312px;
   height: 175.5px;
   max-width: 100%;
@@ -2385,6 +2385,16 @@ blockquote:after,
   -webkit-background-size: cover;
   background-size: cover;
   margin: 20px auto 0;
+}
+
+.recent-posts-wrapper h4.rpost-category {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #c900a0;
+  mix-blend-mode: multiply;
+  font-size: 30pt;
 }
 
 .rpost-meta {
@@ -2423,7 +2433,15 @@ blockquote:after,
 }
 
 .rpost-meta .rpost-comments {
-  color: #FEFEFE;
+  font-size: 12pt;
+}
+
+.rpost-meta .rpost-comments a {
+  color: #FC0262;
+}
+
+.rpost-meta .rpost-comments a:hover {
+  color: #2FF6F6;
 }
 
 .rpost-meta-wrapper {
@@ -2443,14 +2461,19 @@ blockquote:after,
   display: flex;
 }
 
-.blog-main p img {
-  display: none;
+.blog-main div.entry-content img, .blog-main div.entry-content figure {
+  display: none !important;
 }
 
 .blog-main .post-thumbnail img {
-  height: 337.5px;
+  max-height: 337.5px;
   width: 100%;
   object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.blog-main article.post {
+  margin-left: 16px;
 }
 
 /** **    11.2a1 - End Blog Page **/
@@ -2809,19 +2832,26 @@ article.post {
   margin: 0 16px;
 }
 
+.comment-respond {
+  text-align: center;
+}
+
 .comments-title,
 .comment-reply-title {
-  font-family: Proxima Nova, "Helvetica Neue", sans-serif;
-  font-size: 23px;
-  font-size: 1.4375rem;
+  font-family: Proxima Nova Extrabold, "Helvetica Neue", sans-serif;
   font-weight: 700;
   line-height: 1.3125;
   padding-top: 1.217391304em;
-  margin-left: 16px;
 }
 
 .comments-title {
+  font-size: 24px;
   margin-bottom: 1.217391304em;
+}
+
+.comment-reply-title {
+  text-align: center;
+  font-size: 30px;
 }
 
 .comment-list {
@@ -2926,11 +2956,15 @@ article.post {
 
 .comment-form {
   padding-top: 1.75em;
+  text-align: right;
+  width: 80%;
+  min-width: 274px;
+  margin: 0 auto;
 }
 
 .comment-form label {
   color: #686868;
-  display: block;
+  display: inline-block;
   font-family: Proxima Nova, "Helvetica Neue", sans-serif;
   font-size: 13px;
   font-size: 0.8125rem;
@@ -2938,6 +2972,10 @@ article.post {
   line-height: 1.6153846154;
   margin-bottom: 0.5384615385em;
   text-transform: uppercase;
+}
+
+p.comment-form-comment > label {
+  text-align: left;
 }
 
 .comment-list .comment-form {

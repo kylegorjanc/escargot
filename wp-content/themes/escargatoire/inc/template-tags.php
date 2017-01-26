@@ -111,6 +111,15 @@ function escargatoire_entry_taxonomies() {
 }
 endif;
 
+if ( ! function_exists('escargatoire_entry_category') ) :
+function escargatoire_entry_category() {
+	$categories = get_the_category();
+			if ( ! empty( $categories ) ) {
+			    echo esc_html( $categories[0]->name );   
+			}
+}
+endif;
+
 if ( ! function_exists( 'escargatoire_post_thumbnail' ) ) :
 /**
  * Displays an optional post thumbnail.
