@@ -2220,6 +2220,43 @@ blockquote:after,
   }
 }
 
+.rpost-meta {
+  position: relative;
+  width: 94.375%;
+  height: 90%;
+  background-color: rgba(0,0,0,0.82);
+  margin: auto;
+  padding: 3% 1.69%;
+  color: #FCFCFC;
+  font-size: 10pt;
+  .rpost-title {
+    font-family: $bold-font;
+    font-size: 14pt;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    a {
+      color: $accent;
+    }
+    a:hover {
+      color: $accent-1;
+    }
+  }
+  div.rpost-author {
+    margin-bottom: 20px;
+  }
+  .rpost-comments {
+    color: $light-text;
+  }
+
+
+}
+.rpost-meta-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 96.62%;
+}
+
 
   /** **    11.2a - End Home Page **/
   /** **    11.2a1 - Blog Page **/

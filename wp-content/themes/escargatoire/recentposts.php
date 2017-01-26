@@ -13,18 +13,20 @@
              echo ")\";"; ?>
         <strong></strong><br />
         <div class="rpost-meta">
-         <span class="rpost-title">
-            <a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
-              <h4><?php the_title(); ?></h4>
-            </a>
-          </span>
-          <span class="rpost-author"><?php the_author(); ?></span>
-          <span class="rpost-comment-num">
+          <div class="rpost-meta-wrapper">
+           <div class="rpost-title">
               <a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
-                <?php comments_number( 'Leave a Comment', '1 Comment', '% Comments' ); ?>
+                <?php the_title(); ?>
               </a>
-          </span>
-          </div>
+            </div>
+            <div class="rpost-author">by <span style="text-transform:capitalize;"><?php the_author(); ?></span></div>
+            <div class="rpost-comments">
+                <a href="<?php the_permalink(); ?>#comments" title="<?php the_title();?>">
+                  <?php comments_number( 'Leave a Comment', '1 Comment', '% Comments' ); ?>
+                </a>
+            </div>
+            </div>
+        </div>
         </div>
         <?php endforeach; ?>
          </div>

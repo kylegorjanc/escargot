@@ -2266,6 +2266,47 @@ blockquote:after,
   margin: 20px auto 0;
 }
 
+.rpost-meta {
+  position: relative;
+  width: 94.375%;
+  height: 90%;
+  background-color: rgba(0, 0, 0, 0.82);
+  margin: auto;
+  padding: 3% 1.69%;
+  color: #FCFCFC;
+  font-size: 10pt;
+}
+
+.rpost-meta .rpost-title {
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
+  font-size: 14pt;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.rpost-meta .rpost-title a {
+  color: #D8EB00;
+}
+
+.rpost-meta .rpost-title a:hover {
+  color: #2FF6F6;
+}
+
+.rpost-meta div.rpost-author {
+  margin-bottom: 20px;
+}
+
+.rpost-meta .rpost-comments {
+  color: #FEFEFE;
+}
+
+.rpost-meta-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 96.62%;
+}
+
 /** **    11.2a - End Home Page **/
 /** **    11.2a1 - Blog Page **/
 .blog-main {
