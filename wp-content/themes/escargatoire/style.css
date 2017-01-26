@@ -685,14 +685,14 @@ input {
   width: 240px;
   height: 56px;
   background-color: #000;
-  color: #FEFEFE;
   font-family: "Proxima Nova Bold", Helvetica, sans-serif;
   font-size: 12.25pt;
   border-radius: 4px;
   white-space: nowrap;
+  color: #FEFEFE;
 }
 
-.btn-home:hover {
+.btn-home :hover {
   background-color: #2FF6F6;
   color: #000000;
 }

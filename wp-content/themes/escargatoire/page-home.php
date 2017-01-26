@@ -38,7 +38,7 @@ get_header(); ?>
 	
 			  <div class="carousel-cell">	
 				  	<div class="cell-wrap banner-wrap>	 	 
-					  <a href="<?php echo esc_url( home_url( '/category/features/interviews/' ) ); ?>" rel="subscribe">
+					  <a href="<?php echo esc_url( home_url( '/category/features/interviews/' ) ); ?>" rel="interviews">
 							<img src="http://localhost:8000/wp-content/uploads/2017/01/banner-3.jpg" alt="" >
 								<h2>Subscribe</h2>
 						</a>
@@ -57,9 +57,21 @@ get_header(); ?>
 		<div class="home-section" id="home-buttons-section">
 			<div class="section-content" id="home-buttons">
 				<ul>
-					<li><button class="btn-home">Training Logs</button></li>
-					<li><button class="btn-home">Blog Archive</button></li>
-					<li><button class="btn-home">Blog With Us</button></li>
+					<li>
+						<a href="<?php echo esc_url( home_url( '/category/training-logs/' ) ); ?>">
+							<button class="btn-home">Training Logs</button>
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo esc_url( home_url( '/blog' ) ); ?>">
+							<button class="btn-home">Archive</button>
+						 </a></li>
+					<li>
+						<a href="<?php echo esc_url( home_url( '/contact' ) ); ?>">
+							<button class="btn-home">
+							Contact Us</button>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>

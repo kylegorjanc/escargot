@@ -702,17 +702,17 @@ input {
   width: 240px;
   height: 56px;
   background-color: #000;
-  color: $light-text;
   font-family: "Proxima Nova Bold", Helvetica, sans-serif;
   font-size: $font-size * .875;
   border-radius: 4px;
   white-space: nowrap;
-}
-
-.btn-home:hover {
+  color: $light-text;
+  :hover {
     background-color: $accent-1;
     color: $dark-text;
   }
+}
+
 
 button,
 button[disabled]:hover,
