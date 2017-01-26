@@ -81,27 +81,10 @@ get_header(); ?>
 			// wp_reset_query(); -->
 
 
-<div class="home-section" id="home-recent-posts-section">
-		<div class="recent-posts-wrapper">
-				<h2 class="black">Recent Posts</h2>
-
-				<?php 
-				$args = array( 'numberposts' => 6, 'post_status'=>"publish",'post_type'=>"post",'orderby'=>"post_date");
-
-				$postslist = get_posts( $args );
-				echo '<div class="recent-posts flexbox">';
-				 foreach ($postslist as $post) :  setup_postdata($post);
-				 		 echo "<div class=\"flex-section-3 rpost-thumb\" style=\"background-image: url(";
-				 		 the_post_thumbnail_url();
-				 		 echo ")\";"; ?>
-				<strong><?php the_date(); ?></strong><br />
-				 <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"> <?php the_title(); ?></a>
-				</div>
-				<?php endforeach; ?>
-				 </div>
- 		</div>
-</div>
-
+        		    <?php
+			      // Include the subscribe form.
+			      get_template_part( 'recentposts' );
+			    ?>
 
 <!-- 
 		<div class="home-section sixteen-nine" id="home-lower-banner-section">
