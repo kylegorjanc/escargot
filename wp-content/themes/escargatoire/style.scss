@@ -3213,7 +3213,7 @@ http://flickity.metafizzy.co
 
 
 .carousel {
-  margin: 20px 0;
+  margin: 3% 0;
   height:200px;
     .carousel-cell {
       width: 70%;
@@ -3257,9 +3257,9 @@ http://flickity.metafizzy.co
 
 }
 
-@media all and (min-width: 550px) {
+@media all and (min-width: 570px) {
   .carousel {
-    margin: 60px 0;
-    height:300px;
+    margin: 6% 0;
+    height: 300px;
   }
 }
