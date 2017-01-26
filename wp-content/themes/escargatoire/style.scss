@@ -2328,6 +2328,7 @@ blockquote:after,
     height: 175.5px;
     max-width: 100%;
     border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 2px;
     overflow: hidden;
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -2341,11 +2342,16 @@ blockquote:after,
   position: relative;
   width: 94.375%;
   height: 90%;
-  background-color: rgba(0,0,0,0.82);
+  background-color: #000000;
   margin: auto;
   padding: 3% 1.69%;
   color: #FCFCFC;
   font-size: 10pt;
+  opacity: 0;
+  border-radius: 2px;
+  transition: opacity .15s ease-in-out;
+  -moz-transition: opacity .15s ease-in-out;
+  -webkit-transition: opacity .15s ease-in-out;
   .rpost-title {
     font-family: $bold-font;
     font-size: 14pt;
@@ -2364,14 +2370,17 @@ blockquote:after,
   .rpost-comments {
     color: $light-text;
   }
-
-
 }
+
 .rpost-meta-wrapper {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 96.62%;
+}
+
+.rpost-thumb:hover > .rpost-meta  {
+  opacity: 0.82;
 }
 
 
