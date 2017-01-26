@@ -2184,7 +2184,7 @@ blockquote:after,
 
     /** *    11.2a - Home Page **/
 .home-section {
-  margin-top: 20px;
+  margin: 60px 0;
 }
 
 .home-section .page-entry-header {

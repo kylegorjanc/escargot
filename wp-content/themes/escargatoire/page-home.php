@@ -17,12 +17,12 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 
-			<div class="main-gallery js-flickity carousel;"  data-flickity-options='{ "cellAlign": "center", "contain": true, "wrapAround": "true", "setGallerySize": "false"}'>
+			<div class="main-gallery js-flickity carousel"  data-flickity-options='{ "cellAlign": "center", "contain": true, "wrapAround": "true", "setGallerySize": "false"}'>
 			  <div class="carousel-cell">
 				  <div class="cell-wrap banner-wrap">	 
 					  <a href="<?php echo esc_url( home_url( '/subscribe' ) ); ?>" rel="subscribe">
 							<img src="http://localhost:8000/wp-content/uploads/2017/01/banner-1.jpg" alt="">
-								<h2>Subscribe</h2>
+								<h2 class="carousel-header">Subscribe</h2>
 						</a>
 					</div>	
 				</div>
