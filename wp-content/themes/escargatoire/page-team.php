@@ -28,7 +28,8 @@ get_header(); ?>
 
 
   <?php
-    $authors=get_users();
+    $authors=get_users( [ 'role__in' => [ 'administrator', 'editor', 'author', 'contributor' ] ] );
+    shuffle($authors);
     $i=0;
     //get all users list
     foreach($authors as $author){
@@ -80,5 +81,4 @@ get_header(); ?>
 
 </div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

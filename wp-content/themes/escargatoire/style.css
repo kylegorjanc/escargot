@@ -1121,7 +1121,6 @@ input[type="search"].search-field {
   .site > div > header .search-form label[type="checkbox"] {
   width: auto;
   margin-top: 10px;
-  vertical-align: bottom;
 }
 
 .site > div > footer .subscribe-form .form-container, .site > div > header .subscribe-form .form-container {
@@ -1152,13 +1151,14 @@ input[type="search"].search-field {
 }
 
 .site > div > footer .subscribe-form .signup-options-list, .site > div > header .subscribe-form .signup-options-list {
-  display: inline-flex;
+  display: flex !important;
   font-size: 9px;
   padding: 0 0 16px;
 }
 
 .site > div > footer .subscribe-form .signup-options-list .signup-options, .site > div > header .subscribe-form .signup-options-list .signup-options {
   white-space: nowrap;
+  display: inline-flex;
 }
 
 header .search-form label {
@@ -1346,7 +1346,7 @@ a:active {
   position: absolute;
   display: block;
   right: 0px;
-  top: 100px;
+  top: 0px;
   width: 280px;
   height: 100%;
   background: rgba(0, 0, 0, 0.93);
@@ -2652,15 +2652,16 @@ img.size-full {
   text-transform: uppercase;
 }
 
-.sidebar-right .categories > ul, .sidebar-right .tags > ul, .sidebar-right .archives > ul {
+.sidebar-right .categories li, .sidebar-right .tags li, .sidebar-right .archives li {
+  margin-top: 20px;
+}
+
+.sidebar-right .categories ul, .sidebar-right .tags ul, .sidebar-right .archives ul {
   font-size: 12pt;
   list-style: none;
   line-height: 1.4;
   margin-left: 12px;
-}
-
-.sidebar-right .categories > ul > li, .sidebar-right .tags > ul > li, .sidebar-right .archives > ul > li {
-  margin-top: 12px;
+  color: transparent;
 }
 
 .sidebar-right .categories a, .sidebar-right .tags a, .sidebar-right .archives a {
@@ -2669,6 +2670,13 @@ img.size-full {
 
 .sidebar-right .categories a:hover, .sidebar-right .tags a:hover, .sidebar-right .archives a:hover {
   color: #D8EB00;
+}
+
+ul.children {
+  list-style: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  margin-top: 20px;
 }
 
 .flexbox {
@@ -2926,13 +2934,246 @@ div.package ul li {
 div.package button {
   min-width: 100%;
   margin-top: 40px;
-  background-color: #000;
   color: #FEFEFE;
 }
 
 div.package button :hover {
-  background-color: #2FF6F6;
+  background-color: #FC0262;
   color: #000000;
+}
+
+.page .form-container, .page .search-form, .post .form-container, .post .search-form {
+  margin: 0 auto;
+  color: inherit;
+}
+
+.page .form-container label, .page .search-form label, .post .form-container label, .post .search-form label {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 10px;
+  display: inline;
+}
+
+.page .form-container input[type="date"],
+  .page .form-container input[type="time"],
+  .page .form-container input[type="datetime-local"],
+  .page .form-container input[type="week"],
+  .page .form-container input[type="month"],
+  .page .form-container input[type="text"],
+  .page .form-container input[type="email"],
+  .page .form-container input[type="url"],
+  .page .form-container input[type="password"],
+  .page .form-container input[type="search"],
+  .page .form-container input[type="tel"],
+  .page .form-container input[type="number"],
+  .page .form-container textarea, .page .search-form input[type="date"],
+  .page .search-form input[type="time"],
+  .page .search-form input[type="datetime-local"],
+  .page .search-form input[type="week"],
+  .page .search-form input[type="month"],
+  .page .search-form input[type="text"],
+  .page .search-form input[type="email"],
+  .page .search-form input[type="url"],
+  .page .search-form input[type="password"],
+  .page .search-form input[type="search"],
+  .page .search-form input[type="tel"],
+  .page .search-form input[type="number"],
+  .page .search-form textarea, .post .form-container input[type="date"],
+  .post .form-container input[type="time"],
+  .post .form-container input[type="datetime-local"],
+  .post .form-container input[type="week"],
+  .post .form-container input[type="month"],
+  .post .form-container input[type="text"],
+  .post .form-container input[type="email"],
+  .post .form-container input[type="url"],
+  .post .form-container input[type="password"],
+  .post .form-container input[type="search"],
+  .post .form-container input[type="tel"],
+  .post .form-container input[type="number"],
+  .post .form-container textarea, .post .search-form input[type="date"],
+  .post .search-form input[type="time"],
+  .post .search-form input[type="datetime-local"],
+  .post .search-form input[type="week"],
+  .post .search-form input[type="month"],
+  .post .search-form input[type="text"],
+  .post .search-form input[type="email"],
+  .post .search-form input[type="url"],
+  .post .search-form input[type="password"],
+  .post .search-form input[type="search"],
+  .post .search-form input[type="tel"],
+  .post .search-form input[type="number"],
+  .post .search-form textarea {
+  margin: 10px 0px 10px auto;
+  border-radius: 2px;
+  right: 0px;
+  border: none;
+}
+
+.page .form-container input[type="date"],
+  .page .form-container input[type="time"],
+  .page .form-container input[type="datetime-local"],
+  .page .form-container input[type="week"],
+  .page .form-container input[type="month"],
+  .page .form-container input[type="text"],
+  .page .form-container input[type="email"],
+  .page .form-container input[type="url"],
+  .page .form-container input[type="password"],
+  .page .form-container input[type="search"],
+  .page .form-container input[type="tel"],
+  .page .form-container input[type="number"], .page .search-form input[type="date"],
+  .page .search-form input[type="time"],
+  .page .search-form input[type="datetime-local"],
+  .page .search-form input[type="week"],
+  .page .search-form input[type="month"],
+  .page .search-form input[type="text"],
+  .page .search-form input[type="email"],
+  .page .search-form input[type="url"],
+  .page .search-form input[type="password"],
+  .page .search-form input[type="search"],
+  .page .search-form input[type="tel"],
+  .page .search-form input[type="number"], .post .form-container input[type="date"],
+  .post .form-container input[type="time"],
+  .post .form-container input[type="datetime-local"],
+  .post .form-container input[type="week"],
+  .post .form-container input[type="month"],
+  .post .form-container input[type="text"],
+  .post .form-container input[type="email"],
+  .post .form-container input[type="url"],
+  .post .form-container input[type="password"],
+  .post .form-container input[type="search"],
+  .post .form-container input[type="tel"],
+  .post .form-container input[type="number"], .post .search-form input[type="date"],
+  .post .search-form input[type="time"],
+  .post .search-form input[type="datetime-local"],
+  .post .search-form input[type="week"],
+  .post .search-form input[type="month"],
+  .post .search-form input[type="text"],
+  .post .search-form input[type="email"],
+  .post .search-form input[type="url"],
+  .post .search-form input[type="password"],
+  .post .search-form input[type="search"],
+  .post .search-form input[type="tel"],
+  .post .search-form input[type="number"] {
+  width: 200px;
+  height: 40px;
+}
+
+.page .form-container textarea, .page .search-form textarea, .post .form-container textarea, .post .search-form textarea {
+  width: 300px;
+  min-width: 200px;
+}
+
+.page .form-container input[type="submit"],
+  .page .form-container input[type="submit"][disabled]:hover,
+  .page .form-container input[type="submit"][disabled]:focus,
+  .page .form-container .action-btn,
+  .page .form-container .action-btn[disabled]:hover,
+  .page .form-container .action-btn[disabled]:focus,
+  .page .form-container .comment-reply-link, .page .search-form input[type="submit"],
+  .page .search-form input[type="submit"][disabled]:hover,
+  .page .search-form input[type="submit"][disabled]:focus,
+  .page .search-form .action-btn,
+  .page .search-form .action-btn[disabled]:hover,
+  .page .search-form .action-btn[disabled]:focus,
+  .page .search-form .comment-reply-link, .post .form-container input[type="submit"],
+  .post .form-container input[type="submit"][disabled]:hover,
+  .post .form-container input[type="submit"][disabled]:focus,
+  .post .form-container .action-btn,
+  .post .form-container .action-btn[disabled]:hover,
+  .post .form-container .action-btn[disabled]:focus,
+  .post .form-container .comment-reply-link, .post .search-form input[type="submit"],
+  .post .search-form input[type="submit"][disabled]:hover,
+  .post .search-form input[type="submit"][disabled]:focus,
+  .post .search-form .action-btn,
+  .post .search-form .action-btn[disabled]:hover,
+  .post .search-form .action-btn[disabled]:focus,
+  .post .search-form .comment-reply-link {
+  color: #000000;
+  background-color: #FC0262;
+}
+
+.page .form-container .action-btn:hover,
+  .page .form-container input[type="submit"]:hover,
+  .page .form-container input[type="submit"]:focus,
+  .page .form-container .comment-reply-link:hover,
+  .page .form-container .comment-reply-link:focus, .page .search-form .action-btn:hover,
+  .page .search-form input[type="submit"]:hover,
+  .page .search-form input[type="submit"]:focus,
+  .page .search-form .comment-reply-link:hover,
+  .page .search-form .comment-reply-link:focus, .post .form-container .action-btn:hover,
+  .post .form-container input[type="submit"]:hover,
+  .post .form-container input[type="submit"]:focus,
+  .post .form-container .comment-reply-link:hover,
+  .post .form-container .comment-reply-link:focus, .post .search-form .action-btn:hover,
+  .post .search-form input[type="submit"]:hover,
+  .post .search-form input[type="submit"]:focus,
+  .post .search-form .comment-reply-link:hover,
+  .post .search-form .comment-reply-link:focus {
+  color: #000000;
+  background: #2FF6F6;
+  outline: none;
+}
+
+.page .form-container #mc-embedded-subscribe, .page .search-form #mc-embedded-subscribe, .post .form-container #mc-embedded-subscribe, .post .search-form #mc-embedded-subscribe {
+  float: right;
+  width: auto;
+  margin-right: 16px;
+  color: #000000;
+  background: #FC0262;
+  border-color: transparent;
+}
+
+.page .form-container #mc-embedded-subscribe:hover, .page .form-container #mc-embedded-subscribe:focus, .page .search-form #mc-embedded-subscribe:hover, .page .search-form #mc-embedded-subscribe:focus, .post .form-container #mc-embedded-subscribe:hover, .post .form-container #mc-embedded-subscribe:focus, .post .search-form #mc-embedded-subscribe:hover, .post .search-form #mc-embedded-subscribe:focus {
+  color: #000000;
+  background: #2FF6F6;
+  border-color: transparent;
+}
+
+.page .form-container input[type="checkbox"],
+  .page .form-container label[type="checkbox"], .page .search-form input[type="checkbox"],
+  .page .search-form label[type="checkbox"], .post .form-container input[type="checkbox"],
+  .post .form-container label[type="checkbox"], .post .search-form input[type="checkbox"],
+  .post .search-form label[type="checkbox"] {
+  width: auto;
+  margin-top: 10px;
+}
+
+.page .subscribe-form .form-container, .post .subscribe-form .form-container {
+  padding: 20px;
+  width: 350px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+}
+
+.page .subscribe-form .form-title, .post .subscribe-form .form-title {
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
+  color: inherit;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.page .subscribe-form .subscribe-form-elements, .post .subscribe-form .subscribe-form-elements {
+  padding: 0;
+}
+
+.page .subscribe-form li, .post .subscribe-form li {
+  width: 100%;
+}
+
+.page .subscribe-form label, .post .subscribe-form label {
+  display: inline;
+}
+
+.page .subscribe-form .signup-options-list, .post .subscribe-form .signup-options-list {
+  display: flex !important;
+  font-size: 9px;
+  padding: 0 0 16px;
+}
+
+.page .subscribe-form .signup-options-list .signup-options, .post .subscribe-form .signup-options-list .signup-options {
+  white-space: nowrap;
+  display: inline-flex;
 }
 
 /** **    11.2x - End Other Posts and Pages **/
@@ -3350,8 +3591,6 @@ http://flickity.metafizzy.co
   height: 44px;
   border: none;
   border-radius: 50%;
-  background: white;
-  background: rgba(255, 255, 255, 0.75);
   cursor: pointer;
   /* vertically center */
   -webkit-transform: translateY(-50%);
@@ -3359,7 +3598,7 @@ http://flickity.metafizzy.co
 }
 
 .flickity-prev-next-button:hover {
-  background: white;
+  color: accent-1;
 }
 
 .flickity-prev-next-button:focus {
@@ -3461,7 +3700,7 @@ http://flickity.metafizzy.co
   color: #FFFFFF;
   position: absolute;
   mix-blend-mode: overlay;
-  bottom: 33%;
+  bottom: 20%;
   right: 10%;
 }
 
@@ -3490,5 +3729,15 @@ http://flickity.metafizzy.co
   .carousel {
     margin: 6% 0;
     height: 300px;
+  }
+
+  .carousel-cell h2 {
+    font-size: 32pt;
+  }
+}
+
+@media all and (min-width: 740px) {
+  .carousel-cell h2 {
+    font-size: 40pt;
   }
 }

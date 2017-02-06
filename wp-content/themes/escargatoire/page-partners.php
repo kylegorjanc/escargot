@@ -29,7 +29,7 @@ get_header(); ?>
                   <li>Written specifically for your needs</li>
                   <li>You choose the topic</li>
                 </ul>
-                <a href="#partnercontact"><button>Contact Us</button></a>
+                <a href="#partnercontact"><button class="action-btn">Contact Us</button></a>
               </div>
             </div> <!-- package -->
             <div id="standard" class="package">
@@ -41,7 +41,7 @@ get_header(); ?>
                   <li>Custom professional photo shoot</li>
                   <li>1 High Res Photo</li>
                 </ul>
-                <a href="#partnercontact"><button>Contact Us</button></a>
+                <a href="#partnercontact"><button class="action-btn">Contact Us</button></a>
               </div>
             </div> <!-- package -->
             <div id="deluxe" class="package">
@@ -53,7 +53,7 @@ get_header(); ?>
                   <li>3 High Res Photos</li>
                   <li>Social Media Promotions</li>
                 </ul>
-                <a href="#partnercontact"><button>Contact Us</button></a>
+                <a href="#partnercontact"><button class="action-btn">Contact Us</button></a>
               </div>
             </div> <!-- package -->
         </div>
@@ -61,7 +61,7 @@ get_header(); ?>
 
       <div class="section">
         <h2>Content Marketing Consulting</h2>
-        <p>Content marketing is a proven method of converting sales. Runners and other fitness enthusiasts want to be a part of a community with you and to look to your brand for advice and inspiration. At Salty Running, we have developed a premiere service as content marketing consultants for running, gitness and women's sports.</p>
+        <p>Content marketing is a proven method of converting sales. Runners and other fitness enthusiasts want to be a part of a community with you and to look to your brand for advice and inspiration. At Salty Running, we have developed a premiere service as content marketing consultants for running, fitness and women's sports.</p>
 
         <p>We know how to create the informative and entertaining content that will attract runners and other fitness enthusiasts to become members of your community that embody your brand philosophy. <a href="#partnercontact">Contact us</a> to discuss your business’s content marketing needs; we will be happy to share some of our past work.</p>
       </div>

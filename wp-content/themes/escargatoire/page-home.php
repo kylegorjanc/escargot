@@ -20,30 +20,50 @@ get_header(); ?>
 			<div class="main-gallery js-flickity carousel"  data-flickity-options='{ "cellAlign": "center", "contain": true, "wrapAround": "true", "setGallerySize": "false"}'>
 			  <div class="carousel-cell">
 				  <div class="cell-wrap banner-wrap">	 
-					  <a href="<?php echo esc_url( home_url( '/subscribe' ) ); ?>" rel="subscribe">
-							<img src="http://localhost:8000/wp-content/uploads/2017/01/banner-1.jpg" alt="">
-								<h2 class="carousel-header">Subscribe</h2>
+					  <a href="<?php echo esc_url( home_url( '/what-does-salty-mean' ) ); ?>" rel="subscribe">
+							<img src="https://www.saltyrunning.com/wp-content/uploads/2016/03/banner-1.jpg" alt="Subscribe">
+								<h2 class="carousel-header">The New Salty</h2>
 						</a>
 					</div>	
 				</div>
 			 
+				<div class="carousel-cell">
+				  <div class="cell-wrap banner-wrap">
+					  <a href="<?php echo esc_url( home_url( '/category/features/interviews/' ) ); ?>" rel="features/elites">
+						<img src="https://www.saltyrunning.com/wp-content/uploads/2017/02/site_header_photos_021.jpg" alt="" >
+							<h2>Interviews</h2>
+						</a>
+					</div>	 
+				</div>
+
 			  <div class="carousel-cell">	
-				  <div class="cell-wrap banner-wrap>
-					  <a href="<?php echo esc_url( home_url( '/category/training-logs/' ) ); ?>" rel="subscribe">
-						<img src="http://localhost:8000/wp-content/uploads/2017/01/site_header_photos_009.jpg" alt="" >
+				  <div class="cell-wrap banner-wrap">
+					  <a href="<?php echo esc_url( home_url( '/category/training-logs/' ) ); ?>" rel="training-logs">
+						<img src="https://www.saltyrunning.com/wp-content/uploads/2017/02/site_header_photos_018.jpg" alt="" >
 							<h2>Training Logs</h2>
 						</a>
 					</div>	 
 				</div>
 	
 			  <div class="carousel-cell">	
-				  	<div class="cell-wrap banner-wrap>	 	 
-					  <a href="<?php echo esc_url( home_url( '/category/features/interviews/' ) ); ?>" rel="interviews">
-							<img src="http://localhost:8000/wp-content/uploads/2017/01/banner-3.jpg" alt="" >
-								<h2>Subscribe</h2>
+				  	<div class="cell-wrap banner-wrap">	 	 
+					  <a href="<?php echo esc_url( home_url( '/team/' ) ); ?>" rel="team">
+							<img src="https://www.saltyrunning.com/wp-content/uploads/2017/02/site_header_photos_005_team.jpg" alt="Our Team" >
+								<h2>Our Team</h2>
 						</a>
 					</div>	 
 				</div>
+
+				<div class="carousel-cell">
+				  <div class="cell-wrap banner-wrap">
+					  <a href="<?php echo esc_url( home_url( '/category/features/friday-fun/' ) ); ?>" rel="friday-fun">
+						<img src="https://www.saltyrunning.com/wp-content/uploads/2017/02/site_header_photos_002.jpg" alt="" >
+							<h2>The F in Friday</h2>
+						</a>
+					</div>	 
+				</div>
+
+
 			</div>
 
 <!-- 		<div class="home-section sixteen-nine" id="home-carousel-section">

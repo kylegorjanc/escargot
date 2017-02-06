@@ -17,9 +17,9 @@
 				<div class="link-list footer-section" id="footer-nav">
 					<ul>
 						<li class="nav-link"><a href="<?php echo esc_url( home_url( '/about' ) ); ?>" rel="about">About</a></li>
-						<li class="nav-link"><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" rel="contact">Contact</a></li>
+						<li class="nav-link"><a href="mailto:info@saltyrunning.com" rel="contact">Contact</a></li>
 						<li class="nav-link"><a href="<?php echo esc_url( home_url( '/wp-admin' ) ); ?>" rel="login">Login</a></li>
-						<li class="nav-link"><a href="<?php echo esc_url( home_url( '/collaborate' ) ); ?>" rel="about">Join the Team</a></li>
+						<li class="nav-link"><a href="<?php echo esc_url( home_url( '/contribute' ) ); ?>" rel="about">Join the Team</a></li>
 						<li class="nav-link"><a href="<?php echo esc_url( home_url( '/partners' ) ); ?>" rel="about">Work With Us</a></li>
 					</ul>
 				</div>

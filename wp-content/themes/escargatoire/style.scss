@@ -1034,7 +1034,6 @@ input[type="search"].search-field {
     label[type="checkbox"] {
       width: auto;
       margin-top: 10px;
-      vertical-align: bottom;
     }
   }
   .subscribe-form {
@@ -1061,11 +1060,12 @@ input[type="search"].search-field {
       display: inline;
     }
     .signup-options-list {
-      display:inline-flex;
+      display:flex !important;
       font-size: 9px;
       padding: 0 0 16px;
       .signup-options {
         white-space: nowrap;
+        display: inline-flex;
       }
     }
   }
@@ -1278,7 +1278,7 @@ $menu-toggle-height: $icon-font-size-px + ($toggle-padding * 2 );
   position: absolute;
   display: block;
   right: 0px;
-  top: 100px;
+  top: 0px;
   width: 280px;
   height: 100%;
   background: rgba(0,0,0,0.93);
@@ -2593,14 +2593,15 @@ img.size-full {
       font-family: $bold-font;
       font-size: 16pt;
       text-transform: uppercase;
-      > ul {
+      li {
+        margin-top: 20px;
+      }
+       ul {
         font-size: 12pt;
         list-style: none;
         line-height: 1.4;
         margin-left: 12px;
-        > li {
-          margin-top: 12px;
-        }
+        color: transparent;
       }
       a {
         color: $dark-text;
@@ -2610,8 +2611,15 @@ img.size-full {
       }
     }
 
+
   }
 
+ul.children {
+    list-style: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    margin-top: 20px;
+}
 
 .flexbox {
   display: flex;
@@ -2866,13 +2874,143 @@ img.size-full {
     button {
       min-width: 100%;
       margin-top: 40px;
-      background-color: #000;
       color: $light-text;
       :hover {
-        background-color:$accent-1;
+        background-color:$primary-action;
         color: #000000;
       }
     }
+}
+
+
+.page, .post {
+
+    .form-container, .search-form {
+      margin: 0 auto;
+      color: inherit;
+
+    label {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-right: 10px;
+      display: inline;
+    }
+  
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="month"],
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="number"],
+    textarea {
+      margin: 10px 0px 10px auto;
+      border-radius: 2px;
+      right: 0px;
+      border: none;
+    }
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="month"],
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="number"] {
+      width: 200px;
+      height: 40px;
+    }
+
+    textarea {
+      width: 300px;
+      min-width: 200px;
+    }
+
+    input[type="submit"],
+    input[type="submit"][disabled]:hover,
+    input[type="submit"][disabled]:focus,
+    .action-btn,
+    .action-btn[disabled]:hover,
+    .action-btn[disabled]:focus,
+    .comment-reply-link {
+          color: $dark-text;
+          background-color: $primary-action;
+    }
+
+    .action-btn:hover,
+    input[type="submit"]:hover,
+    input[type="submit"]:focus,
+    .comment-reply-link:hover,
+    .comment-reply-link:focus {
+      color: $dark-text;
+      background: $accent-1;
+      outline: none;
+    }
+
+    #mc-embedded-subscribe {
+      float: right;
+      width: auto;
+      margin-right: 16px;
+      color: $dark-text;
+      background: $primary-action;
+      border-color: transparent;
+    }
+    #mc-embedded-subscribe:hover, #mc-embedded-subscribe:focus {
+      color: $dark-text;
+      background: $accent-1;
+      border-color: transparent;
+    }
+
+    input[type="checkbox"], 
+    label[type="checkbox"] {
+      width: auto;
+      margin-top: 10px;
+    }
+  }
+  .subscribe-form {
+    .form-container {
+      padding: 20px;
+      width: 350px;
+      border: 2px solid $dark-text;
+      border-radius: 2px;
+    }
+    .form-title {
+      font-family: "Proxima Nova Bold", Helvetica, sans-serif;
+      color: inherit;
+      text-align: center;
+      margin: 0;
+      text-transform: uppercase;
+    }
+    .subscribe-form-elements {
+      padding: 0;
+    }
+    li {
+      width: 100%;
+    }
+    label {
+      display: inline;
+    }
+    .signup-options-list {
+      display:flex !important;
+      font-size: 9px;
+      padding: 0 0 16px;
+      .signup-options {
+        white-space: nowrap;
+        display: inline-flex;
+      }
+    }
+  }
+
+
 }
 
   /** **    11.2x - End Other Posts and Pages **/
@@ -3287,15 +3425,15 @@ http://flickity.metafizzy.co
   height: 44px;
   border: none;
   border-radius: 50%;
-  background: white;
-  background: hsla(0, 0%, 100%, 0.75);
   cursor: pointer;
   /* vertically center */
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
-.flickity-prev-next-button:hover { background: white; }
+.flickity-prev-next-button:hover { 
+  color:accent-1; 
+}
 
 .flickity-prev-next-button:focus {
   outline: none;
@@ -3385,7 +3523,7 @@ http://flickity.metafizzy.co
         color: #FFFFFF;
         position: absolute;
         mix-blend-mode: overlay;
-        bottom: 33%;
+        bottom: 20%;
         right: 10%;
       }
     }
@@ -3416,4 +3554,14 @@ http://flickity.metafizzy.co
     margin: 6% 0;
     height: 300px;
   }
+  .carousel-cell h2 {
+    font-size: 32pt;
+  }
+}
+
+@media all and (min-width: 740px) {
+  .carousel-cell h2 {
+    font-size: 40pt;
+  }
+
 }
