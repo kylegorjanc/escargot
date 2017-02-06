@@ -579,6 +579,8 @@ ul,
 ol {
   margin: 0 0 24.5pt 17.5pt;
   padding: 0;
+  font-size: 14pt;
+  line-height: 24.5pt;
 }
 
 ul {
@@ -1093,7 +1095,8 @@ input[type="search"].search-field {
   .site > div > header .search-form .comment-reply-link:hover,
   .site > div > header .search-form .comment-reply-link:focus {
   color: #000000;
-  background: #FF9E01;
+  background: #2FF6F6;
+  outline: none;
 }
 
 .site > div > footer .form-container #mc-embedded-subscribe, .site > div > footer .search-form #mc-embedded-subscribe, .site > div > header .form-container #mc-embedded-subscribe, .site > div > header .search-form #mc-embedded-subscribe {
@@ -1102,11 +1105,13 @@ input[type="search"].search-field {
   margin-right: 16px;
   color: #000000;
   background: #FC0262;
+  border-color: transparent;
 }
 
-.site > div > footer .form-container #mc-embedded-subscribe:hover, .site > div > footer .search-form #mc-embedded-subscribe:hover, .site > div > header .form-container #mc-embedded-subscribe:hover, .site > div > header .search-form #mc-embedded-subscribe:hover {
+.site > div > footer .form-container #mc-embedded-subscribe:hover, .site > div > footer .form-container #mc-embedded-subscribe:focus, .site > div > footer .search-form #mc-embedded-subscribe:hover, .site > div > footer .search-form #mc-embedded-subscribe:focus, .site > div > header .form-container #mc-embedded-subscribe:hover, .site > div > header .form-container #mc-embedded-subscribe:focus, .site > div > header .search-form #mc-embedded-subscribe:hover, .site > div > header .search-form #mc-embedded-subscribe:focus {
   color: #000000;
-  background: #FF9E01;
+  background: #2FF6F6;
+  border-color: transparent;
 }
 
 .site > div > footer .form-container input[type="checkbox"],
@@ -2299,9 +2304,20 @@ blockquote:after,
   }
 }
 
-/** *    11.2 - Posts and pages
+/** *    11.2 - Posts and pages **/
+.page.type-page h3 {
+  background-color: #000000;
+  color: #FEFEFE;
+  padding: 8px 16px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 980px;
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
+  letter-spacing: 3px;
+  margin-top: 24px;
+}
 
-    /** *    11.2a - Home Page **/
+/** *    11.2a - Home Page **/
 .home-section {
   margin: 60px 0;
 }
@@ -2580,6 +2596,18 @@ article.post {
 
 /** **    11.2b - End Regular Post  **/
 /** **    11.2c - Regular Page **/
+.post-thumbnail img {
+  max-height: 337.5px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+img.size-full {
+  width: 100%;
+  object-fit: cover;
+}
+
 .page-title {
   visibility: hidden;
   font-size: 0px;
@@ -2587,7 +2615,7 @@ article.post {
 }
 
 .page-entry-header {
-  margin: 50px 16px 0px;
+  margin: 50px 16px 0px 0px;
 }
 
 .page-header {
@@ -2652,7 +2680,6 @@ article.post {
 .flexbox .flex-section-third {
   width: 280px;
   height: 300px;
-  border: 2px solid #2FF6F6;
 }
 
 @media all and (max-width: 660px) {
@@ -2818,6 +2845,97 @@ article.post {
 /** **    11.2e - Long Bio **/
 /** **    11.e - end Long Bio **/
 /** **    11.2x - Other Posts and pages **/
+.partner-page .section {
+  margin-top: 60px;
+}
+
+.partner-page .section h1, .partner-page .section h2, .partner-page .section h3, .partner-page .section h4, .partner-page .section h5, .partner-page .section h6 {
+  text-align: center;
+}
+
+#sponsor-list {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+#sponsor-list li {
+  margin: 20px auto;
+}
+
+div.package {
+  margin: 20px auto 0px;
+  border: 2px solid black;
+  width: 280px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+div.package h1, div.package h2, div.package h3, div.package h4, div.package h5, div.package h6 {
+  background-color: #000000;
+  color: #FEFEFE;
+  padding: 8px 16px;
+  overflow: hidden;
+  width: 100%;
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+div.package h3:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 21px solid transparent;
+  border-bottom: 21px solid transparent;
+  border-right: 14px solid white;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+div.package h3:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 21px solid transparent;
+  border-bottom: 21px solid transparent;
+  border-left: 14px solid white;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+div.package span {
+  display: block;
+  margin: 20px auto;
+  font-family: "Proxima Nova Bold", Helvetica, sans-serif;
+}
+
+div.package ul {
+  list-style-type: none;
+  margin: 0 auto;
+  max-width: 180px;
+  height: 150px;
+}
+
+div.package ul li {
+  margin-top: 20px;
+}
+
+div.package button {
+  min-width: 100%;
+  margin-top: 40px;
+  background-color: #000;
+  color: #FEFEFE;
+}
+
+div.package button :hover {
+  background-color: #2FF6F6;
+  color: #000000;
+}
+
+/** **    11.2x - End Other Posts and Pages **/
 /** *    11.3 - Post Formats **/
 /** *    11.4 - Comments **/
 .comments-area {

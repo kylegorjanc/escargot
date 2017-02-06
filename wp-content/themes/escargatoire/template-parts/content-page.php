@@ -10,7 +10,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="page-entry-header">
-	<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+	<?php 
+	escargatoire_post_thumbnail();
+	?>
 	</header><!-- .entry-header -->
 
 

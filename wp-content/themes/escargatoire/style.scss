@@ -596,6 +596,8 @@ ul,
 ol {
   margin: 0 0 $font-size * 1.75 $font-size * 1.25;
   padding: 0;
+  font-size: $font-size;
+  line-height: $font-size * 1.75;
 }
 
 ul {
@@ -1010,7 +1012,8 @@ input[type="search"].search-field {
     .comment-reply-link:hover,
     .comment-reply-link:focus {
       color: $dark-text;
-      background: $accent-2;
+      background: $accent-1;
+      outline: none;
     }
 
     #mc-embedded-subscribe {
@@ -1019,10 +1022,12 @@ input[type="search"].search-field {
       margin-right: 16px;
       color: $dark-text;
       background: $primary-action;
+      border-color: transparent;
     }
-    #mc-embedded-subscribe:hover {
+    #mc-embedded-subscribe:hover, #mc-embedded-subscribe:focus {
       color: $dark-text;
-      background: $accent-2;
+      background: $accent-1;
+      border-color: transparent;
     }
 
     input[type="checkbox"], 
@@ -2248,7 +2253,22 @@ blockquote:after,
     display: inline;
   }
 }
-  /** *    11.2 - Posts and pages
+  /** *    11.2 - Posts and pages **/
+
+
+.page.type-page{
+  h3{
+    background-color: #000000;
+    color: $light-text;
+    padding: 8px 16px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 980px;
+    font-family: $bold-font;
+    letter-spacing: 3px;
+    margin-top: 24px;
+  }
+}
 
     /** *    11.2a - Home Page **/
   
@@ -2420,6 +2440,8 @@ blockquote:after,
 }
 
 
+
+
   /** **    11.2a1 - End Blog Page **/
   
     /** **    11.2a - Regular Post **/
@@ -2520,6 +2542,18 @@ article.post {
 
   /** **    11.2c - Regular Page **/
 
+.post-thumbnail img {
+  max-height: 337.5px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+img.size-full {
+  width: 100%;
+  object-fit: cover;
+}
+
   .page-title {
     visibility: hidden;
     font-size: 0px;
@@ -2528,7 +2562,7 @@ article.post {
   }
 
   .page-entry-header {
-    margin: 50px 16px 0px;
+    margin: 50px 16px 0px 0px;
   }
 
   .page-header {
@@ -2586,7 +2620,6 @@ article.post {
   .flex-section-third {
     width: 280px;
     height: 300px;
-    border: 2px solid $accent-1;
   }
 }
 
@@ -2757,6 +2790,92 @@ article.post {
   /** **    11.e - end Long Bio **/
 
   /** **    11.2x - Other Posts and pages **/
+
+  .partner-page {
+    .section {
+      margin-top: 60px;
+    
+      h1, h2, h3, h4, h5, h6 {
+        text-align: center;
+      }
+    }
+  }
+    #sponsor-list {
+      max-width: 80%;
+      margin: 0 auto;
+      li {
+        margin: 20px auto;
+      }
+    }
+  
+  
+  div.package {
+    margin: 20px auto 0px;
+    border: 2px solid black;
+    width: 280px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 2px;
+    h1, h2, h3, h4, h5, h6 {
+      background-color: #000000;
+      color: $light-text;
+      padding: 8px 16px;
+      overflow: hidden;
+      width: 100%;
+      font-family: $bold-font;
+      letter-spacing: 3px;
+      position: relative;
+    }
+    h3:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 21px solid transparent;
+      border-bottom: 21px solid transparent;
+      border-right: 14px solid white;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+     h3:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 21px solid transparent;
+      border-bottom: 21px solid transparent;
+      border-left: 14px solid white;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    span {
+      display:block;
+      margin: 20px auto;
+      font-family: $bold-font;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0 auto;
+      max-width: 180px;
+      height: 150px;
+      li {
+        margin-top: 20px;
+
+      }
+    }
+    button {
+      min-width: 100%;
+      margin-top: 40px;
+      background-color: #000;
+      color: $light-text;
+      :hover {
+        background-color:$accent-1;
+        color: #000000;
+      }
+    }
+}
+
+  /** **    11.2x - End Other Posts and Pages **/
   /** *    11.3 - Post Formats **/
   /** *    11.4 - Comments **/
   .comments-area {

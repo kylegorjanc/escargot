@@ -12,9 +12,9 @@
              the_post_thumbnail_url();
              echo ")\";"; ?>
         <strong></strong><br />
-        <h4 class="rpost-category">
+ <!--        <h4 class="rpost-category">
          <?php escargatoire_entry_category(); ?>
-        </h4>
+        </h4> -->
         <div class="rpost-meta">
           <div class="rpost-meta-wrapper">
            <div class="rpost-title">
