@@ -1242,6 +1242,7 @@ header .search-form label {
   font-family: "Genericons";
   content: "\f400";
   font-size: 16px;
+  background-size: 0px !important;
 }
 
 #sf_loading {
