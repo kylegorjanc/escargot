@@ -17,12 +17,12 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 
-			<div class="main-gallery js-flickity carousel"  data-flickity-options='{ "cellAlign": "center", "contain": true, "wrapAround": "true", "setGallerySize": "false"}'>
+			<div class="main-gallery js-flickity carousel"  data-flickity-options='{ "cellAlign": "center", "contain": true, "wrapAround": "true", "setGallerySize": "false", "autoPlay": "6000" }'>
 			  <div class="carousel-cell">
 				  <div class="cell-wrap banner-wrap">	 
-					  <a href="<?php echo esc_url( home_url( '/what-does-salty-mean' ) ); ?>" rel="subscribe">
-							<img src="https://www.saltyrunning.com/wp-content/uploads/2016/03/banner-1.jpg" alt="Subscribe">
-								<h2 class="carousel-header">The New Salty</h2>
+					  <a href="<?php echo esc_url( home_url( '/category/running-life/marriage-family/running-while-pregnant/' ) ); ?>" rel="subscribe">
+							<img src="https://www.saltyrunning.com/wp-content/uploads/2017/02/site_header_photos_022.jpg" alt="Maternity Mondays">
+								<h2 class="carousel-header">Maternity Mondays</h2>
 						</a>
 					</div>	
 				</div>
