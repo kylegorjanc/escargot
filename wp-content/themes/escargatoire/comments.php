@@ -22,19 +22,26 @@ if ( post_password_required() ) {
 
 <div id="comments" class="comments-area">
 
+	<?php
+		comment_form( array(
+			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
+			'title_reply_after'  => '</h2>',
+		) );
+	?>
+
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
 				$comments_number = get_comments_number();
 				if ( 1 === $comments_number ) {
 					/* translators: %s: post title */
-					printf( _x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'escargatoire' ), get_the_title() );
+					printf( _x( 'One comment', 'comments title', 'escargatoire' ) );
 				} else {
 					printf(
 						/* translators: 1: number of comments, 2: post title */
 						_nx(
-							'%1$s thought on &ldquo;%2$s&rdquo;',
-							'%1$s thoughts on &ldquo;%2$s&rdquo;',
+							'%1$s comment',
+							'%1$s comments',
 							$comments_number,
 							'comments title',
 							'escargatoire'
@@ -66,14 +73,9 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'escargatoire' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments on this post are closed.', 'escargatoire' ); ?></p>
 	<?php endif; ?>
 
-	<?php
-		comment_form( array(
-			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
-			'title_reply_after'  => '</h2>',
-		) );
-	?>
+
 
 </div><!-- .comments-area -->
